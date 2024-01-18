@@ -1,1 +1,6 @@
-# README.md
+---
+title: Home
+layout: splash
+---
+
+# Under construction ...
