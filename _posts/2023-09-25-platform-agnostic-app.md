@@ -4,7 +4,6 @@ tags:
   - cloud
   - code
   - architecture
-author-profile: true
 ---
 
 # Platform-Agnostic Web App
