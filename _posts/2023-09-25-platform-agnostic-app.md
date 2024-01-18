@@ -8,14 +8,15 @@ tags:
   - architecture
 ---
 
-The general objective of this project is to demonstrate a cloud-agnostic, 12-factor web application that is deployed into a cloud environment for business continuity, agility, scalability and cost efficiency.  This flexibility will demonstrate the ability to avoid Cloud Service Provider (CSP) lock-in.
-The primary objective is to demonstrate avoiding vendor lock-in while using PaaS.  Though similar principles apply to XaaS. 
+One of the core business tenets is business agility - the ability to adapt to changing market conditions. Similarly, businesses must be agile and must ensure availability through business continuity best practices.  Business either change or die.  How does this affect cloud in particular?  Avoiding Cloud Service Provider (CSP) vendor lock-in ensures this flexibility. 
 
-# Detailed Description
-The purpose of this project is to build a modular, cloud-agnostic, 12-factor design web application that focuses on business continuity and agility.  Businesses today strive to avoid Cloud Service Provider (CSP) vendor lock-in. Businesses must be agile and must ensure availability through business continuity best practices. As a result, this application will also be hosted in the Cloud, Microsoft Azure and Google Cloud Platform (GCP) for this project.  This modern web application is built using a modern cross-platform programming language, in this case ASP.NET 7 MVC, which can run on any system - Linux based or Windows based.  This application will be modular and consist of two parts – a database back-end and MVC (Model-View-Controller) front-end layer.  The actual contents of this application are less important, and in this case it's just a fictituous shopping application for demonstration purposes, because the aim is to build a web app that can be deployed to and hosted in any CSP, such as Microsoft Azure, Google Cloud Platform, or AWS or on any other platform, such as Tanzu or Kubernetes, at will to avoid vendor lock-in for maximum business agility.
+In general, a modular, cloud-agnostic, application that follows the 12 factor methodology can provide business agility, continuity, scalability and cost efficiency.  Below I demonstrate avoiding vendor lock-in while using PaaS.  Though similar principles apply to XaaS (read "any"-as-a-Service). 
+
+# Let's Dive Deeper
+As already mentioned, 12 factor methodolgy can enable us to shift focuse between any application platform or CSP.  A modern web application is built using a modern cross-platform programming language, such as ASP.NET 7 MVC, which can run on any system - Linux based or Windows based.  One can either take a code-first or database-first approach.  This choice will largely depend on the size of the application and enterprise or team complexity - smaller teams may benefit from code-first, but larger teams often must follow strict change management processes, which require a database-first approach.  The below diagrams show a systematic approach to design such a modern web-app.  More detail and sample code can be found in my GitHub repo found here: "https://github.com/rimlaban7/platform-agnostic-app". 
 
 ### Logical Architecture using MVC Pattern
-![Logical Architecture](https://github.com/TripleA-B/friendly-octo-giggle/blob/main/Logical%20Architecture.png)
+![Logical Architecture](https://github.com/RoadToCloud/roadtocloud.github.io/blob/main/assets/images/platform-agnostic-mvc-architecture.png)
 
 ### CI/CD
 ![CI/CD](https://github.com/TripleA-B/friendly-octo-giggle/blob/main/CI%20CD.png)
