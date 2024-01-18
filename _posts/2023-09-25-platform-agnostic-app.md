@@ -4,6 +4,7 @@ tags:
   - cloud
   - code
   - architecture
+layout: posts
 ---
 
 # Platform-Agnostic Web App
