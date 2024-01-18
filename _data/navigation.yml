@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "Home"
-    url: https://www.theroadtocloud.com
   - title: "About"
     url: about/
   # - title: "Sample Posts"
