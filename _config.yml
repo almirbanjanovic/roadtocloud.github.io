@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    "Road to Cloud" : "Site Title"
+title                    : "Road to Cloud" : "Site Title"
 title_separator          : "-"
-subtitle                 : "Road to Cloud" # site tagline that appears below site title in masthead
+subtitle                 : "Chronicles on the road to cloud. " # site tagline that appears below site title in masthead
 name                     : "Almir Banjanovic"
 description              : "Chronicles on the road to cloud."
 url                      : "https://www.theroadtocloud.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
