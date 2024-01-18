@@ -19,10 +19,10 @@ As already mentioned, 12 factor methodolgy can enable us to shift focuse between
 ![Logical Architecture](https://github.com/RoadToCloud/roadtocloud.github.io/blob/main/assets/images/platform-agnostic-mvc-architecture.png)
 
 ### CI/CD
-![CI/CD](https://github.com/TripleA-B/friendly-octo-giggle/blob/main/CI%20CD.png)
+![CI/CD](https://github.com/RoadToCloud/roadtocloud.github.io/blob/main/assets/images/platform-agnostic-ci-cd-flow.png)
 
 ### Microsoft Azure Physical Architecture
-![Microsoft Azure Physical Architecture](https://github.com/TripleA-B/friendly-octo-giggle/blob/main/Azure%20Physical%20Architecture.png)
+![Microsoft Azure Physical Architecture](https://github.com/RoadToCloud/roadtocloud.github.io/blob/main/assets/images/platform-agnostic-azure-architecture.png)
 
 ### Google Cloud Platform Architecture
-![Google Cloud Platform Architecture](https://github.com/TripleA-B/friendly-octo-giggle/blob/main/GCP%20Physical%20Architecture.png)
+![Google Cloud Platform Architecture](https://github.com/RoadToCloud/roadtocloud.github.io/blob/main/assets/images/platform-agnostic-gcp-architecture.png)
