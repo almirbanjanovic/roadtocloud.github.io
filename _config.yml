@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 title                    : "Road to Cloud" # "Site Title"
-title_separator          : "-"
+title_separator          : "|"
 subtitle                 : "Chronicles on the road to cloud. " # site tagline that appears below site title in masthead
 name                     : "Almir Banjanovic"
 description              : "Chronicles on the road to cloud."
@@ -108,9 +108,12 @@ author:
   name             : "Almir Banjanovic"
   avatar           : "/assets/images/bio-head.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Chronicles of grand strategy to imaginatively crafted solutions with creative implementations! 🚀"
-  location         : "Louisville, KY"
+  location         : # "Louisville, KY"
   email            :
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "www.linkedin.com/in/almir-b-15569420"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
