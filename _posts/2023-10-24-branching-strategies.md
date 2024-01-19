@@ -12,7 +12,7 @@ tags:
 DevOps branching strategies are approaches used in software development to manage and organize code repositories effectively. These strategies dictate how development branches are structured, merged, and deployed, providing a framework for collaboration, version control, and seamless integration in the DevOps lifecycle.  However, it is important to remember that there is no one size fits all approach. Here I discuss four (4) well-known branching strategies, which represent a good summary of standard branching strategies but mutations and customizations of them are possible and frequent. These are *Trunk-based Development, GitHub Flow, GitLab Flow, and GitFlow*.
 
 # Trunk-based Development (Centralized Workflow)
-<figure style="width: 500px" class="align-center">
+<figure style="width: 580px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/branching-strategies-trunk.jpg" alt="">
 </figure> 
 Trunk-based development emphasizes a single main branch with frequent small integrations to streamline collaboration. It prioritizes simplicity and continuous integration but may limit experimentation due to its singular focus. It is well-suited for smaller teams due to its simplicity and streamlined integration. However, larger teams may face challenges coordinating frequent integrations. Similarly, teams working across different geographic locations might find it easier to coordinate with a singular main branch, reducing the chances of conflicts.  This approach is best suited for a senior-level team.
@@ -47,6 +47,9 @@ Trunk-based development emphasizes a single main branch with frequent small inte
 
 
 # GitHub Flow (Feature Branching)
+<figure style="width: 580px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/branching-strategies-github-flow.jpg" alt="">
+</figure> 
 Similar to Trunk-based Development, GitHub Flow also revolves around a main branch, with developers creating feature branches, submitting pull requests, and merging changes after code review. 
 
 **Key Points**
@@ -77,6 +80,9 @@ Similar to Trunk-based Development, GitHub Flow also revolves around a main bran
 
 
 # GitLab Flow
+<figure style="width: 580px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/branching-strategies-gitlab-flow.jpg" alt="">
+</figure> 
 GitLab Flow expands on and shares similarities with GitHub Flow above but places additional emphasis on automated testing. It involves feature branches, merge requests, and a continuous delivery approach.
 
 **Key Points**
@@ -100,6 +106,9 @@ GitLab Flow expands on and shares similarities with GitHub Flow above but places
 
 
 # Git Flow
+<figure style="width: 580px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/branching-strategies-git-flow.jpg" alt="">
+</figure> 
 This is the most complex workflow, which involves multiple short-living and long-living branches.  However, Git Flow introduces a more structured branching model with designated branches for features, releases, and hotfixes. It offers a comprehensive strategy for projects with complex release cycles.
 
 **Key Points**
@@ -130,6 +139,7 @@ This is the most complex workflow, which involves multiple short-living and long
 - Merge conflicts require line-by-line resolution
 - Difficult and long path to production
 
-
-# Summary
+# Decision Guide and Summary
 In conclusion, trunk-based development, GitHub Flow, GitLab Flow, and GitFlow provide different approaches to branching, catering to varying project needs, team sizes and seniority. Trunk-based and GitHub/GitLab Flow are simpler and favor continuous integration, while GitFlow introduces more structure for traceability for projects with complex release strategies. The choice depends on the project's size, complexity, and the desired balance between simplicity and structure.
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/branching-strategies-decision-guide.jpg){: .align-center}
