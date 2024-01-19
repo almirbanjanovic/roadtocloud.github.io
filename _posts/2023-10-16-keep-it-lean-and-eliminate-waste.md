@@ -32,7 +32,6 @@ Use data to create knowledge. Use Machine Learning (ML) and Artificial Intellige
 
 
 # The Seven Pillars
-
 With the aim of keeping at lean and eliminating waste, I present the Seven Pillars.  These pillars provide a systematic and collaborative approach to work toward becoming lean and eliminating waste.
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/keep-it-lean-seven-pillars.png){: .align-center}
@@ -51,5 +50,24 @@ This is where the rubber starts to meet the road, from theory to practice.  In e
 
 
 # Visibility, Accountability, Feedback
+The importance of visibility, accountability, and feedback cannot be overstated. 
+
+Visibility ensures that everyone has a clear understanding of the data, metrics, and insights driving decision-making. This transparency is crucial as it aligns actions with guiding principles and allows teams to address issues openly.
+
+Accountability, underpinned by data, metrics, and insights from Machine Learning (ML) and Artificial Intelligence (AI), establishes a foundation of trust. Empowering individuals to take ownership of their roles and linking shared OKRs to guiding principles fosters a sense of responsibility. 
+
+And finally feedback mechanisms complete this triad, providing a continuous loop for improvement. The Guiding Principles Scorecard becomes a dynamic tool, incorporating feedback to adapt and refine principles over time. 
+
+This iterative process ensures that guiding principles remain relevant, responsive to changing dynamics, and effective in guiding decisions and actions in the ever-evolving landscape of cloud computing and software development. In essence, visibility, accountability, and feedback form a symbiotic relationship, creating a framework that not only guides but also adapts, ensuring the resilience and relevance of guiding principles.
+
 
 # Self-service, Automation
+In the landscape of software development and cloud computing, the concept of "One Entry Door with Automated Blueprints" becomes a pivotal solution to address the challenges posed by the shift left, YBYR (you build it, you run it) approach, which can lead to cognitive overload and increased complexity.
+
+As teams navigate the evolving responsibilities brought by this paradigm shift, the need for self-service and automation becomes paramount. The complexity of tasks, such as dealing with intake forms, approval boards, documentation, and adherence to various patterns across DevSecFinMLOps, can be overwhelming. The traditional manual processes not only create inefficiencies and waste but also hinder the swift implementation and delivery of solutions.
+
+The introduction of a single entry door, embodied by a centralized portal like Spotify's Backstage, or any tool that consolidates access, offers a solution. This self-service portal serves as a unified destination, eliminating the need for teams to navigate multiple portals for diverse sets of requirements. It streamlines the process, reduces cognitive load, and accelerates the lead time and cycle time for delivering solutions.
+
+Crucially, this central portal goes beyond just providing access; it incorporates self-service automated architecture blueprints based on enterprise-approved patterns and requirements. This not only empowers teams to initiate projects with ease but also ensures compliance with guiding principles and accelerates the adoption of best practices.
+
+In conclusion, the integration of a single entry door with automated blueprints aligns with the principles of visibility, accountability, and feedback. It not only simplifies the onboarding process for teams but also contributes to the efficiency and resilience of software development and cloud computing practices in the face of evolving responsibilities and technologies.
