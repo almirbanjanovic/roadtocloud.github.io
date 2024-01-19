@@ -1,6 +1,6 @@
 ---
 title:  "Keept it Lean and Eliminate Waste"
-excerpt: "Keep it lean and eliminate waste" represent words to live by in software development, cloud computing, Lean, Agile and DevOps."
+excerpt: "Keep it lean and eliminate waste represent words to live by in software development, cloud computing, Lean, Agile and DevOps."
 toc: true
 tags:
   - architecture
