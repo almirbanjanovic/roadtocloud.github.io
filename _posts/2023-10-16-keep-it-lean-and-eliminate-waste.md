@@ -52,7 +52,9 @@ Guiding principles in the context of cloud computing and software development se
    5. Deliver Fast
    6. Respect People
    7. Optimize the Whole
-
+<br>
+<br>
+<br>
 
 
 <figure style="width: 150px" class="align-right">
