@@ -7,6 +7,8 @@ tags:
   - agile
   - devops
   - sdlc
+  - AI
+  - ML
 ---
 
 # Constant Change
@@ -15,9 +17,13 @@ Reality of today is that we will have to learn to be more efficient.  Factors su
 
 Lean, Agile and DevOps represent systems to force you to stop pretending that you know more than you really do. We must accept predictable unpredictability, embrace uncertainty. This is "epistemic humility".
 
-Use data to create knowledge. Use Machine Learning (ML) and Artificial Intelligence (AI) to augment workforce and to improve efficiency, resilience and ultimately customer experience.
+Use data to create knowledge. Use Machine Learning (ML) and Artificial Intelligence (AI) for augmentation and efficiency, resilience and ultimately customer experience.
 
 ![Heraclitus](../assets/images/heraclitus.png)
+> "Change is the only constant."
+>
+> -- <cite>Heraclitus, Greek Philosopher</cite>
+
 
 # The Seven Pillars
 
