@@ -39,7 +39,7 @@ With the aim of keeping at lean and eliminating waste, I present the Seven Pilla
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/keep-it-lean-seven-pillars.png){: .align-center}
 
 ## Guiding Principles
-Guiding principles in the context of cloud computing and software development serve as a collective North Star for teams, offering a shared vision and a set of fundamental beliefs that guide decision-making and actions. These principles become the foundation upon which shared goals are built, creating a sense of "skin in the game" for all team members. The guiding principles for this project rest on two great books.
+Guiding principles in the context of cloud computing and software development serve as a collective North Star for teams, offering a shared vision and a set of fundamental beliefs that guide decision-making and actions. These principles become the foundation upon which shared goals are built, creating a sense of "skin in the game" for all team members. The guiding principles for this project rest on two great books - *Implementing Lean Software Development* and *The DevOps Handbook*. Each of these provide their own guiding principles listed below.
 
 <figure style="width: 150px" class="align-left">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/implementing-lean-software-development.png" alt="">
