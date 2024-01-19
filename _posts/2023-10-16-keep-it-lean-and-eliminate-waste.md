@@ -38,13 +38,12 @@ With the aim of keeping at lean and eliminating waste, I present the Seven Pilla
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/keep-it-lean-seven-pillars.png){: .align-center}
 
 ## Guiding Principles
-Guiding principles in the context of cloud computing and software development serve as a collective North Star for teams, offering a shared vision and a set of fundamental beliefs that guide decision-making and actions. These principles become the foundation upon which shared goals are built, creating a sense of "skin in the game" for all team members. The guiding principles for this project rest on two great books:
+Guiding principles in the context of cloud computing and software development serve as a collective North Star for teams, offering a shared vision and a set of fundamental beliefs that guide decision-making and actions. These principles become the foundation upon which shared goals are built, creating a sense of "skin in the game" for all team members. The guiding principles for this project rest on two great books.
 
 <figure style="width: 150px" class="align-left">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/implementing-lean-software-development.png" alt="">
   <figcaption><cite>Poppendieck, M., & Poppendieck, T. (2007). Implementing Lean Software Development: From Concept to Cash. Pearson Education.</cite></figcaption>
 </figure> 
-
 1. Eliminate Waste
 2. Build Quality In ("Poka Yoke")
 3. Create Knowledge ("Epistemic Humility")
@@ -53,14 +52,17 @@ Guiding principles in the context of cloud computing and software development se
 6. Respect People
 7. Optimize the Whole
 
+
+
 <figure style="width: 150px" class="align-right">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/the-devops-handbook.png" alt="">
   <figcaption><cite>Kim, G., Debois, P., Humble, J., Willis, J., & Forsgren, N. (2021). The DevOps Handbook: How to Create World-Class Agility, Reliability, & Security in Technology Organizations. It Revolution Press.</cite></figcaption>
 </figure> 
-
 1. The Principles of Flow
 2. The Principles of Feedback
 3. The Principles of Continual Learning
+
+
 
 
 When teams align around shared goals based on these guiding principles, it fosters a collaborative environment where everyone is working towards a common objective. This shared commitment not only enhances teamwork but also cultivates a collective responsibility for the success of the project or initiative.
