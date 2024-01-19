@@ -37,6 +37,24 @@ With the aim of keeping at lean and eliminating waste, I present the Seven Pilla
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/keep-it-lean-seven-pillars.png){: .align-center}
 
+## Guiding Principles
+Guiding principles in the context of cloud computing and software development serve as a collective North Star for teams, offering a shared vision and a set of fundamental beliefs that guide decision-making and actions. These principles become the foundation upon which shared goals are built, creating a sense of "skin in the game" for all team members.
+
+When teams align around shared goals based on these guiding principles, it fosters a collaborative environment where everyone is working towards a common objective. This shared commitment not only enhances teamwork but also cultivates a collective responsibility for the success of the project or initiative.
+
+Furthermore, the opportunity to define shared goals provides a chance to tie Objectives and Key Results (OKRs) together. By aligning individual and team OKRs with overarching guiding principles, there is a cohesive framework that ensures everyone is moving in the same direction. This alignment not only streamlines efforts but also enhances the clarity and purpose of each team member's contribution.
+
+In essence, the combination of guiding principles, a North Star vision, and shared goals creates a powerful synergy. It establishes a strong foundation for collaboration, encourages a sense of ownership, and allows teams to navigate the complex landscape of cloud computing and software development with a unified purpose.
+
+## Training & Education
+This is where the rubber starts to meet the road, from theory to practice.  In training and education for cloud computing and software development, "Where the rubber meets the road" emphasizes the crucial application of knowledge. Achieving alignment on guiding principles becomes paramount at this juncture. Instilling a shared understanding of the aforementioned guiding principles lays a solid foundation.  It ensures that theoretical learning translates seamlessly into practical application, guiding individuals as they navigate the challenges of real-world scenarios in cloud computing and software development projects. This alignment not only encourages collaboration but also empowers teams to confidently apply principles when it matters most – in the practical implementation of their skills.
+
+## Visibility
+## Accountability
+## Self Service
+## Automation
+## Feedback
+
 # Guiding Principles
 
 # Guiding Principles, Education & Training
