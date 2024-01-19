@@ -44,13 +44,13 @@ Guiding principles in the context of cloud computing and software development se
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/implementing-lean-software-development.png" alt="">
   <figcaption><cite>Poppendieck, M., & Poppendieck, T. (2007). Implementing Lean Software Development: From Concept to Cash. Pearson Education.</cite></figcaption>
 </figure> 
-1. Eliminate Waste
-2. Build Quality In ("Poka Yoke")
-3. Create Knowledge ("Epistemic Humility")
-4. Defer Commitment
-5. Deliver Fast
-6. Respect People
-7. Optimize the Whole
+   1. Eliminate Waste
+   2. Build Quality In ("Poka Yoke")
+   3. Create Knowledge ("Epistemic Humility")
+   4. Defer Commitment
+   5. Deliver Fast
+   6. Respect People
+   7. Optimize the Whole
 
 
 
@@ -58,9 +58,9 @@ Guiding principles in the context of cloud computing and software development se
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/the-devops-handbook.png" alt="">
   <figcaption><cite>Kim, G., Debois, P., Humble, J., Willis, J., & Forsgren, N. (2021). The DevOps Handbook: How to Create World-Class Agility, Reliability, & Security in Technology Organizations. It Revolution Press.</cite></figcaption>
 </figure> 
-1. The Principles of Flow
-2. The Principles of Feedback
-3. The Principles of Continual Learning
+   1. The Principles of Flow
+   2. The Principles of Feedback
+   3. The Principles of Continual Learning
 
 
 
