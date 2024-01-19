@@ -70,14 +70,14 @@ Furthermore, other questions arise when it comes to power consumption monitoring
 ## AES Encryption
 This study focuses on AES-128 encryption.  AES is a symmetric-key algorithm. This means that the same key is used for both encryption and decryption.  *Figure 5* below illustrates this visually.
 
-<figure style="width: 580px" class="align-center">
+<figure style="width: 300px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/symmetric-encryption.png" alt="">
   <figcaption>Figure 5 – Symmetric Encryption.</figcaption>
 </figure> 
 
 This characteristic makes side channel attacks especially worrisome.  Considering this, asymmetric encryption algorithms that rely on public and private keys can mitigate risk.  *Figure 6* illustrates asymmetric encryption.  
 
-<figure style="width: 580px" class="align-center">
+<figure style="width: 300px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/asymmetric-encryption.png" alt="">
   <figcaption>Figure 6 – Asymmetric Encryption.</figcaption>
 </figure> 
