@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/clouds.jpg
 excerpt: "Chronicles of grand strategy to imaginatively crafted solutions with creative implementations!"
 intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  - excerpt: '"Welcome to Road to Cloud, your guide to crafting high-performance, cost-effective, and resilient solutions for your enterprise journey."'
 ---
 
 {% include feature_row id="intro" type="center" %}
