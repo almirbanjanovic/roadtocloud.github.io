@@ -1,5 +1,6 @@
 ---
 title:  "Platform Agnostic Web App"
+excerpt: "Avoiding cloud platform lock-in."
 toc: true
 tags:
   - cloud
