@@ -60,8 +60,18 @@ Similar to Trunk-based Development, GitHub Flow also revolves around a main bran
 - Add branch restrictions (for Pull Requests) to main branch
 
 **Pros**
+- Simple workflow
+- Single merge point (main branch)
+- Concurrent feature development possible
+- Allows for individual development and feature testing
+- Provides traceability for individual features
 
 **Cons**
+- Requires strong CI/CD to realize full benefit
+- Basic traceability
+- Merge conflicts can become difficult to resolve
+- Scale is limited due to merging, pulling, deployments
+- Testing *must* be automated
 
 # GitLab Flow
 
