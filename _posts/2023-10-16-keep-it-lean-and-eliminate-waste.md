@@ -18,6 +18,8 @@ tags:
   <figcaption>"Change is the only constant." <cite>Heraclitus, Greek Philosopher</cite></figcaption>
 </figure> 
 
+In the world of cloud computing, acknowledging and embracing change becomes not just a philosophy but a practical approach for staying competitive and efficiently utilizing the ever-evolving capabilities of the cloud.
+
 Lean, Agile and DevOps represent systems to force you to stop pretending that you know more than you really do. We must accept predictable unpredictability, embrace uncertainty, "epistemic humility".
 
 Use data to create knowledge. Use Machine Learning (ML) and Artificial Intelligence (AI) for augmentation and efficiency, resilience and ultimately customer experience.
