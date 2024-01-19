@@ -41,7 +41,7 @@ With the aim of keeping at lean and eliminating waste, I present the Seven Pilla
 Guiding principles in the context of cloud computing and software development serve as a collective North Star for teams, offering a shared vision and a set of fundamental beliefs that guide decision-making and actions. These principles become the foundation upon which shared goals are built, creating a sense of "skin in the game" for all team members. The guiding principles for this project rest on two great books:
 
 <figure style="width: 150px" class="align-left">
-  <img src="{{ site.url }}{{ site.baseurl }}/implementing-lean-software-development.png" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/implementing-lean-software-development.png" alt="">
   <figcaption><cite>Poppendieck, M., & Poppendieck, T. (2007). Implementing Lean Software Development: From Concept to Cash. Pearson Education.</cite></figcaption>
 </figure> 
 
@@ -54,7 +54,7 @@ Guiding principles in the context of cloud computing and software development se
 7. Optimize the Whole
 
 <figure style="width: 150px" class="align-right">
-  <img src="{{ site.url }}{{ site.baseurl }}/the-devops-handbook.png" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/the-devops-handbook.png" alt="">
   <figcaption><cite>Kim, G., Debois, P., Humble, J., Willis, J., & Forsgren, N. (2021). The DEVOPS Handbook: How to Create World-Class Agility, Reliability, & Security in Technology Organizations. It Revolution Press.</cite></figcaption>
 </figure> 
 
