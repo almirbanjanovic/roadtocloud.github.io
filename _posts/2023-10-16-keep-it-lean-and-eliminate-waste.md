@@ -55,7 +55,7 @@ Guiding principles in the context of cloud computing and software development se
 
 <figure style="width: 150px" class="align-right">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/the-devops-handbook.png" alt="">
-  <figcaption><cite>Kim, G., Debois, P., Humble, J., Willis, J., & Forsgren, N. (2021). The DEVOPS Handbook: How to Create World-Class Agility, Reliability, & Security in Technology Organizations. It Revolution Press.</cite></figcaption>
+  <figcaption><cite>Kim, G., Debois, P., Humble, J., Willis, J., & Forsgren, N. (2021). The DevOps Handbook: How to Create World-Class Agility, Reliability, & Security in Technology Organizations. It Revolution Press.</cite></figcaption>
 </figure> 
 
 1. The Principles of Flow
