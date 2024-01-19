@@ -1,6 +1,6 @@
 ---
 title:  "Platform Agnostic Web App"
-layout: post
+layout: posts
 tags:
   - cloud
   - code
