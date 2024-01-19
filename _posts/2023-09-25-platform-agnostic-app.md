@@ -7,6 +7,8 @@ tags:
   - architecture
 ---
 
+# Introduction
+
 One of the core business tenets is business agility - the ability to adapt to changing market conditions. Similarly, businesses must be agile and must ensure availability through business continuity best practices.  Business either change or die.  How does this affect cloud in particular? 
 
 # Let's Dive Deeper
