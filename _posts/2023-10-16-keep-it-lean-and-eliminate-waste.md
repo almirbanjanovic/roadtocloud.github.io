@@ -13,13 +13,14 @@ tags:
 
 # Constant Change
 
+<figure style="width: 150px" class="align-left">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/heraclitus.png" alt="">
+  <figcaption>"Change is the only constant." <cite>Heraclitus, Greek Philosopher</cite></figcaption>
+</figure> 
+
 Lean, Agile and DevOps represent systems to force you to stop pretending that you know more than you really do. We must accept predictable unpredictability, embrace uncertainty, "epistemic humility".
 
 Use data to create knowledge. Use Machine Learning (ML) and Artificial Intelligence (AI) for augmentation and efficiency, resilience and ultimately customer experience.
-
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/heraclitus.png){: .align-left} 
-"Change is the only constant." <cite>Heraclitus, Greek Philosopher</cite>
-
 
 # The Seven Pillars
 
