@@ -15,7 +15,7 @@ tags:
 
 Reality of today is that we will have to learn to be more efficient.  Factors such as budgetary constraints, shareholder promises and serving customers present major driving factors.
 
-Lean, Agile and DevOps represent systems to force you to stop pretending that you know more than you really do. We must accept predictable unpredictability, embrace uncertainty. This is "epistemic humility".
+Lean, Agile and DevOps represent systems to force you to stop pretending that you know more than you really do. We must accept predictable unpredictability, embrace uncertainty, "epistemic humility".
 
 Use data to create knowledge. Use Machine Learning (ML) and Artificial Intelligence (AI) for augmentation and efficiency, resilience and ultimately customer experience.
 
