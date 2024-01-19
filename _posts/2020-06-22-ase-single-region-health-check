@@ -1,5 +1,5 @@
 ---
-title:  "DevOps Branching Strategies"
+title:  "Azure App Service Health-Checks"
 excerpt: "Increasing cloud application resilience in Microsoft Azure with Traffic Managers, Application Gateways and App Services."
 toc: true
 tags:
