@@ -44,8 +44,8 @@ Guiding principles in the context of cloud computing and software development se
 2. Kim, G., Debois, P., Humble, J., Willis, J., & Forsgren, N. (2021). The DEVOPS Handbook: How to Create World-Class Agility, Reliability, & Security in Technology Organizations. It Revolution Press.
 
 <figure class="half">
-    <a href="/assets/images/implementing-lean-software-development.png"><img src="/assets/images/implementing-lean-software-development.png"></a>
-    <a href="/assets/images/the-devops-handbook.png"><img src="/assets/images/the-devops-handbook.png"></a>
+    <a href="/assets/images/implementing-lean-software-development.png"><img src="/assets/images/implementing-lean-software-development.png" width="600" height="300"></a>
+    <a href="/assets/images/the-devops-handbook.png"><img src="/assets/images/the-devops-handbook.png" width="600" height="300"></a>
 </figure>
 
 
