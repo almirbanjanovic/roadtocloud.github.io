@@ -13,8 +13,6 @@ tags:
   - strategy
 ---
 
-# Constant Change
-
 <figure style="width: 150px" class="align-left">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/heraclitus.png" alt="">
   <figcaption>"Change is the only constant." <cite>Heraclitus, Greek Philosopher</cite></figcaption>
