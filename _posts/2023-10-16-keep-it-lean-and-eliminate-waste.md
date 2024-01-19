@@ -17,8 +17,8 @@ Lean, Agile and DevOps represent systems to force you to stop pretending that yo
 
 Use data to create knowledge. Use Machine Learning (ML) and Artificial Intelligence (AI) for augmentation and efficiency, resilience and ultimately customer experience.
 
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/heraclitus.png)
-{: .align-left} "Change is the only constant." <cite>Heraclitus, Greek Philosopher</cite>
+![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/heraclitus.png){: .align-left} 
+"Change is the only constant." <cite>Heraclitus, Greek Philosopher</cite>
 
 
 # The Seven Pillars
