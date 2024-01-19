@@ -46,7 +46,8 @@ Guiding principles in the context of cloud computing and software development se
   <figcaption><cite>Poppendieck, M., & Poppendieck, T. (2007). Implementing Lean Software Development: From Concept to Cash. Pearson Education.</cite></figcaption>
 </figure> 
 <br>
-
+<br>
+<br>
 &nbsp; 1. Eliminate Waste<br>
 &nbsp; 2. Build Quality In ("Poka Yoke")<br>
 &nbsp; 3. Create Knowledge ("Epistemic Humility")<br>
@@ -58,13 +59,17 @@ Guiding principles in the context of cloud computing and software development se
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 <figure style="width: 150px" class="align-right">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/the-devops-handbook.png" alt="">
   <figcaption><cite>Kim, G., Debois, P., Humble, J., Willis, J., & Forsgren, N. (2021). The DevOps Handbook: How to Create World-Class Agility, Reliability, & Security in Technology Organizations. It Revolution Press.</cite></figcaption>
 </figure> 
-  1. The Principles of Flow
-  2. The Principles of Feedback
-  3. The Principles of Continual Learning
+&nbsp; 1. The Principles of Flow <br>
+&nbsp; 2. The Principles of Feedback <br>
+&nbsp; 3. The Principles of Continual Learning <br>
 
 When teams align around shared goals based on these guiding principles, it fosters a collaborative environment where everyone is working towards a common objective. This shared commitment not only enhances teamwork but also cultivates a collective responsibility for the success of the project or initiative.
 
