@@ -47,18 +47,17 @@ Guiding principles in the context of cloud computing and software development se
 </figure> 
 <br>
 
-> 1. Eliminate Waste
-> 2. Build Quality In ("Poka Yoke")
-> 3. Create Knowledge ("Epistemic Humility")
-> 4. Defer Commitment
-> 5. Deliver Fast
-> 6. Respect People
-> 7. Optimize the Whole
+&nbsp; 1. Eliminate Waste
+&nbsp; 2. Build Quality In ("Poka Yoke")
+&nbsp; 3. Create Knowledge ("Epistemic Humility")
+&nbsp; 4. Defer Commitment
+&nbsp; 5. Deliver Fast
+&nbsp; 6. Respect People
+&nbsp; 7. Optimize the Whole
 <br>
 <br>
 <br>
-
-
+<br>
 <figure style="width: 150px" class="align-right">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/the-devops-handbook.png" alt="">
   <figcaption><cite>Kim, G., Debois, P., Humble, J., Willis, J., & Forsgren, N. (2021). The DevOps Handbook: How to Create World-Class Agility, Reliability, & Security in Technology Organizations. It Revolution Press.</cite></figcaption>
