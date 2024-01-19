@@ -1,13 +1,11 @@
 ---
 title:  "Azure App Service Health-Checks"
 excerpt: "Increasing cloud application resilience in Microsoft Azure with Traffic Managers, Application Gateways and App Services."
-toc: true
 tags:
   - architecture
   - cloud
 ---
 
-# Microsoft Azure Health Check Architecture
 In an Active/Passive Dual-Region Architecture on Microsoft Azure, key services like Application Service Environment (ASE), Azure App Services, Azure Traffic Manager, and Azure Application Gateway ensure resilience. Regular health-checks are crucial for maintaining continuous availability and optimal performance.
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/ase-single-region-health-check.png){: .align-center}
