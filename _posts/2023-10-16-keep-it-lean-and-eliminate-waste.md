@@ -22,6 +22,9 @@ Lean, Agile and DevOps represent systems to force you to stop pretending that yo
 
 Use data to create knowledge. Use Machine Learning (ML) and Artificial Intelligence (AI) for augmentation and efficiency, resilience and ultimately customer experience.
 
+
+
+
 # The Seven Pillars
 
 # Guiding Principles
