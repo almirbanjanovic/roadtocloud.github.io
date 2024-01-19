@@ -44,6 +44,7 @@ Trunk-based development emphasizes a single main branch with frequent small inte
 - Limited traceability
 - Favors pair-programming over individual work
 
+
 # GitHub Flow (Feature Branching)
 Similar to Trunk-based Development, GitHub Flow also revolves around a main branch, with developers creating feature branches, submitting pull requests, and merging changes after code review. 
 
@@ -73,7 +74,9 @@ Similar to Trunk-based Development, GitHub Flow also revolves around a main bran
 - Scale is limited due to merging, pulling, deployments
 - Testing *must* be automated
 
+
 # GitLab Flow
+
 
 **Key Points**
 
