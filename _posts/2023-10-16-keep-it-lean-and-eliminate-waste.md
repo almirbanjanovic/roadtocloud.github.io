@@ -9,6 +9,7 @@ tags:
   - sdlc
   - AI
   - ML
+  - strategy
 ---
 
 # Constant Change
@@ -36,7 +37,7 @@ With the aim of keeping at lean and eliminating waste, I present the Seven Pilla
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/keep-it-lean-seven-pillars.png){: .align-center}
 
-# Guiding Principles
+## Guiding Principles
 Guiding principles in the context of cloud computing and software development serve as a collective North Star for teams, offering a shared vision and a set of fundamental beliefs that guide decision-making and actions. These principles become the foundation upon which shared goals are built, creating a sense of "skin in the game" for all team members.
 
 When teams align around shared goals based on these guiding principles, it fosters a collaborative environment where everyone is working towards a common objective. This shared commitment not only enhances teamwork but also cultivates a collective responsibility for the success of the project or initiative.
@@ -45,11 +46,11 @@ Furthermore, the opportunity to define shared goals provides a chance to tie Obj
 
 In essence, the combination of guiding principles, a North Star vision, and shared goals creates a powerful synergy. It establishes a strong foundation for collaboration, encourages a sense of ownership, and allows teams to navigate the complex landscape of cloud computing and software development with a unified purpose.
 
-# Guiding Principles, Education & Training
+## Guiding Principles, Education & Training
 This is where the rubber starts to meet the road, from theory to practice.  In education and training for cloud computing and software development, "Where the rubber meets the road" emphasizes the crucial application of knowledge. Achieving alignment on guiding principles becomes paramount at this juncture. Instilling a shared understanding of the aforementioned guiding principles lays a solid foundation.  It ensures that theoretical learning translates seamlessly into practical application, guiding individuals as they navigate the challenges of real-world scenarios in cloud computing and software development projects. This alignment not only encourages collaboration but also empowers teams to confidently apply principles when it matters most – in the practical implementation of their skills.
 
 
-# Visibility, Accountability, Feedback
+## Visibility, Accountability, Feedback
 The importance of visibility, accountability, and feedback cannot be overstated. 
 
 Visibility ensures that everyone has a clear understanding of the data, metrics, and insights driving decision-making. This transparency is crucial as it aligns actions with guiding principles and allows teams to address issues openly.
@@ -61,7 +62,7 @@ And finally feedback mechanisms complete this triad, providing a continuous loop
 This iterative process ensures that guiding principles remain relevant, responsive to changing dynamics, and effective in guiding decisions and actions in the ever-evolving landscape of cloud computing and software development. In essence, visibility, accountability, and feedback form a symbiotic relationship, creating a framework that not only guides but also adapts, ensuring the resilience and relevance of guiding principles.
 
 
-# Self-service, Automation
+## Self-service, Automation
 In the landscape of software development and cloud computing, the concept of "One Entry Door with Automated Blueprints" becomes a pivotal solution to address the challenges posed by the shift left, YBYR (you build it, you run it) approach, which can lead to cognitive overload and increased complexity.
 
 As teams navigate the evolving responsibilities brought by this paradigm shift, the need for self-service and automation becomes paramount. The complexity of tasks, such as dealing with intake forms, approval boards, documentation, and adherence to various patterns across DevSecFinMLOps, can be overwhelming. The traditional manual processes not only create inefficiencies and waste but also hinder the swift implementation and delivery of solutions.
