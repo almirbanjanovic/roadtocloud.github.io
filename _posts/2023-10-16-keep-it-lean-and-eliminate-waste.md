@@ -45,6 +45,9 @@ Guiding principles in the context of cloud computing and software development se
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/implementing-lean-software-development.png" alt="">
   <figcaption><cite>Poppendieck, M., & Poppendieck, T. (2007). Implementing Lean Software Development: From Concept to Cash. Pearson Education.</cite></figcaption>
 </figure> 
+<br>
+<br>
+<br>
    1. Eliminate Waste
    2. Build Quality In ("Poka Yoke")
    3. Create Knowledge ("Epistemic Humility")
@@ -55,7 +58,9 @@ Guiding principles in the context of cloud computing and software development se
 <br>
 <br>
 <br>
-
+<br>
+<br>
+<br>
 
 <figure style="width: 150px" class="align-right">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/the-devops-handbook.png" alt="">
