@@ -10,7 +10,7 @@ intro:
   - excerpt: "Welcome to Road to Cloud, your guide to crafting high-performance, cost-effective, and resilient solutions for your enterprise journey."
 ---
 
-{% include feature_row id="intro" type="center" %}
+{% include feature_row id="intro" type="left" %}
 
 {% if page.url != "/" and site.breadcrumbs %}
   {% unless paginator %}
