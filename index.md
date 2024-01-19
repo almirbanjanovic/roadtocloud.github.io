@@ -10,14 +10,7 @@ intro:
   - excerpt: "Welcome to Road to Cloud, your guide to crafting high-performance, cost-effective, and resilient solutions for your enterprise journey."
 ---
 
-{% include feature_row id="intro" type="left" %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
-    {% endunless %}
-    {{ content }}
-  </div>
+{% include feature_row id="intro" type="center" %}
 
 # Latest
 {% for post in site.posts %}
