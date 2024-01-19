@@ -52,20 +52,16 @@ Guiding principles in the context of cloud computing and software development se
 &nbsp; 5. Deliver Fast<br>
 &nbsp; 6. Respect People<br>
 &nbsp; 7. Optimize the Whole<br>
-<br>
 
 <figure style="width: 150px" class="align-right">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/the-devops-handbook.png" alt="">
 </figure> 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 &nbsp; 1. The Principles of Flow <br>
 &nbsp; 2. The Principles of Feedback <br>
 &nbsp; 3. The Principles of Continual Learning <br>
+<br>
 <br>
 <br>
 <br>
