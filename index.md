@@ -11,15 +11,3 @@ intro:
 ---
 
 {% include feature_row id="intro" type="center" %}
-
-# Latest
-{% for post in site.posts limit:1 %}
-  [{{ post.title }}]({{ post.url }})
-  {{ post.excerpt | truncate: 156 }}
-{% endfor %}
-
-## Recent
-{% for post in site.posts offset:1 limit:3 %}
-  [{{ post.title }}]({{ post.url }})
-  {{ post.excerpt | truncate: 156 }}
-{% endfor %}
