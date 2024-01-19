@@ -22,7 +22,7 @@ Use data to create knowledge. Use Machine Learning (ML) and Artificial Intellige
 ![Heraclitus](../assets/images/heraclitus.png)
 > "Change is the only constant."
 >
-> -- <cite>Heraclitus, Greek Philosopher</cite>
+> - <cite>Heraclitus, Greek Philosopher</cite>
 
 
 # The Seven Pillars
