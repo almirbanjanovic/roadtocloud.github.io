@@ -31,9 +31,11 @@ Lean, Agile and DevOps represent systems to force you to stop pretending that yo
 Use data to create knowledge. Use Machine Learning (ML) and Artificial Intelligence (AI) for augmentation and efficiency, resilience and ultimately customer experience.
 
 
-
-
 # The Seven Pillars
+
+With the aim of keeping at lean and eliminating waste, I present the Seven Pillars.  These pillars provide a systematic and collaborative approach to work toward becoming lean and eliminating waste.
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/keep-it-lean-seven-pillars.png){: .align-center}
 
 # Guiding Principles
 
