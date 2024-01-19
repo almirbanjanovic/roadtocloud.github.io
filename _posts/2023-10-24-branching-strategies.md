@@ -76,25 +76,59 @@ Similar to Trunk-based Development, GitHub Flow also revolves around a main bran
 
 
 # GitLab Flow
-
+GitLab Flow expands on and shares similarities with GitHub Flow above but places additional emphasis on automated testing. It involves feature branches, merge requests, and a continuous delivery approach.
 
 **Key Points**
+- Supports separate testing environment
+- Multiple long-living branches such as main, testing, production
+- Only short-lived branches are feature branches
 
 **Implementation Checklist**
+- Educate developers on workflow and explain similarity to GitLab Flow
+- Develop features in separate branches
+- Utilize merge / pull requests for code reviews
+- Must automate testing
 
 **Pros**
+- Similar to GitLab Flow
+- Integrates testing for higher code quality
 
 **Cons**
+- Testing must be fully automated, which might present challenges to some teams
+- Limited traceability
+
 
 # Git Flow
+This is the most complex workflow, which involves multiple short-living and long-living branches.  However, Git Flow introduces a more structured branching model with designated branches for features, releases, and hotfixes. It offers a comprehensive strategy for projects with complex release cycles.
 
 **Key Points**
+- Good for grouping multiple features into specific releases
+- Multiple short-living branches such as feature, release, hotfix
+- Multiple long-living branches such as main and develop
+- Well-established process for hot fixes
+- Ideal for large teams of ten (10) or more developers in multiple georgraphic locations
 
 **Implementation Checklist**
+- Determine and add branch protections (pull requests, permissions)
+- Merge and delete any outstanding branches
+- Add gating for approvals and testing
+- Pick main and develop branches
 
 **Pros**
+- Great for specific testing and compliance requirements
+- Supports managing multiple versions
+- Great traceability between features and branches
+- Works well with large teams with sub-teams across different time zones
+- Can bundle multiple features in one release
 
 **Cons**
+- Very complex process
+- Very high learning curve
+- May require dedicated release manager
+- Merge conflicts are frequent and complicated
+- Merge conflicts require line-by-line resolution
+- Difficult and long path to production
+
 
 # Summary
 In conclusion, trunk-based development, GitHub Flow, GitLab Flow, and GitFlow provide different approaches to branching, catering to varying project needs, team sizes and seniority. Trunk-based and GitHub/GitLab Flow are simpler and favor continuous integration, while GitFlow introduces more structure for traceability for projects with complex release strategies. The choice depends on the project's size, complexity, and the desired balance between simplicity and structure.
