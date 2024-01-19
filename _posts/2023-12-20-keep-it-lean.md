@@ -8,8 +8,8 @@ tags:
   - agile
   - devops
   - sdlc
-  - AI
-  - ML
+  - ai
+  - ml
   - strategy
 ---
 
