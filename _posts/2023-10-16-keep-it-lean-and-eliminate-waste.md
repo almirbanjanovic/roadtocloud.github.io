@@ -47,13 +47,13 @@ Guiding principles in the context of cloud computing and software development se
 </figure> 
 <br>
 
-&nbsp; 1. Eliminate Waste
-&nbsp; 2. Build Quality In ("Poka Yoke")
-&nbsp; 3. Create Knowledge ("Epistemic Humility")
-&nbsp; 4. Defer Commitment
-&nbsp; 5. Deliver Fast
-&nbsp; 6. Respect People
-&nbsp; 7. Optimize the Whole
+&nbsp; 1. Eliminate Waste<br>
+&nbsp; 2. Build Quality In ("Poka Yoke")<br>
+&nbsp; 3. Create Knowledge ("Epistemic Humility")<br>
+&nbsp; 4. Defer Commitment<br>
+&nbsp; 5. Deliver Fast<br>
+&nbsp; 6. Respect People<br>
+&nbsp; 7. Optimize the Whole<br>
 <br>
 <br>
 <br>
