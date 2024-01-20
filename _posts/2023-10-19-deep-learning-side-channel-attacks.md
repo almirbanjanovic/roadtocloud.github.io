@@ -1,5 +1,7 @@
 ---
 title:  "Deep-Learning Side-Channel Attacks"
+header:
+  teaser: "/assets/images/profiling-attacks.png"
 excerpt: "Deep learning side channel attacks involve exploiting unintended information leakage from the implementation of deep learning models to infer sensitive information or manipulate their behavior."
 toc: true
 tags:
