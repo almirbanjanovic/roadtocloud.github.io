@@ -1,5 +1,7 @@
 ---
 title:  "Architecture Assessment Framework"
+header:
+  teaser: "/assets/images/arch-assess-1.jpg"
 excerpt: "A collaborative and reusable framework for assessing current state architectures, identifying challenges, and providing recommendations."
 toc: true
 tags:
