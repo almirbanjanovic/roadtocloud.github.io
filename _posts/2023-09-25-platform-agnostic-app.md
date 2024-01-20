@@ -1,5 +1,7 @@
 ---
 title:  "Platform Agnostic Web App"
+header:
+  teaser: "/assets/images/platform-agnostic-ci-cd-flow.png"
 excerpt: "Avoiding cloud platform lock-in with ASP.NET Core 7."
 toc: true
 tags:
