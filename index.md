@@ -10,20 +10,14 @@ intro:
   - excerpt: "Welcome to Road to Cloud, your guide to crafting high-performance, cost-effective, and resilient solutions for your enterprise journey."
 feature_row:
   - image_path: assets/images/architecture.jpg
-    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
-    alt: "placeholder image 1"
+    alt: "Architecture"
     title: "Architecture"
-    excerpt: "Strategy and Architecture"
   - image_path: /assets/images/cloud.jpg
-    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
-    alt: "Cloud Application"
+    alt: "Cloud"
     title: "Cloud"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
   - image_path: /assets/images/devops.jpg
-    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
+    alt: "DevOps"
     title: "DevOps"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-
 ---
 
 {% include feature_row id="intro" type="center" %}
