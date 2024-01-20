@@ -9,13 +9,13 @@ excerpt: "Chronicles of grand strategy to imaginatively crafted solutions with c
 intro: 
   - excerpt: "Welcome to Road to Cloud, your guide to crafting high-performance, cost-effective, and resilient solutions for your enterprise journey."
 feature_row:
-  - image_path: /assets/images/architecture.jpg
+  - image_path: /assets/images/architecture_splash.jpg
     alt: "Architecture"
     title: "Architecture"
-  - image_path: /assets/images/cloud.jpg
+  - image_path: /assets/images/cloud_splash.jpg
     alt: "Cloud"
     title: "Cloud"
-  - image_path: /assets/images/devops.jpg
+  - image_path: /assets/images/devops_splash.jpg
     alt: "DevOps"
     title: "DevOps"
 ---
