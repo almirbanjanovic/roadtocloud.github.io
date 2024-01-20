@@ -28,7 +28,9 @@ In general, a modular, cloud-agnostic, application that follows the 12 factor me
 # CI/CD with GitHub Actions
 ![CI/CD](../assets/images/platform-agnostic-ci-cd-flow.png){:class="img-responsive"}
 
-### GitHub Actions for Microsoft Azure
+<br>
+## GitHub Actions for Microsoft Azure
+<br>
 
 {% highlight yaml %}
 name: GitHub Actions for Azure
@@ -100,8 +102,9 @@ jobs:
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 {% endhighlight %}
 
-
-### GitHub Actions for Google Cloud Platform
+<br>
+## GitHub Actions for Google Cloud Platform
+<br>
 
 {% highlight yaml %}
 name: GitHub Actions for GCP
