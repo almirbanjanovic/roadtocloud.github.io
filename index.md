@@ -8,7 +8,9 @@ header:
   actions:
     - label: "Learn More"
       url: "/blog/"
-excerpt: "Welcome to Road to Cloud, your guide to crafting high-performance, cost-effective, and resilient solutions for your enterprise journey -- from grand strategy to imaginatively crafted solutions with creative implementations!"
+excerpt: "Welcome to Road to Cloud, your guide to crafting high-performance, cost-effective, and resilient solutions for your enterprise journey."
+intro:
+  - excerpt: "Chronicles of grand strategy to imaginatively crafted solutions with creative implementations!"
 ---
 
 {% include feature_row id="intro" type="center" %}
