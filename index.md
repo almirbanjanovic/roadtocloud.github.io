@@ -12,19 +12,19 @@ feature_row:
   - image_path: /assets/images/architecture.png
     alt: "Architecture"
     title: "Architecture"
-    url: https://www.theroadtocloud.com/tags/#architecture
+    url: https:/tags/
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/cloud.png
     alt: "Cloud"
     title: "Cloud"
-    url: /tags/#cloud
+    url: /tags/
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/devops.png
     alt: "DevOps"
     title: "DevOps"
-    url: /tags/#devops
+    url: /tags/
     btn_class: "btn--primary"
     btn_label: "Learn more"
 ---
