@@ -1,5 +1,7 @@
 ---
 title:  "DevOps Branching Strategies"
+header:
+  teaser: "/assets/images/branching-strategies-decision-guide.jpg"
 excerpt: "DevOps branching strategies represent approaches used in software development to manage and organize code repositories effectively. "
 toc: true
 tags:
