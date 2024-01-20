@@ -99,7 +99,7 @@ GitLab Flow expands on and shares similarities with GitHub Flow above but places
 - Must automate testing
 
 ## Pros
-- Similar to GitLab Flow
+- Similar to GitHub Flow
 - Integrates testing for higher code quality
 
 ## Cons
