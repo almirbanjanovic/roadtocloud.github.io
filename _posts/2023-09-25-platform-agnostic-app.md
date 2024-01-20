@@ -25,7 +25,7 @@ In general, a modular, cloud-agnostic, application that follows the 12 factor me
 ### Microsoft Azure Physical Architecture
 ![Microsoft Azure Physical Architecture](../assets/images/platform-agnostic-azure-architecture.png){:class="img-responsive"}
 
-```
+```yaml
 name: GitHub Actions for Azure
 
 env:
@@ -99,7 +99,7 @@ jobs:
 ### Google Cloud Platform Architecture
 ![Google Cloud Platform Architecture](../assets/images/platform-agnostic-gcp-architecture.png){:class="img-responsive"}
 
-```
+```yaml
 name: GitHub Actions for GCP
 
 on: 
