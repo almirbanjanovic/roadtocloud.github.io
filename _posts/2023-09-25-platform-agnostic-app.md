@@ -19,13 +19,18 @@ In general, a modular, cloud-agnostic, application that follows the 12 factor me
 ### Logical Architecture using MVC Pattern
 ![Logical Architecture](../assets/images/platform-agnostic-mvc-architecture.png){:class="img-responsive"}
 
-### CI/CD
-![CI/CD](../assets/images/platform-agnostic-ci-cd-flow.png){:class="img-responsive"}
+### Google Cloud Platform Architecture
+![Google Cloud Platform Architecture](../assets/images/platform-agnostic-gcp-architecture.png){:class="img-responsive"}
 
 ### Microsoft Azure Physical Architecture
 ![Microsoft Azure Physical Architecture](../assets/images/platform-agnostic-azure-architecture.png){:class="img-responsive"}
 
-```yaml
+# CI/CD with GitHub Actions
+![CI/CD](../assets/images/platform-agnostic-ci-cd-flow.png){:class="img-responsive"}
+
+### GitHub Actions for Microsoft Azure
+
+{% highlight yaml %}
 name: GitHub Actions for Azure
 
 env:
@@ -93,13 +98,12 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-```
+{% endhighlight %}
 
 
-### Google Cloud Platform Architecture
-![Google Cloud Platform Architecture](../assets/images/platform-agnostic-gcp-architecture.png){:class="img-responsive"}
+### GitHub Actions for Google Cloud Platform
 
-```yaml
+{% highlight yaml %}
 name: GitHub Actions for GCP
 
 on: 
@@ -136,5 +140,5 @@ jobs:
           
       - name: Deploy to App Engine
         run: gcloud app deploy ./BethanysPieShop/app.yaml
-```
+{% endhighlight %}
 
