@@ -11,3 +11,17 @@ intro:
 ---
 
 {% include feature_row id="intro" type="center" %}
+
+<table>
+    <tr>
+        <td id="left">Left</td>
+        <td id="center">Center</td>
+        <td id="right">Right</td>
+    </tr>
+    <tr>
+        <td>{% assign random = site.time | date: "%s%N" | modulo: site.posts.size %} {{ site.posts[random].title }}</td>
+        <td>{% assign random = site.time | date: "%s%N" | modulo: site.posts.size %} {{ site.posts[random].title }}</td>
+        <td>{% assign random = site.time | date: "%s%N" | modulo: site.posts.size %} {{ site.posts[random].title }}</td>
+    </tr>
+</table>
+
