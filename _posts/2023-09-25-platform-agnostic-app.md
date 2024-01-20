@@ -1,6 +1,6 @@
 ---
 title:  "Platform Agnostic Web App"
-excerpt: "Avoiding cloud platform lock-in."
+excerpt: "Avoiding cloud platform lock-in with ASP.NET Core 7."
 toc: true
 tags:
   - cloud
