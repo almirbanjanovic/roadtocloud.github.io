@@ -31,7 +31,6 @@ In general, a modular, cloud-agnostic, application that follows the 12 factor me
 <br>
 ## GitHub Actions for Microsoft Azure
 <br>
-
 {% highlight yaml %}
 name: GitHub Actions for Azure
 
@@ -105,7 +104,6 @@ jobs:
 <br>
 ## GitHub Actions for Google Cloud Platform
 <br>
-
 {% highlight yaml %}
 name: GitHub Actions for GCP
 
