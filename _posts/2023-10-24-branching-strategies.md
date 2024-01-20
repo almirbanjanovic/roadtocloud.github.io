@@ -93,7 +93,7 @@ GitLab Flow expands on and shares similarities with GitHub Flow above but places
 - Only short-lived branches are feature branches
 
 ## Implementation Checklist
-- Educate developers on workflow and explain similarity to GitLab Flow
+- Educate developers on workflow and explain similarity to GitHub Flow
 - Develop features in separate branches
 - Utilize merge / pull requests for code reviews
 - Must automate testing
