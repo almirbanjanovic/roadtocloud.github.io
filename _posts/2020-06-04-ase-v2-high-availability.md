@@ -1,5 +1,7 @@
 ---
 title:  "Azure App Service Environment (ASEv2) High Availability"
+header:
+  teaser: "/assets/images/ase-v2-high-availability.png"
 excerpt: "Increasing cloud application resilience in Microsoft Azure with Traffic Managers, Application Gateways and App Services."
 tags:
   - architecture
