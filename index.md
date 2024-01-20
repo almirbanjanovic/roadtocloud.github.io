@@ -12,7 +12,7 @@ feature_row:
   - image_path: /assets/images/architecture.png
     alt: "Architecture"
     title: "Architecture"
-    url: [Tags Archive][tags-archive]
+    url: /tag-archive/#architecture
   - image_path: /assets/images/cloud.png
     alt: "Cloud"
     title: "Cloud"
