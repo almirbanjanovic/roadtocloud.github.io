@@ -12,19 +12,19 @@ feature_row:
   - image_path: /assets/images/architecture.png
     alt: "Architecture"
     title: "Architecture"
-    url: /tag-archive/#architecture
+    url: /tags/#architecture
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/cloud.png
     alt: "Cloud"
     title: "Cloud"
-    url: /tag-archive/#cloud
+    url: /tags/#cloud
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/devops.png
     alt: "DevOps"
     title: "DevOps"
-    url: /tag-archive/#devops
+    url: /tags/#devops
     btn_class: "btn--primary"
     btn_label: "Learn more"
 ---
