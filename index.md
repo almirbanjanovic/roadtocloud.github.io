@@ -12,7 +12,7 @@ feature_row:
   - image_path: /assets/images/architecture.png
     alt: "Architecture"
     title: "Architecture"
-    url: /tags/#architecture
+    url: https://www.theroadtocloud.com/tags/#architecture
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/cloud.png
