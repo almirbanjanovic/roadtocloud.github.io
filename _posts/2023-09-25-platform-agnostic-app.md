@@ -19,11 +19,11 @@ In general, a modular, cloud-agnostic, application that follows the 12 factor me
 ## Logical Architecture using MVC Pattern
 ![Logical Architecture](../assets/images/platform-agnostic-mvc-architecture.png){:class="img-responsive"}
 
-## Google Cloud Platform Architecture
-![Google Cloud Platform Architecture](../assets/images/platform-agnostic-gcp-architecture.png){:class="img-responsive"}
-
 ## Microsoft Azure Physical Architecture
 ![Microsoft Azure Physical Architecture](../assets/images/platform-agnostic-azure-architecture.png){:class="img-responsive"}
+
+## Google Cloud Platform Architecture
+![Google Cloud Platform Architecture](../assets/images/platform-agnostic-gcp-architecture.png){:class="img-responsive"}
 
 # CI/CD with GitHub Actions
 ![CI/CD](../assets/images/platform-agnostic-ci-cd-flow.png){:class="img-responsive"}
