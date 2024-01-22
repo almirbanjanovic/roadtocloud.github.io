@@ -21,13 +21,11 @@ DevOps gating is a practice in software development that involves setting up che
 
 For example:
 
-<div align="center">
 The Statement | The Test
 ---|---
 "The grass is green." | "It is *certain* that this is true."
 "This code behaves correctly." | "It is *certain* that this is true."
 "The release is ready." | "It is certain that this is true."
-</div>
 
 This can be accomplished by automated testing, or gating, in a DevOps pipeline.  The "**X**" intersection of the DevOps infinite loop is where this happens.
 
@@ -35,6 +33,9 @@ This can be accomplished by automated testing, or gating, in a DevOps pipeline. 
 
 ## Source Code Version Control
 Use repositories for this.  Without this you can't track any issues found in any scans fruterh down the pipeline.  The 12 factor methodology outlines this too.
+
+## Artifact Version Control
+It is very important to systematically manage and track changes to binary artifacts, such as open source packages, Docker images, VM images and build pipeline artifacts. A very good tool for something like this is Artifactory.  It plays a crucial role in DevOps gating by providing a centralized and secure repository for binary artifacts.  
 
 ## Optimal Branching Strategy
 The best branching strategy for commiting and managing code repositories will depend on your team's specific make-up and requirements.  See my post on [DevOps Branchign Strategies]({% post_url 2023-10-24-branching-strategies %}) for help with this.
@@ -48,12 +49,11 @@ This one is pretty simple - avoid manual committees and boards for approvals.  T
 ## Vulnerability Testing
 Here we introduce Dev**Sec**Ops.  DevSecOps integrates security practices seamlessly into the DevOps pipeline. It encompasses:
 
-<div align="center">
 DevSecOps Area | Description | Tooling
 ---|---|---
-Dependency checks | examining and securing external software dependencies | National Vulnerability Database (NVD), Artifactory
+Dependency checks / Open Source Scanning | Examining and securing external software dependencies, such as code from third party sources | Artifactory, OWASP Dependency-Check, National Vulnerability Database (NVD)
 Static Application Security Testing (SAST) | Identifying vulnerabilities in the source code | Checkmarx, Fortify, GitHub CodeQL
 Dynamic Application Security Testing (DAST) | Assessing security during runtime | OWASP ZAP, Burp Suite, and Acunetix
-</div>
+
 
 
