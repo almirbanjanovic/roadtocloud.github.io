@@ -1,5 +1,5 @@
 ---
-title:  "DevOps Gates"
+title:  "DevOps Code Quality Gates"
 header:
   teaser: "/assets/images/devops-gating.jpg"
 excerpt: "The Gates to the Cloud - delivery pipeline checkpoints for healthy, resilient, and secure applications."
