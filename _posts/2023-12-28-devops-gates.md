@@ -70,4 +70,5 @@ Automated rollbacks are crucial for maintaining system stability and resilience 
 ## Automated Change Orders
 This one is pretty simple - avoid manual committees and boards for approvals.  This creates waste and decreases efficiency, speed and does not create knowledge through testing.
 
-
+# Final Thoughts
+We discussed the concept of DevOps gates in the context of a continuous integration and continuous deployment (CI/CD) pipeline. We also explored the importance of implementing gates to ensure quality, security, and compliance at different stages of the development process. Above, I also provided a comprehensive list of DevOps gating, to enhance  the efficiency and reliability of the software delivery pipeline.
