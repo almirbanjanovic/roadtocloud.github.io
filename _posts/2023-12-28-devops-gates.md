@@ -9,6 +9,7 @@ tags:
   - sdlc
   - strategy
 ---
+
 <figure style="width: 300px" class="align-left">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/devops-gating.jpg" alt="">
 </figure> 
@@ -30,3 +31,13 @@ The Statement | The Test
 
 This can be accomplished by automated testing, or gating, in a DevOps pipeline.  The "**X**" intersection of the DevOps infinite loop is where this happens.
 
+# The Gates to the Cloud
+
+## Source Code Version Control
+Use repositories for this.  Without this you can't track any issues found in any scans fruterh down the pipeline.  The 12 factor methodology outlines this too.
+
+## Optimal Branching Strategy
+The best branching strategy for commiting and managing code repositories will depend on your team's specific make-up and requirements.  See my post on [DevOps Branchign Strategies]({% post_url 2023-10-24-branching-strategies %}) for help with this.
+
+## Unit Testing with Appropriate Percentage (%) Code Coverage
+You might be wondering what an appropriate Unit Tes percentage coverage is.  Well the answer is - IT DEPENDS.  This will again depend on your team's specific make-up on team and/or developer maturity.  I found [this discussion on StackOverflow](https://stackoverflow.com/questions/90002/what-is-a-reasonable-code-coverage-for-unit-tests-and-why) nails this.  In simple terms, a random number percentage (%) does not equal good code coverage.
