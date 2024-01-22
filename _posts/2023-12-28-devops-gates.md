@@ -58,6 +58,7 @@ Dependency checks / Open Source Scanning | Examining and securing external softw
 Static Application Security Testing (SAST) | Identifying vulnerabilities in the source code | [Checkmarx](https://checkmarx.com/), [Fortify](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer), [GitHub CodeQL](https://codeql.github.com/)
 Dynamic Application Security Testing (DAST) | Assessing security during runtime | [OWASP ZAP](https://www.zaproxy.org/), [Burp Suite](https://portswigger.net/burp), and [Acunetix](https://www.acunetix.com/)
 
+
 # Rollbacks and Zero-downtime Releases
 Automated rollbacks are crucial for maintaining system stability and resilience and enable zero-downtime releases. Techniques such as rolling updates, blue/green deployments, canary releases, and feature flags contribute to the success of automated rollbacks. 
 
