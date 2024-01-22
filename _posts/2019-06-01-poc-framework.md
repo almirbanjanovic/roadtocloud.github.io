@@ -18,10 +18,10 @@ In app development and cloud computing, a Proof of Concept (POC) is a quick demo
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/poc-framework.jpg){: .align-center}
 
-# Benefits
+# What is a Proof of Concept?
 The approach to proof of concepts (POCs) is straightforward, business-focused, and efficient. A team should prioritize consistency and objectivity, ensuring a rapid delivery of POCs. By identifying existing capabilities within the enterprise, a team can accelerate implementation and cuts costs. The method reduces potential impacts and incompatibilities with enterprise capabilities. A catalog of all POC efforts is maintained, preventing duplications and ensuring streamlined technology testing. Additionally, there is an emphasis on early utilization or updates to reference architectures, ensuring that POCs address new challenges rather than rehashing old ones.
 
-# Concept Development
+## Concept Development
 Concept development is focused on ensuring the analysis has been completed and the necessary inputs are documented and distributed to the necessary stakeholders. This stage addresses the following major themes:
 
 - What is the problem are we trying to solve?
@@ -35,7 +35,7 @@ Concept development is focused on ensuring the analysis has been completed and t
 - Technology / vendor selection
 - Development of POC implementation plan
 
-# Proof of Value
+## Proof of Value
 Proof of Value focuses on the ability of a product or technology to fulfill the defined business needs. The main ideas here are:
 
 - Establishment of Proof of Value environment/runtime
@@ -45,14 +45,14 @@ Proof of Value focuses on the ability of a product or technology to fulfill the 
 - Identify the business owners of the product/technology.  Note this may be different than the entity requesting the POC
 - Determine the best strategy to integrate the new product/technology into the business
 
-# Proof of Technology
+## Proof of Technology
 Proof of Technology is focused on the technological aspects of a product or new technology implementation, determining if it will fit/scale into the standard recommended architecture. This phase covers the key topics outlined below:
 
 - Establish Proof of Technology environment/runtime, if not already established
 - Perform functional evaluation to ensure the product technology will operate in environment, can be managed, and scale to the expected needs
 - Identify the infrastructure owners of the product/technology
 
-# Concept Completion 
+## Concept Completion 
 Concept Completion is the summing of the Concept Development, Proof of Value and Proof of Technology phases into a cohesive package, providing the basis of a final product/technology go/no-go decision. In this phase, the key areas of attention encompass specific outputs:
 
 - Combined value, business need, technology assessment
