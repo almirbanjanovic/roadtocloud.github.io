@@ -13,7 +13,7 @@ tags:
 <figure style="width: 300px" class="align-left">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/devops-gating.jpg" alt="">
 </figure> 
-<br>
+
 DevOps gating is a practice in software development that involves setting up checkpoints or gates to make sure the application code is ready for deployment. One of the core messages of [Keep it Lean and Eliminate Waste]({% post_url 2023-12-20-keep-it-lean %}) is the concept of "epistemic humility" - that we need to accept that quality of our knowledge about a specific application component in delivery is poor and we need to plan with that in mind. As a result, two separate propositions that have to be evaluated independently:
 
 1. A statement and
@@ -26,7 +26,7 @@ The Statement | The Test
 "The grass is green." | "It is *certain* that this is true."
 "This code behaves correctly." | "It is *certain* that this is true."
 "The release is ready." | "It is certain that this is true."
-
+<br>
 This can be accomplished by automated testing, or gating, in a DevOps pipeline.  The "**X**" intersection of the DevOps infinite loop is where this happens.
 
 # The Gates to the Cloud
@@ -57,7 +57,7 @@ DevSecOps Area | Description | Tooling
 Dependency checks / Open Source Scanning | Examining and securing external software dependencies, such as code from third party sources | [Artifactory](https://jfrog.com/artifactory/), [OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/), [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 Static Application Security Testing (SAST) | Identifying vulnerabilities in the source code | [Checkmarx](https://checkmarx.com/), [Fortify](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer), [GitHub CodeQL](https://codeql.github.com/)
 Dynamic Application Security Testing (DAST) | Assessing security during runtime | [OWASP ZAP](https://www.zaproxy.org/), [Burp Suite](https://portswigger.net/burp), [Acunetix](https://www.acunetix.com/)
-
+<br>
 
 # Rollbacks and Zero-downtime Releases
 Automated rollbacks are crucial for maintaining system stability and resilience and enable zero-downtime releases. Techniques such as rolling updates, blue/green deployments, canary releases, and feature flags contribute to the success of automated rollbacks. 
