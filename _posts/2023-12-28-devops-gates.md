@@ -40,8 +40,11 @@ It is very important to systematically manage and track changes to binary artifa
 ## Optimal Branching Strategy
 The best branching strategy for commiting and managing code repositories will depend on your team's specific make-up and requirements.  See my post on [DevOps Branching Strategies]({% post_url 2023-10-24-branching-strategies %}) for help with this.
 
-## Unit Testing with Appropriate Percentage (%) Code Coverage
-You might be wondering what an appropriate Unit Tes percentage coverage is.  Well the answer is - IT DEPENDS.  This will again depend on your team's specific make-up on team and/or developer maturity.  I found [this discussion on StackOverflow](https://stackoverflow.com/questions/90002/what-is-a-reasonable-code-coverage-for-unit-tests-and-why) nails this.  In simple terms, a random number percentage (%) does not equal good code coverage.  Tools such as SonarQube can help here.
+## Unit Testing
+Unit testing is essential to shifting testing left so issues are identified before they're even deployed.  You might be wondering what an appropriate Unit Tes percentage coverage is.  Well the answer is - IT DEPENDS.  This will again depend on your team's specific make-up on team and/or developer maturity.  I found [this discussion on StackOverflow](https://stackoverflow.com/questions/90002/what-is-a-reasonable-code-coverage-for-unit-tests-and-why) nails this.  In simple terms, a random number percentage (%) does not equal good code coverage.  Tools such as SonarQube can help here.
+
+## Integration Testing
+Integration testing ensures that all components work together as intended in any environment, which should be carbon copies of one another for predictability, stability and reliability.  For example, in a web application scenario, integration testing ensures that user interfaces interact correctly with a RESTful API, which, in turn, communicates seamlessly with the underlying database. Testing might involve validating data flow, error handling, and overall system behavior to guarantee cohesion and reliability across the entire stack.
 
 ## Automated Change Orders
 This one is pretty simple - avoid manual committees and boards for approvals.  This creates waste and decreases efficiency, speed and does not create knowledge through testing.
