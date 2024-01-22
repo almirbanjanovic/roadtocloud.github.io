@@ -16,11 +16,11 @@ tags:
 DevOps gating is a practice in software development that involves setting up checkpoints or gates to make sure the application code is ready for deployment. One of the core messages of ![Keep it Lean and Eliminate Waste](_posts/2023-12-20-keep-it-lean.md) is the concept of "epistemic humility" - that we need to accept that quality of our knowledge about a specific application component in delivery is poor and we need to plan with that in mind. As a result, two separate propositions that have to be evaluated independently:
 
 1. A statement
-2. The test
+2. A test
 
 For example:
 
-**The Statement | The Test**
+The Statement | The Test
 ---|---
 "The grass is green." | "It is *certain* that this is true."
 "This code behaves correctly." | "It is *certain* that this is true."
