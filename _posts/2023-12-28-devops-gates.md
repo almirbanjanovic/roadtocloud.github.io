@@ -26,7 +26,7 @@ The Statement | The Test
 "The grass is green." | "It is *certain* that this is true."
 "This code behaves correctly." | "It is *certain* that this is true."
 "The release is ready." | "It is certain that this is true."
-<br>
+
 This can be accomplished by automated testing, or gating, in a DevOps pipeline.  The "**X**" intersection of the DevOps infinite loop is where this happens.
 
 # The Gates to the Cloud
@@ -57,7 +57,7 @@ DevSecOps Area | Description | Tooling
 Dependency checks / Open Source Scanning | Examining and securing external software dependencies, such as code from third party sources | [Artifactory](https://jfrog.com/artifactory/), [OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/), [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 Static Application Security Testing (SAST) | Identifying vulnerabilities in the source code | [Checkmarx](https://checkmarx.com/), [Fortify](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer), [GitHub CodeQL](https://codeql.github.com/)
 Dynamic Application Security Testing (DAST) | Assessing security during runtime | [OWASP ZAP](https://www.zaproxy.org/), [Burp Suite](https://portswigger.net/burp), [Acunetix](https://www.acunetix.com/)
-<br>
+
 
 # Rollbacks and Zero-downtime Releases
 Automated rollbacks are crucial for maintaining system stability and resilience and enable zero-downtime releases. Techniques such as rolling updates, blue/green deployments, canary releases, and feature flags contribute to the success of automated rollbacks. 
