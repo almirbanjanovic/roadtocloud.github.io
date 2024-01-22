@@ -6,6 +6,7 @@ excerpt: "The Gates to the Cloud - delivery pipeline checkpoints for healthy, re
 toc: true
 tags:
   - devops
+  - code
   - sdlc
   - strategy
 ---
