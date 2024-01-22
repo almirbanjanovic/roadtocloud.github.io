@@ -59,7 +59,7 @@ Static Application Security Testing (SAST) | Identifying vulnerabilities in the 
 Dynamic Application Security Testing (DAST) | Assessing security during runtime | [OWASP ZAP](https://www.zaproxy.org/), [Burp Suite](https://portswigger.net/burp), [Acunetix](https://www.acunetix.com/)
 
 
-# Rollbacks and Zero-downtime Releases
+## Rollbacks and Zero-downtime Releases
 Automated rollbacks are crucial for maintaining system stability and resilience and enable zero-downtime releases. Techniques such as rolling updates, blue/green deployments, canary releases, and feature flags contribute to the success of automated rollbacks. 
 
 - Rolling updates involve gradually replacing instances of the application with new versions, minimizing downtime - see [Kubernetes - Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/).
