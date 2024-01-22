@@ -33,7 +33,7 @@ This can be accomplished by automated testing, or gating, in a DevOps pipeline. 
 # The Gates to the Cloud
 
 ## Source Code Version Control
-Use repositories for this.  Without this you can't track any issues found in any scans further down the pipeline.  The [12 factor methodology (https://12factor.net) outlines this too.  We can use [Azure DevOps Repos](https://azure.microsoft.com/en-us/products/devops/repos/) and [GitHub](https://github.com) for this purpose.
+Use repositories for this.  Without this you can't track any issues found in any scans further down the pipeline.  The [12 factor methodology](https://12factor.net) outlines this too.  We can use [Azure DevOps Repos](https://azure.microsoft.com/en-us/products/devops/repos/) and [GitHub](https://github.com) for this purpose.
 
 ## Artifact Version Control
 It is very important to systematically manage and track changes to binary artifacts, such as open source packages, Docker images, VM images and build pipeline artifacts. A very good tool for something like this is [Artifactory](https://jfrog.com/artifactory/).  It plays a crucial role in DevOps quality gating by providing a centralized and secure repository for binary artifacts.  
