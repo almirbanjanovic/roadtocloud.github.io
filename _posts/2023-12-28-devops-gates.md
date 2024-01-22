@@ -56,7 +56,7 @@ DevSecOps Area | Description | Tooling
 ---|---|---
 Dependency checks / Open Source Scanning | Examining and securing external software dependencies, such as code from third party sources | [Artifactory](https://jfrog.com/artifactory/), [OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/), [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 Static Application Security Testing (SAST) | Identifying vulnerabilities in the source code | [Checkmarx](https://checkmarx.com/), [Fortify](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer), [GitHub CodeQL](https://codeql.github.com/)
-Dynamic Application Security Testing (DAST) | Assessing security during runtime | [OWASP ZAP](https://www.zaproxy.org/), [Burp Suite](https://portswigger.net/burp), and [Acunetix](https://www.acunetix.com/)
+Dynamic Application Security Testing (DAST) | Assessing security during runtime | [OWASP ZAP](https://www.zaproxy.org/), [Burp Suite](https://portswigger.net/burp), [Acunetix](https://www.acunetix.com/)
 
 
 # Rollbacks and Zero-downtime Releases
