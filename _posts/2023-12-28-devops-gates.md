@@ -20,11 +20,13 @@ DevOps gating is a practice in software development that involves setting up che
 
 For example:
 
+<div align="center">
 The Statement | The Test
 ---|---
 "The grass is green." | "It is *certain* that this is true."
 "This code behaves correctly." | "It is *certain* that this is true."
 "The release is ready." | "It is certain that this is true."
+</div>
 
 This can be accomplished by automated testing, or gating, in a DevOps pipeline.  The "**X**" intersection of the DevOps infinite loop is where this happens.
 
