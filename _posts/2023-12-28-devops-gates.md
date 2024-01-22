@@ -38,7 +38,7 @@ Use repositories for this.  Without this you can't track any issues found in any
 It is very important to systematically manage and track changes to binary artifacts, such as open source packages, Docker images, VM images and build pipeline artifacts. A very good tool for something like this is Artifactory.  It plays a crucial role in DevOps gating by providing a centralized and secure repository for binary artifacts.  
 
 ## Optimal Branching Strategy
-The best branching strategy for commiting and managing code repositories will depend on your team's specific make-up and requirements.  See my post on [DevOps Branchign Strategies]({% post_url 2023-10-24-branching-strategies %}) for help with this.
+The best branching strategy for commiting and managing code repositories will depend on your team's specific make-up and requirements.  See my post on [DevOps Branching Strategies]({% post_url 2023-10-24-branching-strategies %}) for help with this.
 
 ## Unit Testing with Appropriate Percentage (%) Code Coverage
 You might be wondering what an appropriate Unit Tes percentage coverage is.  Well the answer is - IT DEPENDS.  This will again depend on your team's specific make-up on team and/or developer maturity.  I found [this discussion on StackOverflow](https://stackoverflow.com/questions/90002/what-is-a-reasonable-code-coverage-for-unit-tests-and-why) nails this.  In simple terms, a random number percentage (%) does not equal good code coverage.  Tools such as SonarQube can help here.
