@@ -40,4 +40,20 @@ Use repositories for this.  Without this you can't track any issues found in any
 The best branching strategy for commiting and managing code repositories will depend on your team's specific make-up and requirements.  See my post on [DevOps Branchign Strategies]({% post_url 2023-10-24-branching-strategies %}) for help with this.
 
 ## Unit Testing with Appropriate Percentage (%) Code Coverage
-You might be wondering what an appropriate Unit Tes percentage coverage is.  Well the answer is - IT DEPENDS.  This will again depend on your team's specific make-up on team and/or developer maturity.  I found [this discussion on StackOverflow](https://stackoverflow.com/questions/90002/what-is-a-reasonable-code-coverage-for-unit-tests-and-why) nails this.  In simple terms, a random number percentage (%) does not equal good code coverage.
+You might be wondering what an appropriate Unit Tes percentage coverage is.  Well the answer is - IT DEPENDS.  This will again depend on your team's specific make-up on team and/or developer maturity.  I found [this discussion on StackOverflow](https://stackoverflow.com/questions/90002/what-is-a-reasonable-code-coverage-for-unit-tests-and-why) nails this.  In simple terms, a random number percentage (%) does not equal good code coverage.  Tools such as SonarQube can help here.
+
+## Automated Change Orders
+This one is pretty simple - avoid manual committees and boards for approvals.  This creates waste and decreases efficiency, speed and does not create knowledge through testing.
+
+## Vulnerability Testing
+Here we introduce Dev**Sec**Ops.  DevSecOps integrates security practices seamlessly into the DevOps pipeline. It encompasses:
+
+<div align="center">
+DevSecOps Area | Description | Tooling
+---|---|---
+Dependency checks | examining and securing external software dependencies | National Vulnerability Database (NVD), Artifactory
+Static Application Security Testing (SAST) | Identifying vulnerabilities in the source code | Checkmarx, Fortify, GitHub CodeQL
+Dynamic Application Security Testing (DAST) | Assessing security during runtime | OWASP ZAP, Burp Suite, and Acunetix
+</div>
+
+
