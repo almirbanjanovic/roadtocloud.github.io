@@ -14,7 +14,7 @@ tags:
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/devops-gating.jpg" alt="">
 </figure> 
 
-DevOps gating is a practice in software development that involves setting up checkpoints or gates to make sure the application code is ready for deployment. One of the core messages of [Keep it Lean and Eliminate Waste]({% post_url 2023-12-20-keep-it-lean %}) is the concept of "epistemic humility" - that we need to accept that quality of our knowledge about a specific application component in delivery is poor and we need to plan with that in mind. As a result, two separate propositions that have to be evaluated independently:
+DevOps gating is a practice in software development that involves setting up checkpoints or gates to make sure the application code is ready for deployment. One of the core messages of [Keep it Lean and Eliminate Waste]({% post_url 2023-12-20-keep-it-lean %}) is the concept of "epistemic humility" - that we need to accept that quality of our knowledge about a specific application component in delivery is poor and we need to plan with that in mind. As a result, there are two separate propositions that have to be evaluated independently:
 
 1. A statement and
 2. A test.
@@ -32,10 +32,10 @@ This can be accomplished by automated testing, or gating, in a DevOps pipeline. 
 # The Gates to the Cloud
 
 ## Source Code Version Control
-Use repositories for this.  Without this you can't track any issues found in any scans fruterh down the pipeline.  The 12 factor methodology outlines this too.  We can use [Azure DevOps Repos](https://azure.microsoft.com/en-us/products/devops/repos/) and [GitHub](https://github.com) for this purpose.
+Use repositories for this.  Without this you can't track any issues found in any scans further down the pipeline.  The [12 factor methodology (https://12factor.net) outlines this too.  We can use [Azure DevOps Repos](https://azure.microsoft.com/en-us/products/devops/repos/) and [GitHub](https://github.com) for this purpose.
 
 ## Artifact Version Control
-It is very important to systematically manage and track changes to binary artifacts, such as open source packages, Docker images, VM images and build pipeline artifacts. A very good tool for something like this is [Artifactory](https://jfrog.com/artifactory/).  It plays a crucial role in DevOps gating by providing a centralized and secure repository for binary artifacts.  
+It is very important to systematically manage and track changes to binary artifacts, such as open source packages, Docker images, VM images and build pipeline artifacts. A very good tool for something like this is [Artifactory](https://jfrog.com/artifactory/).  It plays a crucial role in DevOps quality gating by providing a centralized and secure repository for binary artifacts.  
 
 ## Optimal Branching Strategy
 The best branching strategy for commiting and managing code repositories will depend on your team's specific make-up and requirements.  See my post on [DevOps Branching Strategies]({% post_url 2023-10-24-branching-strategies %}) for help with this.
