@@ -51,7 +51,7 @@ Integration testing ensures that all components work together as intended in any
 Here we need to make sure to test throughput of an application.  This ivolves testing CPU load, memory (RAM) load, response times and service level agreements (SLAs) are met.  For example, evaluating how the web application performs under a specified number of concurrent users, how the REST API responds to increased requests, and how the database manages a higher volume of transactions. This testing ensures that the different components can sustain optimal performance and reliability under varying load conditions, helping identify and address potential bottlenecks. Here we can use tools such as Apache [JMeter](https://jmeter.apache.org/), [Loadrunner](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview) and [Grafana k6](https://k6.io/).
 
 ## Vulnerability Testing
-Here we introduce Dev**Sec**Ops.  DevSecOps integrates security practices seamlessly into the DevOps pipeline. It encompasses:
+Here we introduce Dev**Sec**Ops, which integrates security practices seamlessly into the DevOps pipeline. It encompasses:
 
 DevSecOps Area | Description | Tooling
 ---|---|---
