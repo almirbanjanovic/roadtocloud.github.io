@@ -6,6 +6,7 @@ excerpt: "DevOps branching strategies represent approaches used in software deve
 toc: true
 tags:
   - devops
+  - code
   - sdlc
   - strategy
 ---
