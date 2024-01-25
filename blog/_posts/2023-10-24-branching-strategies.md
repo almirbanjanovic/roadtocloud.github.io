@@ -145,8 +145,6 @@ This is the most complex workflow, which involves multiple short-living and long
 # Decision Guide and Summary
 In conclusion, trunk-based development, GitHub Flow, GitLab Flow, and GitFlow provide different approaches to branching, catering to varying project needs, team sizes and seniority. Trunk-based and GitHub/GitLab Flow are simpler and favor continuous integration, while GitFlow introduces more structure for traceability for projects with complex release strategies. The choice depends on the project's size, complexity, and the desired balance between simplicity and structure.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/branching-strategies-decision-guide.jpg){: .align-center}
-
 <figure>
 	<a href="/assets/images/branching-strategies-decision-guide.jpg"><img src="/assets/images/branching-strategies-decision-guide.jpg"></a>
 </figure>
