@@ -1,7 +1,7 @@
 ---
 title: Podcasts
 layout: category
-category: podcast
-permalink: /podcast/
+permalink: /categories/podcast/
+taxonomy: podcast
 author_profile: true
 ---
