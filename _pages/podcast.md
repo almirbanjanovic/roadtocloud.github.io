@@ -1,6 +1,7 @@
 ---
 title: Podcasts
-layout: category
+layout: home
+category: podcast
 permalink: /podcast/
 author_profile: true
 ---
