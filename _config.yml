@@ -283,15 +283,6 @@ compress_html:
   ignore:
     envs: development
 
-# Collections
-collections:
-  podcast:
-    output: true
-    permalink: /:collection/:path/
-  blog:
-    output: true
-    permalink: /:collection/:path/
-
 defaults:
  
   # _pages
@@ -305,27 +296,6 @@ defaults:
   - scope:
       path: ""
       type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: # true
-      related: true
-
-  # _podcast
-  - scope:
-      path: ""
-      type: podcast
-    values:
-      layout: single
-      author_profile: true
-      share: false
-
-  # _blog
-  - scope:
-      path: ""
-      type: blog
     values:
       layout: single
       author_profile: true
