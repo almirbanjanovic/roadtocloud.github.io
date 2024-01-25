@@ -1,7 +1,7 @@
 ---
 title: Podcasts
-layout: category
 permalink: /podcast/
+layout: category
 taxonomy: podcast
 author_profile: true
 ---
