@@ -3,7 +3,7 @@ main:
   - title: "Blog"
     url: /blog/
   - title: "Podcast"
-    url: /podcast/  
+    url: /category/podcast/
   - title: "About"
     url: /about/
   # - title: "Sample Posts"
