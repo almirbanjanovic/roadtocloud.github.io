@@ -1,8 +1,8 @@
 ---
-title:  "Platform Agnostic Web App"
+title:  "Cloud-agnostic Web App"
 header:
   teaser: "/assets/images/platform-agnostic-ci-cd-flow.png"
-excerpt: "Avoiding cloud platform lock-in with ASP.NET Core 7. Deploy your app to any Cloud Service Provider (CSP). This post dives into Microsoft Azure and Google Cloud Platform (GCP)."
+excerpt: "Avoiding cloud platform lock-in with ASP.NET Core 7. Deploy your app to any Cloud Service Provider (CSP)!"
 toc: true
 tags:
   - cloud
