@@ -308,3 +308,12 @@ defaults:
       comments: # true
       share: # true
       related: true
+
+  # _podcast
+  - scope:
+      path: ""
+      type: podcast
+    values:
+      layout: single
+      author_profile: true
+      share: false
