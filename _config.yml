@@ -289,6 +289,14 @@ collections:
     permalink: /:collection/:path/
 
 defaults:
+ 
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+  
   # _posts
   - scope:
       path: ""
