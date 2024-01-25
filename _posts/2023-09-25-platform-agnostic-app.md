@@ -2,7 +2,7 @@
 title:  "Platform Agnostic Web App"
 header:
   teaser: "/assets/images/platform-agnostic-ci-cd-flow.png"
-excerpt: "Avoiding cloud platform lock-in with ASP.NET Core 7."
+excerpt: "Avoiding cloud platform lock-in with ASP.NET Core 7. Deploy your app to any Cloud Service Provider (CSP). This post dives into Microsoft Azure and Google Cloud Platform (GCP)."
 toc: true
 tags:
   - cloud
@@ -17,16 +17,24 @@ In general, a modular, cloud-agnostic, application that follows the 12 factor me
 # Architecture Diagrams
 
 ## Logical Architecture using MVC Pattern
-![Logical Architecture](../assets/images/platform-agnostic-mvc-architecture.png){:class="img-responsive"}
+<figure>
+    <a href="/assets/images/platform-agnostic-mvc-architecture.png"><img src="/assets/images/platform-agnostic-mvc-architecture.png"></a>
+</figure>
 
 ## Microsoft Azure Physical Architecture
-![Microsoft Azure Physical Architecture](../assets/images/platform-agnostic-azure-architecture.png){:class="img-responsive"}
+<figure>
+    <a href="/assets/images/platform-agnostic-azure-architecture.png"><img src="/assets/images/platform-agnostic-azure-architecture.png"></a>
+</figure>
 
 ## Google Cloud Platform Architecture
-![Google Cloud Platform Architecture](../assets/images/platform-agnostic-gcp-architecture.png){:class="img-responsive"}
+<figure>
+    <a href="/assets/images/platform-agnostic-gcp-architecture.png"><img src="/assets/images/platform-agnostic-gcp-architecture.png"></a>
+</figure>
 
 # CI/CD with GitHub Actions
-![CI/CD](../assets/images/platform-agnostic-ci-cd-flow.png){:class="img-responsive"}
+<figure>
+    <a href="/assets/images/platform-agnostic-ci-cd-flow.png"><img src="/assets/images/platform-agnostic-ci-cd-flow.png"></a>
+</figure>
 
 <br>
 ## GitHub Actions for Microsoft Azure
