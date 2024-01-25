@@ -1,7 +1,7 @@
 ---
 title: Blog
 layout: category
-taxonomy: podcast
+taxonomy: blog
 permalink: /blog/
 author_profile: true
 ---
