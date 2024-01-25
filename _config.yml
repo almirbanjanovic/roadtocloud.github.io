@@ -287,6 +287,9 @@ collections:
   podcast:
     output: true
     permalink: /:collection/:path/
+  blog:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -313,6 +316,15 @@ defaults:
   - scope:
       path: ""
       type: podcast
+    values:
+      layout: single
+      author_profile: true
+      share: false
+
+   # _blog
+   - scope:
+      path: ""
+      type: blog
     values:
       layout: single
       author_profile: true
