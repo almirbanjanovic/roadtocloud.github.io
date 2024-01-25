@@ -287,7 +287,7 @@ collections:
   podcast:
     output: true
     permalink: /:collection/:path/
-  blog:
+  posts:
     output: true
     permalink: /:collection/:path/
 
@@ -328,4 +328,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: false
+      read_time: true
+      comments: # true
+      share: # true
+      related: true
