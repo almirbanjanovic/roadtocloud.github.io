@@ -1,6 +1,7 @@
 ---
 title: Blog
+layout: category
+taxonomy: podcast
 permalink: /blog/
-layout: home
 author_profile: true
 ---
