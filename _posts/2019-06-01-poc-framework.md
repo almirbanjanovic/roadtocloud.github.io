@@ -17,7 +17,7 @@ In app development and cloud computing, a Proof of Concept (POC) is a quick demo
 4. Concept Completion
 
 <figure>
-    <a href="assets/images/poc-framework.jpg"><img src="assets/images/poc-framework.jpg"></a>
+    <a href="/assets/images/poc-framework.jpg"><img src="/assets/images/poc-framework.jpg"></a>
 </figure>
 
 # What is a Proof of Concept?
