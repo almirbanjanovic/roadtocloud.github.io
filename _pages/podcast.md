@@ -1,5 +1,5 @@
 ---
-title: Podcast
+title: Podcasts
 layout: collection
 permalink: /category/podcast
 taxonomy: podcast
