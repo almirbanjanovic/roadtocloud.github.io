@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/clouds.jpg
   actions:
     - label: "Learn More"
-      url: "category-archive"
+      url: "/category-archive/"
   caption: "Photo credit: Almir Banjanovic"
 excerpt: "Welcome to Road to Cloud -- your guide to grand strategy, imaginative solutions and creative implementations!"
 intro:
