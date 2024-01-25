@@ -2,5 +2,6 @@
 title: Blog
 permalink: /blog/
 collection: blog
-layout: home
+layout: collection
+author_profile: true
 ---
