@@ -22,14 +22,14 @@ Furthermore, this SCA uses deep learning because of some inherent advantages:
    
 In general, SCAs can be categorized into two separate types: profiling attacks, which use a training device and a testing device, and non-profiling attacks, which only use the test device. *Figure 1* below portrays profiling attacks, while *Figure 2* shows non-profiling attacks.  
 
-<figure style="width: 580px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/profiling-attacks.png" alt="">
+<figure>
+  <a href="/assets/images/profiling-attacks.png"><img src="/assets/images/profiling-attacks.png"></a>
   <figcaption>Figure 1 - Profiling attacks.</figcaption>
 </figure> 
 
 
-<figure style="width: 580px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/non-profiling-attacks.png" alt="">
+<figure>
+  <a href="/assets/images/non-profiling-attacks.png"><img src="/assets/images/non-profiling-attacks.png"></a>
   <figcaption>Figure 2 - Non-profiling attacks.</figcaption>
 </figure> 
 
@@ -46,16 +46,16 @@ This deep learning side channel attack study contributes by optimizing problems 
    
 For profiling attacks (*Figure 1*), using TripletPower proved more favorable over using CNNs, assuming fewer training traces are available.  CNN does outperform TripletPower if there are sufficient training traces available, more than 4,000 as can be seen in *Figure 3* below.
 
-<figure style="width: 580px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/triplet-power-vs-cnn.png" alt="">
+<figure>
+  <a href="/assets/images/triplet-power-vs-cnn.png"><img src="/assets/images/triplet-power-vs-cnn.png"></a>
   <figcaption>Figure 3 - TripletPower vs Convolutional Neural Network (CNN) in Profiling Attacks.</figcaption>
 </figure> 
 
 However, in practical terms, TripletPower, at least from an attacker’s perspective, does lower the barrier of entry without thousands of training traces.
 For profiling attacks (*Figure 2*), similar observations were made as can be seen in *Figure 4* below.  Once there are sufficient traces available, more than 500, clear encryption keys can be identified.
 
-<figure style="width: 580px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/triplet-power-non-profiling-attack.png" alt="">
+<figure>
+  <a href="/assets/images/triplet-power-non-profiling-attack.png"><img src="/assets/images/triplet-power-non-profiling-attack.png"></a>
   <figcaption>Figure 4 - TripletPower for Non-Profiling Attacks. Graph on the left shows 250 traces, while the graph on the rights shows 500 traces.</figcaption>
 </figure> 
 
@@ -72,15 +72,15 @@ Furthermore, other questions arise when it comes to power consumption monitoring
 ## AES Encryption
 This study focuses on AES-128 encryption.  AES is a symmetric-key algorithm. This means that the same key is used for both encryption and decryption.  *Figure 5* below illustrates this visually.
 
-<figure style="width: 300px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/symmetric-encryption.png" alt="">
+<figure>
+  <a href="/assets/images/symmetric-encryption.png"><img src="/assets/images/symmetric-encryption.png"></a>
   <figcaption>Figure 5 – Symmetric Encryption.</figcaption>
 </figure> 
 
 This characteristic makes side channel attacks especially worrisome.  Considering this, asymmetric encryption algorithms that rely on public and private keys can mitigate risk.  *Figure 6* illustrates asymmetric encryption.  
 
-<figure style="width: 300px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/asymmetric-encryption.png" alt="">
+<figure>
+  <a href="/assets/images/asymmetric-encryption.png"><img src="/assets/images/asymmetric-encryption.png"></a>
   <figcaption>Figure 6 – Asymmetric Encryption.</figcaption>
 </figure> 
 
