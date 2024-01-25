@@ -10,7 +10,7 @@ tags:
 
 Out of the box, Microsoft guarantes an SLA, or availability, of 99.95% for Azure App Services and Azure App Service Environments.  This becomes problematic for applications which require an SLA of at least 99.99% or more.  The trick here is to use Application Gateways and Availability Zones to increase availability and resilience.  The diagram below showcases such a deployment.  
 
-<figure style="width: 500px" class="align-center">
+<figure style="width: 400px" class="align-left">
 	<a href="{{ site.url }}{{ site.baseurl }}/assets/images/ase-v2-high-availability.png"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/ase-v2-high-availability.png"></a>
 </figure>
 
