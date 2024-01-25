@@ -1,8 +1,6 @@
 ---
 title: Podcasts
-//layout: collection
-permalink: /category/podcast
-taxonomy: podcast
+layout: collection
 collection: podcast
 author_profile: true
 ---
