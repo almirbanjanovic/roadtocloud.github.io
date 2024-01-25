@@ -1,7 +1,7 @@
 ---
 title: Podcasts
-layout: collection
+layout: home
 permalink: /podcast/
-collection: podcast
+category: podcasts
 author_profile: true
 ---
