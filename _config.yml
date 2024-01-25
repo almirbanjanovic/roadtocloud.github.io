@@ -284,12 +284,12 @@ compress_html:
     envs: development
 
 collections:
-  - podcast:
-      output: true
-      permalink: /:collection/:path/
-  - blog:
-      output: true
-      permalink: /:collection/:path/
+  podcast:
+    output: true
+    permalink: /:collection/:path/
+  blog:
+    output: true
+    permalink: /:collection/:path/
 
 defaults:
  
