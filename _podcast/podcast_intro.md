@@ -2,7 +2,7 @@
 title:  "Welcome to Road to Cloud"
 header:
   teaser: "/assets/images/logo.jpg"
-excerpt: "Welcome to Road to Cloud."
+excerpt: "In today’s episode we will set the stage for Road to Cloud podcast."
 ---
 
 
