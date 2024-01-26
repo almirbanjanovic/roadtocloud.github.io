@@ -6,7 +6,7 @@ header:
   overlay_image: /assets/images/clouds.jpg
   actions:
     - label: "Learn More"
-      url: "/categories/"
+      url: "/blog/"
   caption: "Photo credit: Created with DALLE-3."
 excerpt: "Welcome to Road to Cloud -- your guide to grand strategy, imaginative solutions and creative implementations!"
 intro:
