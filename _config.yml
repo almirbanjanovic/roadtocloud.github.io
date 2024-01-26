@@ -275,18 +275,18 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-# Collections
-collections:
-  podcasts:
-    output: true
-    permalink: /:collection/:path/
-
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
     envs: development
+
+# Collections
+collections:
+  podcast:
+    output: true
+    permalink: /:collection/:path/
 
 defaults:
   # _pages
@@ -309,10 +309,10 @@ defaults:
       share: true
       related: false
 
-  # _podcasts
+  # _podcast
   - scope:
       path: ""
-      type: podcasts
+      type: podcast
     values:
       layout: single
       author_profile: true
