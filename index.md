@@ -6,8 +6,8 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/clouds.jpg
   actions:
-    - label: "View My Resume"
-      url: "/assets/documents/Almir_Banjanovic_Resume_2024.pdf"
+    - label: "Learn More"
+      url: "/categories/"
   caption: "Photo credit: Almir Banjanovic, Grand Teton National Park"
 excerpt: "Welcome to Road to Cloud -- your guide to grand strategy, imaginative solutions and creative implementations!"
 intro:
