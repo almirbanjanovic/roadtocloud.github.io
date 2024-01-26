@@ -7,4 +7,4 @@ Almir Banjanovic is an enthusiastic, inquisitive, and cloud-savvy expert boastin
 
 Outside of work, Almir finds joy in the company of family and friends, indulging in the occasional hot or cold brew, strumming the guitar, reading news and immersing himself in extensive car literature and videos.
 
-<button name="button" onclick="/assets/documents/Almir_Banjanovic_Resume_2024.pdf">View Almir's Resume</button>
+[View Almir's Resume]/assets/documents/Almir_Banjanovic_Resume_2024.pdf){: .btn target="_blank"}
