@@ -6,8 +6,8 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/clouds.jpg
   actions:
-    - label: "Learn More"
-      url: "/categories/"
+    - label: "View My Resume"
+      url: "/assets/documents/Almir_Banjanovic_Resume_2024.pdf"
   caption: "Photo credit: Almir Banjanovic"
 excerpt: "Welcome to Road to Cloud -- your guide to grand strategy, imaginative solutions and creative implementations!"
 intro:
