@@ -2,8 +2,8 @@
 main:
   - title: "Blog"
     url: /blog/
-  - title: "Podcast"
-    url: /podcast/
+  #- title: "Podcast"
+  #  url: /podcast/
   - title: "About"
     url: /about/
   # - title: "Sample Posts"
