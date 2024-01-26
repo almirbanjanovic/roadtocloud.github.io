@@ -2,6 +2,7 @@
 title: "Road to Cloud"
 layout: splash
 header:
+  overlay_color: "#80daeb"
   overlay_image: /assets/images/clouds.jpg
   actions:
     - label: "Learn More"
