@@ -11,7 +11,7 @@ tags:
   - strategy
 ---
 
-<figure> style="width: 150px" class="align-left"
+<figure style="width: 150px" class="align-left">
 	<a href="/assets/images/devops-gating.jpg"><img src="/assets/images/devops-gating.jpg"></a>
 	<figcaption>The Gates to the Cloud</figcaption>
 </figure>
