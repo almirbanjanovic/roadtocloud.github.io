@@ -1,5 +1,5 @@
 ---
-title: Podcasts
+title: Podcast
 layout: collection
 permalink: /podcast/
 collection: podcast
