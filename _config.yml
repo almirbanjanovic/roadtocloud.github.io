@@ -108,7 +108,7 @@ author:
   name             : "Almir Banjanovic"
   avatar           : "/assets/images/bio-head.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Chronicles of grand strategy to imaginatively crafted solutions with creative implementations! 🚀"
-  location         : # "Louisville, KY"
+  location         : #
   email            :
   links:
     - label: "LinkedIn"
