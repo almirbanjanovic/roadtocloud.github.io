@@ -1,5 +1,5 @@
 ---
-title:  "Cloud-agnostic Web App"
+title:  "Cloud-Agnostic Web App"
 header:
   teaser: "/assets/images/platform-agnostic-ci-cd-flow.png"
 excerpt: "Avoiding cloud platform lock-in with ASP.NET Core 7. Deploy your app to any Cloud Service Provider (CSP)!"
