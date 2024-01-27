@@ -2,7 +2,7 @@
 title:  "DevOps Branching Strategies"
 header:
   teaser: "/assets/images/branching-strategies-decision-guide.jpg"
-excerpt: "DevOps branching strategies represent approaches used in software development to manage and organize code repositories effectively. "
+excerpt: "Branching strategies represent approaches used in software development to manage and organize code repositories effectively. "
 toc: true
 tags:
   - devops
@@ -12,7 +12,7 @@ tags:
 ---
 
 # The Big Picture
-DevOps branching strategies are approaches used in software development to manage and organize code repositories effectively. These strategies dictate how development branches are structured, merged, and deployed, providing a framework for collaboration, version control, and seamless integration in the DevOps lifecycle.  However, it is important to remember that there is no one size fits all approach. Here I discuss four (4) well-known branching strategies, which represent a good summary of standard branching strategies but mutations and customizations of them are possible and frequent. These are *Trunk-based Development, GitHub Flow, GitLab Flow, and GitFlow*.
+Branching strategies are approaches used in software development to manage and organize code repositories effectively. These strategies dictate how development branches are structured, merged, and deployed, providing a framework for collaboration, version control, and seamless integration in the DevOps lifecycle.  However, it is important to remember that there is no one size fits all approach. Here I discuss four (4) well-known branching strategies, which represent a good summary of standard branching strategies but mutations and customizations of them are possible and frequent. These are *Trunk-based Development, GitHub Flow, GitLab Flow, and GitFlow*.
 
 # Trunk-based Development (Centralized Workflow)
 <figure>
