@@ -1,8 +1,8 @@
 ---
-title:  "Architecture Assessment Framework"
+title:  "Modernizing and Gaining Alignment"
 header:
   teaser: "/assets/images/arch-assess-1.jpg"
-excerpt: "A collaborative and reusable framework for assessing current state architectures, identifying challenges, and providing recommendations."
+excerpt: "A collaborative and reusable framework for assessing current state architectures, identifying challenges, providing recommendations and gaining alignment."
 toc: true
 tags:
   - enterprise architecture
