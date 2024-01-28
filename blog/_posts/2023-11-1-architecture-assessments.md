@@ -1,10 +1,11 @@
 ---
-title:  "Modernizing and Gaining Alignment"
+title:  "Gaining Alignment on Modernization Journeys"
 header:
   teaser: "/assets/images/arch-assess-1.jpg"
 excerpt: "How does one embark on a modernization and digital transformation journey? Oftentimes this involves assessing current state vs future state, identifying challenges, providing recommendations and gaining alignment."
 toc: true
 tags:
+  - digital transformation
   - enterprise architecture
   - strategy
 ---
@@ -19,16 +20,16 @@ First and foremost, there is a need to evaluate the current state, thoroughly ex
 
 Subsequently, identifying challenges becomes pivotal, accompanied by the definition of actionable business value outcomes to address these challenges strategically. The next step involves providing recommendations based on any findings, offering both practical and strategic insights. To ensure a seamless implementation of these recommendations, a roadmap is created or adjusted, outlining the sequence of activities required for enhancement. Lastly, continuous communication of progress and the realized business value is vital, fostering transparency and garnering support for ongoing improvements. Through this comprehensive process, organizations can systematically refine their enterprise modernization goals, ensuring alignment with business goals and facilitating a culture of continuous improvement.
 
-# Enterprise Alignment
+# Gaining Alignment
 <figure>
     <a href="/assets/images/arch-assess-2.jpg"><img src="/assets/images/arch-assess-2.jpg"></a>
 </figure>
 
-Achieving enterprise alignment through architecture assessments involves a stepwise approach. Begin by gaining endorsement from enterprise architecture leadership, aligning the assessment with overarching architectural goals. Move on to securing alignment from specific segment or area leadership, tailoring the assessment to address their unique concerns. Finally, engage senior and executive leadership, emphasizing tangible business value outcomes and alignment with broader organizational objectives. This cascading alignment ensures a collaborative and integrated approach throughout the organization, enhancing the success of the architecture assessment.
+Achieving enterprise alignment involves a stepwise approach. Begin by gaining endorsement from your own team, including peers and leadership, aligning the assessment with any established guiding principles and industry standards. Move on to securing alignment from specific customer teams, as this grassroots alignment with help gather valuable feedback. Next, engage customer leadership, incorporating any feedback from the previous step. Finally, depending on the scope of the modernization and digital transformation journey, it may also be necessary to engage senior and executive leadership, emphasizing tangible business value outcomes and alignment with broader organizational objectives. This cascading alignment ensures a collaborative and integrated approach throughout the organization, enhancing the success of digital transformation.
 
 # Roadmap
 <figure>
     <a href="/assets/images/arch-assess-3.jpg"><img src="/assets/images/arch-assess-3.jpg"></a>
 </figure>
 
-The roadmap for architecture enhancement follows a three-phase approach. In the short term, activities focus on conducting a thorough current-state evaluation and engaging stakeholders to define the scope and goals of the assessment. Near-term activities involve identifying challenges, providing actionable recommendations, and gaining alignment from enterprise architecture and specific segment leadership. The long-term plan includes implementing recommended changes, adjusting the architecture roadmap, and communicating progress and business value outcomes to senior and executive leadership. This phased approach ensures a systematic and strategic progression toward enhanced enterprise architecture aligned with organizational goals.
+The roadmap follows a three-phase approach. In the short term, activities focus on conducting a thorough current-state evaluation and engaging stakeholders to define the scope and goals of the assessment. Near-term activities involve identifying challenges, providing actionable recommendations, and gaining alignment from within your own team as well as specific customer teams and leadership. The long-term plan includes implementing recommended changes, adjusting the roadmap, and communicating progress and business value outcomes to senior and executive leadership. This phased approach ensures a systematic and strategic progression toward modernization. 
