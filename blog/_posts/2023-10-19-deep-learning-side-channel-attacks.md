@@ -10,7 +10,7 @@ tags:
   - ml
 ---
 
-Deep learning side channel attacks involve exploiting unintended information leakage from the implementation of deep learning models to infer sensitive information or manipulate their behavior. Recently I visited a presentation by Dr. Boyang Wang from the University of Cincinnati.  Below I'll give an overview of what deep-learning side-channel attacks are and offer my own critique.
+Deep learning side channel attacks involve exploiting unintended information leakage from the implementation of deep learning models to infer sensitive information or manipulate their behavior. Recently I visited a presentation by Dr. Boyang Wang from the University of Cincinnati.  Below I'll give an overview of what Dr. Wang presented about his research into deep-learning side-channel attacks and offer my own critique.
 
 # Synopsis
 In general terms, “side channel attacks” are attacks that use “side channel information”, which is information that can be retrieved from an encryption device. In this project, an attacker uses a side-channel attack (SCA) to analyze power draw of a specific target when it runs encryption with the aim of recovering its encryption key. The immediate question of “why” arises. Why is this possible? This is possible because power consumption is correlated with the intermediate values of encryption. In simpler terms, when an encryption algorithm runs, more power is drawn. In even simpler terms, computing one byte with all zeros consumes less power than one byte with all ones.
