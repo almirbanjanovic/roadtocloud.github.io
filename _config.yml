@@ -22,7 +22,7 @@ subtitle                 : "Chronicles on the road to cloud. " # site tagline th
 name                     : "Almir Banjanovic"
 description              : "Chronicles on the road to cloud."
 url                      : "https://www.theroadtocloud.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "/home" # the subpath of your site, e.g. "/blog"
 repository               : "rimlaban7/roadtocloud" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/logo-88x88.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
