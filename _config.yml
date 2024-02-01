@@ -308,7 +308,7 @@ defaults:
       comments: # true
       share: true
       related: false
-      class: wide
+      classes: wide
 
   # _podcast
   - scope:
