@@ -50,11 +50,6 @@ env:
 
 on: 
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
         
 jobs:
   build:
@@ -120,11 +115,6 @@ name: GitHub Actions for GCP
 
 on: 
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
 
 jobs:
   build:
