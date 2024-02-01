@@ -40,6 +40,7 @@ In general, a modular, cloud-agnostic, application that follows the 12 factor me
 ## GitHub Actions for Microsoft Azure
 <br>
 {% highlight yaml %}
+{% raw %}
 name: GitHub Actions for Azure
 
 env:
@@ -107,6 +108,7 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+{% endraw %}
 {% endhighlight %}
 
 <br>
