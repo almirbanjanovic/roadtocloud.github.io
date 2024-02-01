@@ -115,6 +115,7 @@ jobs:
 ## GitHub Actions for Google Cloud Platform
 <br>
 {% highlight yaml %}
+{% raw %}
 name: GitHub Actions for GCP
 
 on: 
@@ -151,5 +152,6 @@ jobs:
           
       - name: Deploy to App Engine
         run: gcloud app deploy ./BethanysPieShop/app.yaml
+{% endraw %}
 {% endhighlight %}
 
