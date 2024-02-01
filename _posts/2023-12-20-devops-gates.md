@@ -16,7 +16,7 @@ tags:
 	<figcaption>The Gates to the Cloud (Created with DALL-E 3!)</figcaption>
 </figure>
 
-Quality gating is a practice in software engineering that involves setting up checkpoints or gates to make sure the application code is ready for deployment. One of the core messages of [Keep it Lean and Eliminate Waste]({% post_url 2023-12-20-keep-it-lean %}) is the concept of "epistemic humility" - that we need to accept that quality of our knowledge about a specific component in delivery is poor and we need to plan with that in mind. As a result, there are two separate propositions that have to be evaluated independently:
+Quality gating is a practice in software engineering that involves setting up checkpoints or gates to make sure the application code is ready for deployment. One of the core messages of [Keep it Lean and Eliminate Waste]({% post_url 2023-10-20-keep-it-lean-and-eliminate-waste %}) is the concept of "epistemic humility" - that we need to accept that quality of our knowledge about a specific component in delivery is poor and we need to plan with that in mind. As a result, there are two separate propositions that have to be evaluated independently:
 
 1. A statement and
 2. A test.
