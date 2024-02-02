@@ -1,5 +1,5 @@
 ---
-title:  "Azure App Service Health-Checks"
+title:  "Custom Health-Checks for a Hybrid Cloud Application"
 header:
   teaser: "/assets/images/ase-single-region-health-check.png"
 excerpt: "Increasing hybrid cloud application resilience in Microsoft Azure with Traffic Managers, Application Gateways and App Services."
