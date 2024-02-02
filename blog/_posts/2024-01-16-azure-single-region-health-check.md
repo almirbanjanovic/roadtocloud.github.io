@@ -2,7 +2,7 @@
 title:  "Azure App Service Health-Checks"
 header:
   teaser: "/assets/images/ase-single-region-health-check.png"
-excerpt: "Increasing cloud application resilience in Microsoft Azure with Traffic Managers, Application Gateways and App Services."
+excerpt: "Increasing hybrid cloud application resilience in Microsoft Azure with Traffic Managers, Application Gateways and App Services."
 tags:
   - architecture
   - cloud
