@@ -2,7 +2,7 @@
 title:  "What exactly does CI/CD mean?"
 header:
   teaser: "/assets/images/continuous-integration-delivery-deployment.png"
-excerpt: "I often see people confusing the terms *Continuous Integration, Continuous Delivery and Continuous Deployment*.  Let's break it down in simpler terms."
+excerpt: "I often see people confusing the terms *Continuous Integration, Continuous Delivery* and *Continuous Deployment*.  Let's break it down in simpler terms."
 tags:
   - cloud
   - code
@@ -10,7 +10,7 @@ tags:
 ---
 
 
-I often see people confusing the terms *Continuous Integration, Continuous Delivery and Continuous Deployment*.  Let's break it down in simpler terms.
+I often see people confusing the terms *Continuous Integration, Continuous Delivery* and *Continuous Deployment*.  Let's break it down in simpler terms.
 
 <figure>
     <a href="/assets/images/continuous-integration-delivery-deployment.png"><img src="/assets/images/continuous-integration-delivery-deployment.png"></a>
