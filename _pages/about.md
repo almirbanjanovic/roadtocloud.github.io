@@ -8,5 +8,6 @@ Almir Banjanovic is an enthusiastic, inquisitive, and cloud-savvy expert boastin
 Outside of work, Almir finds joy in the company of family and friends. Favorite pastimes involve the occasional hot or cold brew, hiking in a national park, strumming the guitar, reading news and extensive car literature and videos.
 
 <figure>
-    <a href="/assets/images/yellowstone.jpg"><img src="/assets/images/yellowstone.jpg"></a>
+    <a href="/assets/images/yellowstone.JPG"><img src="/assets/images/yellowstone.JPG"></a>
+    <figcaption>Yellowstone National Park</figcaption>
 </figure>
