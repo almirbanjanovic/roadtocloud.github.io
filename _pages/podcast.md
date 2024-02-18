@@ -1,6 +1,7 @@
 ---
 title: Road to Cloud Podcast
 layout: single
+permalink: /podcast/
 ---
 
 <div style="height: 228px; width: 100%;"><iframe src="https://audio.com/embed/audio/1791210371882532?theme=image"
