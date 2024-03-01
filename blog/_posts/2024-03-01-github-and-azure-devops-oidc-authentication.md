@@ -1,7 +1,7 @@
 ---
 title:  "Authenticating GitHub and Azure DevOps using OpenID Connect"
 header:
-  teaser: "/assets/images/github_terraform_azure_function.jpg"
+  #teaser: "/assets/images/github_terraform_azure_function.jpg"
 excerpt: "What if I told you, that you could improve developer exprience **and** security with your DevOps pipelines?  Enter OpenID Connect (OIDC) to the rescue!"
 toc: true
 tags:
