@@ -27,10 +27,12 @@ A step-by-step guide to configure OIDC using Workload Identity Federation can be
 # Azure DevOps, Entra ID OIDC Authentication
 A picture is worth a thousand words.  I've laid out the authentication flow in the diagram below for Azue DevOps.  No more secrets management!
 
+## Azure DevOps, Entra ID, Azure Flow
 <figure>
     <a href="/assets/images/azure-devops-oidc.jpg"><img src="/assets/images/azure-devops-oidc.jpg"></a>
 </figure>
 
+## Microsoft's Chief Architect John Savill Explains
 Microsoft's Chief Architect John Savill explains OIDC authentication with Workload Identity Federation in his awesome YouTube videos that I have linked below.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/saTUeR_U3lA?si=r3OMGYwt5DVX3Iii" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -38,10 +40,12 @@ Microsoft's Chief Architect John Savill explains OIDC authentication with Worklo
 # GitHub, Entra ID OIDC Authentication
 How does this flow look for GitHub and GitHub Actions Workflows?  Well pretty similar to Azure DevOps and Azure Pipelines.  Check it out, gone are secrets!
 
+## GitHub, Entra ID, Azure Flow
 <figure>
     <a href="/assets/images/github-oidc.jpg"><img src="/assets/images/github-oidc.jpg"></a>
 </figure>
 
+## Microsoft's Chief Architect John Savill Explains
 Once again, also check out Microsoft's Chief Architect John Savill explain this OIDC flow for GitHub.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XkhkkLBkAT4?si=faDeaiViVhgPyBxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
