@@ -17,7 +17,7 @@ This project demonstrates the deployment of an Azure Function App using Terrafor
  
 
 <figure>
-    <a href="/assets/github_terraform_azure_function.jpg"><img src="/assets/github_terraform_azure_function.jpg"></a>
+    <a href="/assets/images/github_terraform_azure_function.jpg"><img src="/assets/images/github_terraform_azure_function.jpg"></a>
 </figure>
 
 ## Prerequisites
