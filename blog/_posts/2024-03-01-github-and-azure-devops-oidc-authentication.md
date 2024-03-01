@@ -31,7 +31,7 @@ Microsoft's Chief Architect John Savill explains OIDC authentication with Worklo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/saTUeR_U3lA?si=r3OMGYwt5DVX3Iii" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### GitHub
+# GitHub, Entra ID OIDC Authentication
 How does this flow look for GitHub and GitHub Actions Workflows?  Well pretty similar to Azure DevOps and Azure Pipelines.  Check it out, gone are secrets!
 
 <figure>
