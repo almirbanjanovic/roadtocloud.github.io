@@ -19,3 +19,15 @@ The problem with this approach is that now we are creating a client secret, basi
 A solution that is becoming increasingly popular involves using token exchange with OpenID Connect (OIDC). Microsoft even recommends this in their latest and greatest [documentation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect):
 
 >However, using hardcoded secrets requires you to create credentials in the cloud provider and then duplicate them in GitHub as a secret. With OpenID Connect (OIDC), you can take a different approach by configuring your workflow to request a short-lived access token directly from the cloud provider. Your cloud provider also needs to support OIDC on their end, and you must configure a trust relationship that controls which workflows are able to request the access tokens. Providers that currently support OIDC include Amazon Web Services, Azure, Google Cloud Platform, and HashiCorp Vault, among others.
+
+A step-by-step guide to configure OIDC using Workload Identity Federation can be found [here](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-that-uses-workload-identity-federation).
+
+## Additional Information
+
+Microsoft's Chief Architect John Savill explains OIDC authentication with Workload Identity Federation in his awesome YouTube videos that I have linked below.  
+
+### Azure DevOps
+<iframe width="560" height="315" src="https://www.youtube.com/embed/saTUeR_U3lA?si=r3OMGYwt5DVX3Iii" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### GitHub
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XkhkkLBkAT4?si=faDeaiViVhgPyBxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
