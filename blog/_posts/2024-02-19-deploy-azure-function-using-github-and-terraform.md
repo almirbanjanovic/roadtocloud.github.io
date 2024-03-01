@@ -3,6 +3,7 @@ title:  "Deploying to Azure using GitHub Actions and Terraform Cloud"
 header:
   teaser: "/assets/images/github_terraform_azure_function.jpg"
 excerpt: "Let's deploy an Azure Function using GitHub Actions and Terraform Cloud!"
+toc: true
 tags:
   - cloud
   - code
