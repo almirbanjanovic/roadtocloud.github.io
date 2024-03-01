@@ -1,8 +1,6 @@
 ---
 title:  "Authenticating GitHub and Azure DevOps using OpenID Connect"
-header:
-  #teaser: "/assets/images/github_terraform_azure_function.jpg"
-excerpt: "What if I told you, that you could improve developer exprience **and** security with your DevOps pipelines?  Enter OpenID Connect (OIDC) to the rescue!"
+excerpt: "What if I told you, we could improve developer exprience **and** security with your DevOps pipelines?  Enter OpenID Connect (OIDC) to the rescue!"
 toc: true
 tags:
   - cloud
@@ -22,12 +20,24 @@ A solution that is becoming increasingly popular involves using token exchange w
 
 A step-by-step guide to configure OIDC using Workload Identity Federation can be found [here](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-that-uses-workload-identity-federation).
 
-## Additional Information
+# Azure DevOps, Entra ID OIDC Authentication
+A picture is worth a thousand words.  I've laid out the authentication flow in the diagram below for Azue DevOps.  No more secrets management!
+
+<figure>
+    <a href="/assets/images/azure-devops-oidc.jpg"><img src="/assets/images/azure-devops-oidc.jpg"></a>
+</figure>
 
 Microsoft's Chief Architect John Savill explains OIDC authentication with Workload Identity Federation in his awesome YouTube videos that I have linked below.  
 
-### Azure DevOps
 <iframe width="560" height="315" src="https://www.youtube.com/embed/saTUeR_U3lA?si=r3OMGYwt5DVX3Iii" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### GitHub
+How does this flow look for GitHub and GitHub Actions Workflows?  Well pretty similar to Azure DevOps and Azure Pipelines.  Check it out, gone are secrets!
+
+<figure>
+    <a href="/assets/images/github-oidc.jpg"><img src="/assets/images/github-oidc.jpg"></a>
+</figure>
+
+Once again, also check out Microsoft's Chief Architect John Savill explain this OIDC flow for GitHub.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XkhkkLBkAT4?si=faDeaiViVhgPyBxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
