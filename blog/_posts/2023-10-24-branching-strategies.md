@@ -5,10 +5,10 @@ header:
 excerpt: "Branching strategies represent approaches used in software development to manage and organize code repositories effectively. "
 toc: true
 tags:
-  - devops
-  - code
-  - sdlc
-  - strategy
+  - DevOps
+  - Programming
+  - SDLC
+  - Strategy
 ---
 
 # The Big Picture
