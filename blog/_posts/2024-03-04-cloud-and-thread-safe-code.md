@@ -3,6 +3,7 @@ title:  "Brewing Healthy Cloud Applications"
 header:
   #teaser: "/assets/images/platform-agnostic-ci-cd-flow.png"
 excerpt: "Let's dive into a coffee shop metaphor to illustrate building healthy cloud application."
+classes: wide
 toc: true
 tags:
   - Cloud
