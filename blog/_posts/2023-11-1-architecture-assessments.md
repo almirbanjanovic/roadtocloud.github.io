@@ -5,9 +5,8 @@ header:
 excerpt: "How does one perform an architecture asessment in the context of modernization? Oftentimes this involves assessing current state vs future state, identifying challenges, providing recommendations and gaining alignment."
 toc: true
 tags:
-  - digital transformation
-  - enterprise architecture
-  - strategy
+  - Architecture
+  - Strategy
 ---
 How does one perform an architecture asessment in the context of modernization? Oftentimes this involves assessing current state vs future state, identifying challenges, providing recommendations and gaining alignment. This process is comprised of several key steps in a collaborative way.
 
