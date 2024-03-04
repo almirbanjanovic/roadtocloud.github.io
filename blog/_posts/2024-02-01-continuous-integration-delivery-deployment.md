@@ -4,9 +4,9 @@ header:
   teaser: "/assets/images/continuous-integration-delivery-deployment.png"
 excerpt: "I often see people confusing the terms *Continuous Integration, Continuous Delivery* and *Continuous Deployment*.  Let's break it down in simpler terms."
 tags:
-  - cloud
-  - code
-  - devops
+  - Cloud
+  - DevOps
+  - Programming
 ---
 
 
