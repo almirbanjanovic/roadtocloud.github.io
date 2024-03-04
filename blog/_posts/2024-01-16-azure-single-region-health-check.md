@@ -4,8 +4,8 @@ header:
   teaser: "/assets/images/ase-single-region-health-check.png"
 excerpt: "Increasing hybrid cloud application resilience in Microsoft Azure with Traffic Managers, Application Gateways and App Services."
 tags:
-  - architecture
-  - cloud
+  - Architecture
+  - Cloud
 ---
 
 In an active-passive dual-region architecture on Microsoft Azure, key services like Application Service Environment (ASE), Azure App Services, Azure Traffic Manager, and Azure Application Gateway can ensure resilience. 
