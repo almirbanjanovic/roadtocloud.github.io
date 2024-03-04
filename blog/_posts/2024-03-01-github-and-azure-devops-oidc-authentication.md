@@ -3,9 +3,9 @@ title:  "Authenticating GitHub and Azure DevOps using OpenID Connect"
 excerpt: "What if I told you, we could improve developer exprience **and** security with DevOps pipelines?  Enter OpenID Connect (OIDC) to the rescue!"
 toc: true
 tags:
-  - cloud
-  - code
-  - devops
+  - Cloud
+  - DevOps
+  - Security
 ---
 
 # Introduction
