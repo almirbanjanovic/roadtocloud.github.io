@@ -28,7 +28,7 @@ Creating a new connection for each HTTP request (similar to grinding new coffee 
 ## Singleton Pattern: One Coffee Machine to Serve Them All
 The singleton pattern in software development is like having a single, highly efficient coffee machine in a shop that all baristas share. This pattern ensures that only one instance of a resource (e.g., an `HttpClient` in .NET) is created and reused across the application, optimizing resource cloud hosting cost and avoiding runaway autoscaling of cloud compute nodes.
 
-### Dependency Injection (DI)
+## Dependency Injection (DI)
 Use dependency injection to implement the singleton pattern - it is like a coffee shop where the manager ensures that all baristas use the same coffee machine, maintaining efficiency and consistency. It allows for flexible configuration and easy sharing of the coffee machine (or `HttpClient`) across different parts of the application.
 
 In a .NET Core or .NET 5/6/7/8 applications, you can use the built-in DI container to manage `HttpClient` instances efficiently. This approach ensures that `HttpClient` instances are reused properly, which is crucial for managing connections and resources effectively.
