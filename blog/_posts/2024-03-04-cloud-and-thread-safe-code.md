@@ -11,7 +11,7 @@ tags:
   - Architecture
 ---
 
-<figure style="width: 150px" class="align-left">
+<figure class="align-left">
 	<a href="/assets/images/cloud-code-coffee.jpg"><img src="/assets/images/cloud-code-coffee.jpg"></a>
 </figure>
 
