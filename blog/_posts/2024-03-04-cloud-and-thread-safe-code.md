@@ -1,7 +1,7 @@
 ---
 title:  "Brewing Healthy Cloud Applications"
 header:
-  #teaser: "/assets/images/platform-agnostic-ci-cd-flow.png"
+  teaser: "/assets/images/cloud-code-coffee.jpg"
 excerpt: "Let's dive into a coffee shop metaphor to illustrate building healthy cloud application."
 classes: wide
 toc: true
@@ -64,6 +64,7 @@ public class MyService
 }
 {% endraw %}
 {% endhighlight %}
+<br>
 
 # Thread-Safe Programming: The Coordination of Multiple Baristas
 In a busy coffee shop, multiple baristas (threads) work in parallel to serve customers efficiently. However, without proper coordination, they might bump into each other or duplicate efforts, leading to wasted resources and time. Similarly, in software applications, thread-safe programming ensures that multiple threads access shared resources (like a shared coffee machine) in a manner that prevents conflicts and ensures consistency.
@@ -100,6 +101,7 @@ public class CoffeeDeadlock
 }
 {% endraw %}
 {% endhighlight %}
+<br>
 
 1. **Placing the Order (Calling the Async Method)**: You go to the coffee shop (start your program) and order a coffee (call an asynchronous method, GetContentAsync). The coffee shop is busy (the system is doing work), so you're told to wait for your name to be called (the async operation will complete in the future).
 
