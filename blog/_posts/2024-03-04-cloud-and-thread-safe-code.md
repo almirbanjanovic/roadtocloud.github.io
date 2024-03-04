@@ -11,6 +11,11 @@ tags:
   - Architecture
 ---
 
+<figure style="width: 150px" class="align-left">
+	<a href="/assets/images/cloud-code-coffee.jpg"><img src="/assets/images/cloud-code-coffee.jpg"></a>
+	<figcaption>The Gates to the Cloud (Created with DALL-E 3!)</figcaption>
+</figure>
+
 # Introduction
 One common misconception is that highly-available, resilient and elastic cloud architectures represent a silver bullet.  This is not necessarily the case.  Cloud architecture is tightly coupled to healthy programming techniques - a healthy cloud architecture and healthy code hosted on those architectues are two sides of the same coin.  This fundamental concept often gets lost.  Consider having the most resilient, multi-AZ (Availability Zone), multi-Region cloud architecture that unscrupulously autoscales additional nodes horizontally to handle additional load caused by sudden spikes of REST API calls.  Now also consider that these additional calls are caused by unhealthy code. This is not only inefficient and can crash a REST API, but it can also crash an entire cloud infrastructure and cause runaway costs incurred by additional horizontal scaling.  In this post, let's examine healty programming techniques such as reusing HTTP connections and building thread-safe code with a coffee shop metaphor.
 
