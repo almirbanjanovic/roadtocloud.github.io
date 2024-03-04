@@ -5,8 +5,8 @@ header:
 excerpt: "A rapid test to confirm the viability of a new feature or technology."
 toc: true
 tags:
-  - sdlc
-  - strategy
+  - SDLC
+  - Strategy
 ---
 
 In app development and cloud computing, a Proof of Concept (POC) is a quick demo that checks if a new idea or project is doable and makes sense. It helps decide whether to move forward by showcasing key features and solving specific challenges before diving into full development in the cloud.  As shown in the picture below, a POC consists of four (4) separate steps:
