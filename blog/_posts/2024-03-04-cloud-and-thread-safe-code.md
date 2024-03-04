@@ -27,7 +27,7 @@ First, some key concepts, simplified:
 - **Asynchronous Task (`async/await`)**: Think of an asynchronous task like ordering a coffee at a busy café. You place your order (async) and then wait (await) for your name to be called when the coffee is ready. While waiting, you can do other things instead of standing still and blocking the line of other people wanting to order.
 - **Blocking Calls (`.Result` or `.Wait()`)**: This is like insisting on standing at the counter, staring at the barista until your coffee is ready, not doing anything else, and not letting anyone else order.
 
-### The Deadlock Scenario
+### The Deadlock Scenario 
 This example demonstrates how using `.Result` or `.Wait()` in a context where the synchronization context is captured can lead to a deadlock:
 <br>
 {% highlight csharp %}
@@ -53,22 +53,45 @@ public class CoffeeDeadlock
 {% endraw %}
 {% endhighlight %}
 
-1. Placing the Order (Calling the Async Method)
-   You go to the coffee shop (start your program) and order a coffee (call an asynchronous method, GetContentAsync).
-    The coffee shop is busy (the system is doing work), so you're told to wait for your name to be called (the async operation will complete in the future).
+1. **Placing the Order (Calling the Async Method)**: You go to the coffee shop (start your program) and order a coffee (call an asynchronous method, GetContentAsync). The coffee shop is busy (the system is doing work), so you're told to wait for your name to be called (the async operation will complete in the future).
 
-2. Waiting for the Coffee (Awaiting the Async Task)
-   Instead of waiting normally, you decide to stand at the counter, not move and stare at the barista uncomfortably until you get your coffee (using .Result or .Wait()), effectively blocking anyone else from ordering (blocking the main thread).
+2. **Waiting for the Coffee (Awaiting the Async Task)**: Instead of waiting normally, you decide to stand at the counter, not move and stare at the barista uncomfortably until you get your coffee (using .Result or .Wait()), effectively blocking anyone else from ordering (blocking the main thread).
 
-3. The Cofee Shop Rule (Synchronization Context)
+3. **The Cofee Shop Rule (Synchronization Context)**: The coffee shop has a rule: Coffee must be handed to you personally at the counter (the continuation after an await must happen on the original synchronization context, or thread). But, because you're blocking the counter (the main thread), the barista can't serve anyone else, nor can they complete your order, because they need you to step aside to finish it (the async operation needs the blocked thread to continue).
 
-    The coffee shop has a rule: Coffee must be handed to you personally at the counter (the continuation after an await must happen on the original synchronization context, or thread).
-    But, because you're blocking the counter (the main thread), the barista can't serve anyone else, nor can they complete your order, because they need you to step aside to finish it (the async operation needs the blocked thread to continue).
+4. **The Deadlock**: You're waiting for your coffee to be ready before you move (waiting for the async operation to complete), but the coffee shop can't finish making your coffee until you stop blocking the counter and stop making the barista uncomfortable with your stare (the system can't complete the async operation because it's waiting for the blocked thread to become available). As a result, everything stops. You're not moving. The barista can't serve your coffee. No one else can order. This standstill is the deadlock.
 
-4. The Deadlock
+### Avoiding Deadlocks
+To avoid the deadlock, you can ensure that the asynchronous method is allowed to complete without blocking the main thread. Here’s how you can do it:
+<br>
+{% highlight csharp %}
+{% raw %}
+public class CoffeeDeadlock
+{
+    public static async Task Main(string[] args)
+    {
+        var result = await GetContentAsync("http://coffeedeadlock.com").ConfigureAwait(false); // Avoids deadlock
+        Console.WriteLine(result);
+    }
 
-    You're waiting for your coffee to be ready before you move (waiting for the async operation to complete), but the coffee shop can't finish making your coffee until you stop blocking the counter and making the barista uncomfortable with your stare (the system can't complete the async operation because it's waiting for the blocked thread to become available).
-    As a result, everything stops. You're not moving, the barista can't serve your coffee, and no one else can order. This standstill is the deadlock.
+    public static async Task<string> GetContentAsync(string url)
+    {
+        using (var httpClient = new HttpClient())
+        {
+            var response = await httpClient.GetAsync(url).ConfigureAwait(false); // Does not capture the synchronization context
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+        }
+    }
+}
+
+{% endraw %}
+{% endhighlight %}
+
+Just like in the coffee shop, where you could wait for your coffee without blocking the counter (maybe sit down or step aside), programming has a way to avoid deadlocks.
+
+1. **Use `await` properly**: This is like waiting for your coffee without blocking the counter. You allow other customers to order, and the barista to serve other orders while yours is being prepared.
+2. **`ConfigureAwait(false)`**: This tells the system, "I don't need to receive my coffee exactly at the counter where I ordered. You can call my name, and I'll pick it up wherever I am." This means the continuation of your task doesn't need to be on the original thread, avoiding the need for you to block any "place" or thread.
 
 ## Reusing HTTP Connections: The Art of Efficient Service
 Imagine walking into your favorite coffee shop and the barista knows not only your order but also prepares it by reusing the coffee grounds for multiple customers. While this might raise eyebrows in the coffee world, in the realm of HTTP connections, reusing connections (similar to coffee grounds) is efficient.
