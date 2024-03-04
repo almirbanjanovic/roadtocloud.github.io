@@ -13,7 +13,6 @@ tags:
 
 <figure style="width: 150px" class="align-left">
 	<a href="/assets/images/cloud-code-coffee.jpg"><img src="/assets/images/cloud-code-coffee.jpg"></a>
-	<figcaption>The Gates to the Cloud (Created with DALL-E 3!)</figcaption>
 </figure>
 
 # Introduction
