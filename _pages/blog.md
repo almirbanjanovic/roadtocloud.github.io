@@ -1,6 +1,6 @@
 ---
 title: Blog
-layout: posts
+layout: tags
 permalink: /blog/
 author_profile: true
 read_time: true
