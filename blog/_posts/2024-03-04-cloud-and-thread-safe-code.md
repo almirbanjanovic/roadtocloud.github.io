@@ -34,8 +34,9 @@ Use dependency injection to implement the singleton pattern - it is like a coffe
 In a .NET Core or .NET 5/6/7/8 applications, you can use the built-in DI container to manage `HttpClient` instances efficiently. This approach ensures that `HttpClient` instances are reused properly, which is crucial for managing connections and resources effectively.
 
 **Step 1: Define Typed Client**
+
 First, create a class that will serve as your typed client. This class will encapsulate all logic for making HTTP requests to a specific external service.
-<br>
+
 {% highlight csharp %}
 {% raw %}
 using System.Net.Http;
@@ -64,8 +65,9 @@ public class CoffeeServiceClient
 {% endhighlight %}
 
 **Step 2: Configure the Typed Client in `Program.cs`**:
+
 In your `Program.cs`, register the typed client with the dependency injection (DI) container using AddHttpClient. This method allows you to configure the HttpClient that will be injected into your typed client.
-<br>
+
 {% highlight csharp %}
 {% raw %}
 using Microsoft.AspNetCore.Builder;
@@ -90,8 +92,10 @@ app.Run();
 {% endraw %}
 {% endhighlight %}
 
-**Step 3: Use the Typed Client in a Controller:**
+**Step 3: Use the Typed Client in a Controller**
+
 Inject the typed client into your controllers or services where you need to make HTTP requests. 
+
 {% highlight csharp %}
 {% raw %}
 using Microsoft.AspNetCore.Mvc;
@@ -142,24 +146,21 @@ This example demonstrates how using `.Result` or `.Wait()` in a context where th
 <br>
 {% highlight csharp %}
 {% raw %}
-public class CoffeeDeadlock
+[HttpGet("{typeOfRoast}")]
+public IActionResult GetSync(string typeOfRoast)
 {
-    public static void Main(string[] args)
+    try
     {
-        var result = GetContentAsync("http://coffeedeadlock.com").Result; // This can cause a deadlock
-        Console.WriteLine(result);
+        // Incorrectly using .Result can lead to a deadlock
+        var data = _coffeeServiceClient.GetCoffeeAsync(typeOfRoast).Result;
+        return Ok(data);
     }
-
-    public static async Task<string> GetContentAsync(string url)
+    catch (HttpRequestException e)
     {
-        using (var httpClient = new HttpClient())
-        {
-            var response = await httpClient.GetAsync(url); // Awaiting here captures the synchronization context
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
-        }
+        return StatusCode(500, e.Message);
     }
 }
+
 {% endraw %}
 {% endhighlight %}
 <br>
