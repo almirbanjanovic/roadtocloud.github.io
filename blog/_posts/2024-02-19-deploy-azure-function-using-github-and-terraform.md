@@ -5,9 +5,9 @@ header:
 excerpt: "Let's deploy an Azure Function using GitHub Actions and Terraform Cloud!"
 toc: true
 tags:
-  - cloud
-  - code
-  - devops
+  - Cloud
+  - Programming
+  - DevOps
 ---
 
 # Azure Function App Project
