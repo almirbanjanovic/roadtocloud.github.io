@@ -33,39 +33,96 @@ Use dependency injection to implement the singleton pattern - it is like a coffe
 
 In a .NET Core or .NET 5/6/7/8 applications, you can use the built-in DI container to manage `HttpClient` instances efficiently. This approach ensures that `HttpClient` instances are reused properly, which is crucial for managing connections and resources effectively.
 
-1. **Configure `HttpClient` in `Startup.cs` or `Program.cs`**:
+**Step 1: Define Typed Client**
+First, create a class that will serve as your typed client. This class will encapsulate all logic for making HTTP requests to a specific external service.
 <br>
 {% highlight csharp %}
 {% raw %}
-public void ConfigureServices(IServiceCollection services)
-{
-    // Other configurations...
+using System.Net.Http;
+using System.Threading.Tasks;
 
-    // Register HttpClient as a singleton indirectly through IHttpClientFactory
-    services.AddHttpClient();
-}
-{% endraw %}
-{% endhighlight %}
-
-2. **Inject and Use `HttpClient` via `IHttpClientFactory`:**
-{% highlight csharp %}
-{% raw %}
-public class MyService
+public class CoffeeServiceClient
 {
     private readonly HttpClient _httpClient;
 
-    public MyService(IHttpClientFactory httpClientFactory)
+    public CoffeeServiceClient(HttpClient httpClient)
     {
-        _httpClient = httpClientFactory.CreateClient();
+        _httpClient = httpClient;
+        // Assuming the external service requires an API key in the header
+        _httpClient.DefaultRequestHeaders.Add("ApiKey", "YourApiKeyHere");
+	// Other configuration goes here
     }
 
-    public async Task<string> GetAsync(string url)
+    public async Task<string> GetCoffeeAsync(string typeOfRoast)
     {
-        var response = await _httpClient.GetAsync(url);
+        var response = await _httpClient.GetAsync($"coffee/{typeOfRoast}");
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadAsStringAsync();
     }
 }
+{% endraw %}
+{% endhighlight %}
+
+**Step 2: Configure the Typed Client in `Program.cs`**:
+In your `Program.cs`, register the typed client with the dependency injection (DI) container using AddHttpClient. This method allows you to configure the HttpClient that will be injected into your typed client.
+<br>
+{% highlight csharp %}
+{% raw %}
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Register the typed client with HttpClient configured
+builder.Services.AddHttpClient<CoffeeServiceClient>(client =>
+{
+    client.BaseAddress = new Uri("https://api.coffeeapi.com/v1/");
+    // Set other default configurations here
+});
+
+var app = builder.Build();
+
+// Map controllers and run app (assuming you're using controllers)
+app.MapControllers();
+
+app.Run();
+{% endraw %}
+{% endhighlight %}
+
+**Step 3: Use the Typed Client in a Controller:**
+Inject the typed client into your controllers or services where you need to make HTTP requests. 
+{% highlight csharp %}
+{% raw %}
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+
+[ApiController]
+[Route("[controller]")]
+public class CoffeeController : ControllerBase
+{
+    private readonly CoffeeServiceClient _coffeeServiceClient;
+
+    public CoffeeController(CoffeeServiceClient coffeeServiceClient)
+    {
+        _coffeeServiceClient = coffeeServiceClient;
+    }
+
+    [HttpGet("{typeOfRoast}")]
+    public async Task<IActionResult> Get(string typeOfRoast)
+    {
+        try
+        {
+            var data = await _coffeeServiceClient.GetCoffeeAsync(typeOfRoast);
+            return Ok(data);
+        }
+        catch (HttpRequestException e)
+        {
+            return StatusCode(500, e.Message);
+        }
+    }
+}
+
 {% endraw %}
 {% endhighlight %}
 <br>
