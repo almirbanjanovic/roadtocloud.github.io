@@ -5,10 +5,10 @@ header:
 excerpt: "The Gates to the Cloud - delivery pipeline checkpoints for healthy, resilient, and secure applications."
 toc: true
 tags:
-  - devops
-  - code
-  - sdlc
-  - strategy
+  - DevOps
+  - Programming
+  - SDLC
+  - Strategy
 ---
 
 <figure style="width: 150px" class="align-left">
