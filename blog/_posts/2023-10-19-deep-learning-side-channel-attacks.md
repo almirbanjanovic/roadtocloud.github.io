@@ -5,9 +5,9 @@ header:
 excerpt: "Deep learning side channel attacks involve exploiting unintended information leakage from the implementation of deep learning models to infer sensitive information or manipulate their behavior."
 toc: true
 tags:
-  - security
-  - ai
-  - ml
+  - Security
+  - AI
+  - ML
 ---
 
 Deep learning side channel attacks involve exploiting unintended information leakage from the implementation of deep learning models to infer sensitive information or manipulate their behavior. Recently I visited a presentation by Dr. Boyang Wang from the University of Cincinnati.  Below I'll give an overview of what Dr. Wang presented about his research into deep-learning side-channel attacks and offer my own critique.
