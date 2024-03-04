@@ -165,7 +165,7 @@ public IActionResult GetSync(string typeOfRoast)
 {% endhighlight %}
 <br>
 
-1. **Placing the Order (Calling the Async Method)**: You go to the coffee shop (start your program) and order a coffee (call an asynchronous method, GetContentAsync). The coffee shop is busy (the system is doing work), so you're told to wait for your name to be called (the async operation will complete in the future).
+1. **Placing the Order (Calling the Async Method)**: You go to the coffee shop and order a coffee (call an asynchronous method, GetCoffeeAsync). The coffee shop is busy (the system is doing work), so you're told to wait for your name to be called (the async operation will complete in the future).
 
 2. **Waiting for the Coffee (Awaiting the Async Task)**: Instead of waiting normally, you decide to stand at the counter, not move and stare at the barista uncomfortably until you get your coffee (using .Result or .Wait()), effectively blocking anyone else from ordering (blocking the main thread).
 
@@ -178,25 +178,20 @@ To avoid the deadlock, you can ensure that the asynchronous method is allowed to
 <br>
 {% highlight csharp %}
 {% raw %}
-public class CoffeeDeadlock
+[HttpGet("{typeOfRoast}")]
+public async Task<IActionResult> GetAsync(string typeOfRoast)
 {
-    public static async Task Main(string[] args)
+    try
     {
-        var result = await GetContentAsync("http://coffeedeadlock.com").ConfigureAwait(false); // Avoids deadlock
-        Console.WriteLine(result);
+        // Properly awaiting the asynchronous operation
+        var data = await _coffeeServiceClient.GetCoffeeAsync(typeOfRoast);
+        return Ok(data);
     }
-
-    public static async Task<string> GetContentAsync(string url)
+    catch (HttpRequestException e)
     {
-        using (var httpClient = new HttpClient())
-        {
-            var response = await httpClient.GetAsync(url).ConfigureAwait(false); // Does not capture the synchronization context
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-        }
+        return StatusCode(500, e.Message);
     }
 }
-
 {% endraw %}
 {% endhighlight %}
 
