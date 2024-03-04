@@ -147,7 +147,7 @@ This example demonstrates how using `.Result` or `.Wait()` in a context where th
 {% highlight csharp %}
 {% raw %}
 [HttpGet("{typeOfRoast}")]
-public IActionResult GetSync(string typeOfRoast)
+public IActionResult Get(string typeOfRoast)
 {
     try
     {
@@ -179,7 +179,7 @@ To avoid the deadlock, you can ensure that the asynchronous method is allowed to
 {% highlight csharp %}
 {% raw %}
 [HttpGet("{typeOfRoast}")]
-public async Task<IActionResult> GetAsync(string typeOfRoast)
+public async Task<IActionResult> Get(string typeOfRoast)
 {
     try
     {
