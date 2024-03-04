@@ -5,14 +5,12 @@ header:
 excerpt: "Keep it lean and eliminate waste represent words to live by in software development, cloud computing, Lean, Agile and DevOps."
 toc: true
 tags:
-  - architecture
-  - lean
-  - agile
-  - devops
-  - sdlc
-  - ai
-  - ml
-  - strategy
+  - Architecture
+  - Lean
+  - Agile
+  - DevOps
+  - SDLC
+  - Strategy
 ---
 
 <figure style="width: 150px" class="align-left">
