@@ -102,4 +102,54 @@ To illustrate the concept of reusing HTTP connections effectively, akin to the e
 ## Singleton Pattern: One Coffee Machine to Serve Them All
 The singleton pattern in software development is like having a single, highly efficient coffee machine in a shop that all baristas share. Whether through dependency injection or static methods, this pattern ensures that only one instance of a resource (e.g., an `HttpClient` in .NET) is created and reused across the application, optimizing resource use.
 
+### Dependency Injection (DI)
+Using dependency injection to implement the singleton pattern is like a coffee shop where the manager ensures that all baristas use the same coffee machine, maintaining efficiency and consistency. It allows for flexible configuration and easy sharing of the coffee machine (or `HttpClient`) across different parts of the application.
 
+In a .NET Core or .NET 5/6/7/8 applications, you can use the built-in DI container to manage `HttpClient` instances efficiently. This approach ensures that `HttpClient` instances are reused properly, which is crucial for managing connections and resources effectively.
+
+1. **Configure `HttpClient` in `Startup.cs` or `Program.cs`**:
+<br>
+{% highlight csharp %}
+{% raw %}
+public void ConfigureServices(IServiceCollection services)
+{
+    // Other configurations...
+
+    // Register HttpClient as a singleton indirectly through IHttpClientFactory
+    services.AddHttpClient();
+}
+{% endraw %}
+{% endhighlight %}
+
+2. **Inject and Use `HttpClient` via `IHttpClientFactory`:**
+{% highlight csharp %}
+{% raw %}
+public class MyService
+{
+    private readonly HttpClient _httpClient;
+
+    public MyService(IHttpClientFactory httpClientFactory)
+    {
+        _httpClient = httpClientFactory.CreateClient();
+    }
+
+    public async Task<string> GetAsync(string url)
+    {
+        var response = await _httpClient.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadAsStringAsync();
+    }
+}
+{% endraw %}
+{% endhighlight %}
+
+
+
+
+
+
+{% highlight csharp %}
+{% raw %}
+
+{% endraw %}
+{% endhighlight %}
