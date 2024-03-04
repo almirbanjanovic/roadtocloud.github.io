@@ -5,9 +5,10 @@ header:
 excerpt: "Avoiding cloud platform lock-in with ASP.NET Core 7. Deploy your app to any Cloud Service Provider (CSP)!"
 toc: true
 tags:
-  - cloud
-  - code
-  - architecture
+  - Cloud
+  - DevOps
+  - Programming
+  - Architecture
 ---
 
 One of the core business tenets is business agility - the ability to adapt to changing market conditions. Similarly, businesses must be agile and must ensure availability through business continuity best practices.  Business either change or die.  How does this affect cloud in particular? 
