@@ -31,7 +31,7 @@ The singleton pattern in software development is like having a single, highly ef
 ## Dependency Injection (DI)
 Use dependency injection to implement the singleton pattern - it is like a coffee shop where the manager ensures that all baristas use the same coffee machine, maintaining efficiency and consistency. It allows for flexible configuration and easy sharing of the coffee machine (or `HttpClient`) across different parts of the application.
 
-In a .NET Core or .NET 5/6/7/8 applications, you can use the built-in DI container to manage `HttpClient` instances efficiently. This approach ensures that `HttpClient` instances are reused properly, which is crucial for managing connections and resources effectively.
+In a .NET Core or .NET 5/6/7/8 application, you can use the built-in DI container to manage `HttpClient` instances efficiently. This approach ensures that `HttpClient` instances are reused properly, which is crucial for managing connections and resources effectively.
 
 **Step 1: Define Typed Client**
 
