@@ -20,9 +20,14 @@ Before you begin, you'll need to have the following:
 
 - An Azure subscription.
 - A GitHub account.
-- A Terraform Cloud account, with a workspace configured and mapped to this repository.
-- Azure CLI installed locally (for development and testing).
 - Your favorite IDE - I prefer Visual Studio Code with the below extensions installed
     - GitHub Actions
     - HashiCorp HCL 
     - HashiCorp Terraform
+
+# Configuration
+
+## Azure Subscription
+
+We'll need to create an Entra application and service principal that has the appropriate permissions to create and modify Azure resources.  Fot his, follow Microsoft's guide [Create a Microsoft Entra application and service principal that can access resources](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#register-an-application-with-microsoft-entra-id-and-create-a-service-principal).
+
