@@ -29,5 +29,5 @@ Before you begin, you'll need to have the following:
 
 ## Azure Subscription
 
-We'll need to create an Entra application and service principal that has the appropriate permissions to create and modify Azure resources.  Fot his, follow Microsoft's guide [Create a Microsoft Entra application and service principal that can access resources](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#register-an-application-with-microsoft-entra-id-and-create-a-service-principal).
+We'll need to create an Entra application and service principal that has the appropriate permissions to create and modify Azure resources.  There are many guides out there on how to configure this.  For this post, I followed Microsoft's guide: [Create a Microsoft Entra application and service principal that can access resources](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#register-an-application-with-microsoft-entra-id-and-create-a-service-principal).
 
