@@ -29,5 +29,4 @@ Before you begin, you'll need to have the following:
 
 ## Azure Subscription
 
-We'll need to create an Entra application and service principal that has the appropriate permissions to create and modify Azure resources.  There are many guides out there on how to configure this.  For this post, I followed Microsoft's guide: [Create a Microsoft Entra application and service principal that can access resources](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#register-an-application-with-microsoft-entra-id-and-create-a-service-principal).
-
+We'll need to create an Entra application and service principal that has the appropriate permissions to create and modify Azure resources.  There are a few different ways to accomplish this depending on you subscription type and preferred method (Azure Portal, Azure CLI, or PowerShell).  For this project, I followed this guide: [Configuring OpenID Connect in Azure](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure).
