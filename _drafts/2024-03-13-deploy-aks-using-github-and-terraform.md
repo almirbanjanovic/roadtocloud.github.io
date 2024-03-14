@@ -18,8 +18,8 @@ This post will demonstrate the deployment of an Azure Kubernetes Service using T
 
 Before you begin, you'll need to have the following:
 
-- An Azure subscription.
-- A GitHub account.
+- An Azure subscription
+- A GitHub account
 - Your favorite IDE - I prefer Visual Studio Code with the below extensions installed
     - GitHub Actions
     - HashiCorp HCL 
@@ -27,6 +27,19 @@ Before you begin, you'll need to have the following:
 
 # Configuration
 
-## Azure, Entra, GitHub
+## OpenID Connect (OIDC)
 
 We'll need to create an Entra application and service principal that has the appropriate permissions to create and modify Azure resources.  There are a few different ways to accomplish this depending on you subscription type and preferred method (Azure Portal, Azure CLI, or PowerShell).  For this project, I followed this guide: [Configuring OpenID Connect in Azure](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure).
+
+## GitHub Actions Repository Secrets
+
+The GitHub Actions and Terraform code we will use for this project require repository secrets to be configured.  Add the below repository secrets:
+- AZURE_TENANT_ID
+- AZURE_SUBSCRIPTION_ID
+- AZURE_CLIENT_ID
+- REGION
+- ENVIRONMENT_NAME
+- RESOURCE_GROUP_NAME
+- STORAGE_ACCOUNT_NAME
+- BLOB_CONTAINER_NAME
+- STORAGE_ACCOUNT_SKU
