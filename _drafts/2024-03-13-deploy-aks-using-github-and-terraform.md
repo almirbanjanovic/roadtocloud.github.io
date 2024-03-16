@@ -61,47 +61,6 @@ Once both OIDC is configured in Azure, and these repository secreta above are ad
 
 ## Initialize Terraform Remote State Storage
 
-When you execute `terraform init`, you're setting up the providers and linking to any existing state of the infrastructure. For this project, the backend state is kept in an Azure storage account.  You only need to run the below workflow once, and it will configure an Azure storage account for Terraform remote state.
+When you execute `terraform init`, you're setting up the providers and linking to any existing state of the infrastructure. For this project, the backend state is kept in an Azure storage account.  You only need to run the `init-remote-backend.yml` GitHub Actions Workflow once, and it will initialize an Azure storage account for Terraform remote state. In the next step, we'll import this into Terraform state, so Terraform can also track it.  It makes much more sense to use declerative syntax with Terraform for further provisioning, instead of Azure CLI's procedural syntax.  This will make management much easier and simpler.  
 
-<br>
-{% highlight yaml %}
-{% raw %}
-name: Initialize Backend Terraform State Storage
-on: 
-  workflow_dispatch
 
-permissions:
-      id-token: write
-      contents: read
-      
-jobs: 
-  initialize-state-storage:
-    runs-on: ubuntu-latest
-
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    defaults:
-        run:
-          shell: bash
-
-    steps:
-        - uses: actions/checkout@v4
-
-        - name: Azure login
-          uses: azure/login@v2
-          with:
-            client-id: ${{ secrets.AZURE_CLIENT_ID }}
-            tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-            subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-
-        # Execute Azure CLI script of a specific CLI version via file present in your repository.
-        - name: Azure CLI script file
-          uses: azure/cli@v2
-          with:
-            azcliversion: 2.30.0
-            inlineScript: |
-              az group create --name ${{ secrets.RESOURCE_GROUP_NAME }} --location ${{ secrets.REGION }} 
-              az storage account create --resource-group ${{ secrets.RESOURCE_GROUP_NAME }} --name ${{ secrets.STORAGE_ACCOUNT_NAME }} --sku ${{ secrets.STORAGE_ACCOUNT_SKU }} --encryption-services blob
-              az storage container create --name ${{ secrets.BLOB_CONTAINER_NAME }} --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
-{% endraw %}
-{% endhighlight %}
-<br>    
