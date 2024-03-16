@@ -30,11 +30,17 @@ Before you begin, you'll need to have the following:
 
 ## OpenID Connect (OIDC)
 
-We'll need to create an Entra application and service principal that has the appropriate permissions to create and modify Azure resources.  There are a few different ways to accomplish this depending on you subscription type and preferred method (Azure Portal, Azure CLI, or PowerShell).  For this project, I followed this guide: [Configuring OpenID Connect in Azure](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure).
+We'll need to create an Entra application and service principal that has the appropriate permissions to create and modify Azure resources.  There are a few different ways to accomplish this depending on you subscription type and preferred method (Azure Portal, Azure CLI, or PowerShell).  For this project, I followed this guide: [Configuring OpenID Connect in Azure](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure).  For this to work correctly, you'll need to have the below values configured.
 
-## GitHub Actions Repository Secrets
+| Organization       | GitHub User Name or Organization Name |
+| Repository         | Repository Name                       |
+| Entity Type        | Environment                           |
+| Based on selection | prod                                  |
 
-The GitHub Actions and Terraform code we will use for this project require repository secrets to be configured.  Add the below repository secrets:
+
+## GitHub Actions Environment Secrets
+
+The GitHub Actions and Terraform code we will use for this project require an environment as well as environment secrets to be configured. For step-by-step instructions on how to create an environment, see [Creating an Environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#creating-an-environment). We'll need to call this environment *prod* for the GitHub Actions to work correctly.  Add the below repository secrets:
 - AZURE_TENANT_ID
 - AZURE_SUBSCRIPTION_ID
 - AZURE_CLIENT_ID
