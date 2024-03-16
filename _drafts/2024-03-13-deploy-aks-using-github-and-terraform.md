@@ -56,6 +56,8 @@ The GitHub Actions and Terraform code we will use for this project require an en
 - RESOURCE_GROUP_NAME
 - STORAGE_ACCOUNT_PREFIX
 
+Once both OIDC is configured in Azure, and these repository secreta above are added to GitHub environment secrets, you can run `test-oidc.yml` to validate whether or not your GitHub Actions Workflow can connect to Azure.
+
 
 ## Initialize Terraform Remote State Storage
 
