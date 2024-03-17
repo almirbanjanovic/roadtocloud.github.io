@@ -44,19 +44,21 @@ We'll need to create an Entra application and service principal that has the app
 
 The GitHub Actions and Terraform code we will use for this project require an environment as well as environment secrets to be configured. For step-by-step instructions on how to create an environment, see [Creating an Environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#creating-an-environment). We'll need to call this environment *prod*, as stated above for the GitHub Actions to work correctly.  Add the below repository secrets.
 
-- AZURE_TENANT_ID
-- AZURE_SUBSCRIPTION_ID
-- AZURE_CLIENT_ID
-- ACCOUNT_REPLICATION_TYPE
-- ACCOUNT_TIER
-- AZ_CLI_LOCATION
-- TF_LOCATION
-- BLOB_CONTAINER_NAME
-- ENVIRONMENT
-- RESOURCE_GROUP_NAME
-- STORAGE_ACCOUNT_PREFIX
+| Variable | Description |
+|-|-|
+| AZURE_TENANT_ID | Entra Tenant ID |
+| AZURE_SUBSCRIPTION_ID | Subscription ID for Azure |
+| AZURE_CLIENT_ID | App Registration / Client ID for OIDC Service Principal |
+| ACCOUNT_REPLICATION_TYPE | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
+| ACCOUNT_TIER | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
+| TF_LOCATION | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
+| BLOB_CONTAINER_NAME | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
+| ENVIRONMENT | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
+| RESOURCE_GROUP_NAME | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
+| STORAGE_ACCOUNT_PREFIX | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
+| AZ_CLI_LOCATION | Similar to `TF_LOCATION`, but in Azure CLI formatting.  Look up with `az location list` command |
 
-Once both OIDC is configured in Azure, and these repository secreta above are added to GitHub environment secrets, you can run `test-oidc.yml` to validate whether or not your GitHub Actions Workflow can connect to Azure.
+Once both OIDC is configured in Azure, and these repository secrets above are added to GitHub environment secrets, you can run `test-oidc.yml` to validate whether or not your GitHub Actions Workflow can connect to Azure.
 
 
 ## Initialize Terraform Remote State Storage
