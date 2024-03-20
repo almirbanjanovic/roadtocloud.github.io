@@ -18,27 +18,24 @@ Let's talk about something that sounds complicated but is actually not as bad as
 ## TL;DR
 If you wanna jump straight into it, check out my GitHub repository for this project [here](https://github.com/rimlaban7/azure-kubernetes-service-terraform).  This includes a step-by-step guide, including prerequisites, configuration and deployment of AKS using OIDC, Terraform, GitHub Actions.
 
-## Goodbye Passwords, Hello OIDC
-
-Imagine deploying infrastructure without worrying about safeguarding a pile of secrets or passwords. From an engineer's or software developer's lense, this presents a host of challenges.  How do you store, manage and rotate those secrets and passwords? Thanks to OIDC, that daunting endeavor is a thing of the past! OIDC simplifies authenticating with Azure, meaning less time fretting over security and more time doing what you love: crafting great code. It’s a smarter, streamlined way to work, and honestly, who doesn’t want that?  For more information on how OIDC works with Entra, Azure, GitHub and Azure DevOps, see my blog post titled [Authenticating GitHub and Azure DevOps using OpenID Connect](https://www.theroadtocloud.com/blog/github-and-azure-devops-oidc-authentication/).
-
 ## Keeping It Simple with Trunk-Based Development
 
 For this project, I kept is simple with a Trunk-Based Development strategy. Simply put, it honestly makes the most sense for a single person, or a very small highly skilled team, working on a project.  For a complete overview of all the different ways you can structure your repositories and workflow strategies, see my blog post on [Branching Strategies](https://www.theroadtocloud.com/blog/branching-strategies/)
 
+## Goodbye Passwords, Hello OIDC
+
+Imagine deploying infrastructure without worrying about safeguarding a pile of secrets or passwords. From an engineer's or software developer's lense, this presents a host of challenges.  How do you store, manage and rotate those secrets and passwords? Thanks to OIDC, that daunting endeavor is a thing of the past! OIDC simplifies authenticating with Azure, meaning less time fretting over security and more time doing what you love: crafting great code. It’s a smarter, streamlined way to work, and honestly, who doesn’t want that?  For more information on how OIDC works with Entra, Azure, GitHub and Azure DevOps, see my blog post titled [Authenticating GitHub and Azure DevOps using OpenID Connect](https://www.theroadtocloud.com/blog/github-and-azure-devops-oidc-authentication/).  This project uses OIDC. It just makes sense.
+
 ## Flexibility and Portability Matter
 
-Why make a big deal about Kubernetes (or K8s as the cool kids call it)? Simply put, it gives you the flexibility to manage your applications with ease, regardless of where you choose to run them. The major Cloud Service Providers (CSPs) have all jumped on board - Microsoft with Azure Kubernetes Service (AKS), AWS with Elastick Kubernetes Service, and Google Cloud Platform (GCP) with Google Kubernetes Service (GKS). Think of K8s as your cloud Swiss Army knife, ready to adapt to whatever your project needs. K8s represents a cloud-agnostic service, pitting the major CSPs against each other to earn your business.
+Why make a big deal about Kubernetes, or K8s as the cool kids call it? Simply put, it gives you the flexibility to manage your applications with ease, regardless of where you choose to run them. The major Cloud Service Providers (CSPs) have all jumped on board - Microsoft with Azure Kubernetes Service (AKS), AWS with Elastick Kubernetes Service, and Google Cloud Platform (GCP) with Google Kubernetes Service (GKS). Think of K8s as your cloud Swiss Army knife, ready to adapt to whatever your project needs. K8s represents a cloud-agnostic service, pitting the major CSPs against each other to earn your business.
 
+Finally, what's all the Terraform fuss about?  Some might say - can't I just use Azure Resource Manager (ARM) Templates?  Well, technically, yes.  But when you learn Terraform, an cross-CSP Infrastructure as Code (IaC) declarative deployment tool, it enables flexibility for IaC just like K8s does for application hosting.  A CSP decides to raise prices for infrastrucuture?  Don't fret, take your Terraform and Kubernetes knowledge to another vendor!
 
+## Why This All Matters
 
-## Wrapping Up
+Let's make sure we hit the point of this post home.  In the grand scheme of things, embracing tools such as OIDC, Kubernetes, Terraform and GitHub is about remaining flexible and secure in a technology landscape that is evolving at a rapid pace. It's about ensuring that as developers, architects, or managers, we’re not just keeping pace but setting the pace, ready to adapt and thrive no matter what comes our way.
 
-As we wrap this up, think of the deployment process not as a daunting task but as your next step towards mastering the cloud. With the security of OIDC, the flexibility of Kubernetes, and the simplicity of our approach, you're well on your way to deploying AKS like a pro. It’s about making your life easier, your work more secure, and your deployments a reason to celebrate.
-Why This All Matters
-
-In the grand scheme of things, embracing these tools and strategies is about staying agile and secure in a world that’s constantly changing. It's about ensuring that as developers, architects, or managers, we’re not just keeping pace but setting the pace, ready to adapt and thrive no matter what comes our way.
-
-So, here’s to making deployment a smoother, more secure part of our development journey. Ready to take the next step? Let’s dive in and see just how much easier and more enjoyable your work can become.
+So, here’s to making deployment a smoother, more secure part of our development journey. Ready to take the next step? Let’s dive in and see just how much easier and more enjoyable your work can become.  Check out the entire repo [here](https://github.com/rimlaban7/azure-kubernetes-service-terraform)!
 
 
