@@ -11,58 +11,31 @@ tags:
   - DevOps
 ---
 
-# Overview
+# Deploying AKS with Terraform, GitHub, and OpenID Connect (OIDC)
 
-This post will demonstrate the deployment of an Azure Kubernetes Service using Terraform and GitHub Actions for CI/CD.  The full code can be found in my GitHub [azure-kubernetes-service](https://github.com/rimlaban7/azure-kubernetes-service-terraform) repository. For this project we'll also make sure GitHub and Azure use OpenID Connect (OIDC) for authenticating service principals. This will save us from storing client secrets (basically passwords).  For an overview of how this works, see my blog post titled [Authenticating GitHub and Azure DevOps using OpenID Connect ](https://www.theroadtocloud.com/blog/github-and-azure-devops-oidc-authentication/).
+Let's talk about something that sounds complicated but is actually not as bad as it might seem: deploying Azure Kubernetes Service (AKS) using Terraform, orchestrated through GitHub Actions. And the cherry on top? Let's make this entire process seamless and more secure by integrating OpenID Connect (OIDC) for authentication. This will give your developer experience a major upgrade!
 
-# Prerequisites
+## Goodbye Passwords, Hello OIDC
 
-Before you begin, you'll need to have the following:
+Imagine deploying infrastructure without worrying about safeguarding a pile of secrets or passwords. From an engineer's or software developer's lense, this presents a host of challenges.  How do you store, manage and rotate those secrets and passwords? Thanks to OIDC, that daunting endeavor is a thing of the past! OIDC simplifies authenticating with Azure, meaning less time fretting over security and more time doing what you love: crafting great code. It’s a smarter, streamlined way to work, and honestly, who doesn’t want that?  For more information on how OIDC works with Entra, Azure, GitHub and Azure DevOps, see my blog post titled [Authenticating GitHub and Azure DevOps using OpenID Connect](https://www.theroadtocloud.com/blog/github-and-azure-devops-oidc-authentication/).
 
-- An Azure subscription
-- A GitHub account
-- Your favorite IDE - I prefer Visual Studio Code with the below extensions installed
-    - GitHub Actions
-    - HashiCorp HCL 
-    - HashiCorp Terraform
+## Flexibility and Portability Matter
 
-# Configuration
+Why make a big deal about Kubernetes (or K8s as the cool kids call it)? Simply put, it gives you the flexibility to manage your applications with ease, regardless of where you choose to run them. The major Cloud Service Providers (CSPs) have all jumped on board - Microsoft with Azure Kubernetes Service (AKS), AWS with Elastick Kubernetes Service, and Google Cloud Platform (GCP) with Google Kubernetes Service (GKS). Think of K8s as your cloud Swiss Army knife, ready to adapt to whatever your project needs. K8s represents a cloud-agnostic service, pitting the major CSPs against each other to earn your business.
 
-## OpenID Connect (OIDC)
+## The Deployment Journey
 
-We'll need to create an Entra application and service principal that has the appropriate permissions to create and modify Azure resources.  There are a few different ways to accomplish this depending on you subscription type and preferred method (Azure Portal, Azure CLI, or PowerShell).  For this project, I followed this guide: [Configuring OpenID Connect in Azure](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure).  For this to work correctly, you'll need to have the below values configured.
+Here's how we demystify the whole process: start with a solid foundation (our GitHub repo, prepped and ready, following top-notch practices). Then, we walk you through the setup like a friend who’s been there before, covering everything from the nooks and crannies of OIDC configuration to the secrets of setting up GitHub like a treasure trove of your most prized assets. And yes, we even touch on initializing Terraform – think of it as laying down the tracks for your deployment train to glide smoothly.
+Keeping It Simple with Trunk-Based Development
 
-| Configuration Item | Value                                   |
-| ------------------ | --------------------------------------- |
-| Organization       | *GitHub User Name or Organization Name* |
-| Repository         | *Repository Name*                       |
-| Entity Type        | `Environment`                           |
-| Based on selection | `prod`                                  |
+We keep our development process straightforward with a Trunk-Based Development strategy. It’s about having a single, main line of work that keeps everyone on the same page, reducing complexity and fostering faster, more agile releases. Add GitHub Actions into the mix, and you've got a recipe for deploying with confidence and speed.
+Wrapping Up: Deploying with Confidence
 
+As we wrap this up, think of the deployment process not as a daunting task but as your next step towards mastering the cloud. With the security of OIDC, the flexibility of Kubernetes, and the simplicity of our approach, you're well on your way to deploying AKS like a pro. It’s about making your life easier, your work more secure, and your deployments a reason to celebrate.
+Why This All Matters
 
-## GitHub Actions Environment Secrets
+In the grand scheme of things, embracing these tools and strategies is about staying agile and secure in a world that’s constantly changing. It's about ensuring that as developers, architects, or managers, we’re not just keeping pace but setting the pace, ready to adapt and thrive no matter what comes our way.
 
-The GitHub Actions and Terraform code we will use for this project require an environment as well as environment secrets to be configured. For step-by-step instructions on how to create an environment, see [Creating an Environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#creating-an-environment). We'll need to call this environment *prod*, as stated above for the GitHub Actions to work correctly.  Add the below repository secrets.
-
-| Variable | Description |
-|-|-|
-| AZURE_TENANT_ID | Entra Tenant ID |
-| AZURE_SUBSCRIPTION_ID | Subscription ID for Azure |
-| AZURE_CLIENT_ID | App Registration / Client ID for OIDC Service Principal |
-| ACCOUNT_REPLICATION_TYPE | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
-| ACCOUNT_TIER | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
-| TF_LOCATION | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
-| BLOB_CONTAINER_NAME | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
-| ENVIRONMENT | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
-| RESOURCE_GROUP_NAME | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
-| STORAGE_ACCOUNT_PREFIX | [Storage Account Config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) |
-| AZ_CLI_LOCATION | Similar to `TF_LOCATION`, but in Azure CLI formatting.  Look up with `az location list` command. |
-
-Once both OIDC is configured in Azure, and these repository secrets above are added to GitHub environment secrets, you can run `test-oidc.yml` to validate whether or not your GitHub Actions Workflow can connect to Azure.
-
-
-## Initialize Terraform Remote State Storage
-
-When you execute `terraform init`, you're setting up the providers and linking to any existing state of the infrastructure. For this project, the backend state is kept in an Azure storage account.  You only need to run the `init-remote-backend.yml` GitHub Actions Workflow once, and it will initialize an Azure storage account for Terraform remote state. In the next step, we'll import this into Terraform state, so Terraform can also track it.  It makes much more sense to use declerative syntax with Terraform for further provisioning, instead of Azure CLI's procedural syntax.  This will make management much easier and simpler.  
+So, here’s to making deployment a smoother, more secure part of our development journey. Ready to take the next step? Let’s dive in and see just how much easier and more enjoyable your work can become.
 
 
