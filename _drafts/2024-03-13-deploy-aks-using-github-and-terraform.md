@@ -20,7 +20,7 @@ If you wanna jump straight into it, check out my GitHub repository for this proj
 
 ## Keeping It Simple with Trunk-Based Development
 
-For this project, I kept is simple with a Trunk-Based Development strategy. Simply put, it honestly makes the most sense for a single person, or a very small highly skilled team, working on a project.  For a complete overview of all the different ways you can structure your repositories and workflow strategies, see my blog post on [Branching Strategies](https://www.theroadtocloud.com/blog/branching-strategies/)
+For this project, I kept is simple with a Trunk-Based Development strategy. Simply put, it honestly makes the most sense for a single person, or a very small highly skilled team working on a project.  For a complete overview of all the different ways you can structure your repositories and workflow strategies, see my blog post on [Branching Strategies](https://www.theroadtocloud.com/blog/branching-strategies/).
 
 ## Goodbye Passwords, Hello OIDC
 
