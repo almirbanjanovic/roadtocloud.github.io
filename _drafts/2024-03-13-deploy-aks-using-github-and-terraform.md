@@ -11,7 +11,7 @@ tags:
   - DevOps
 ---
 
-# Deploying AKS with Terraform, GitHub, and OpenID Connect (OIDC)
+# Flexibility, Portability and Security with Kubernetes, Terraform, GitHub, and OpenID Connect (OIDC)
 
 Let's talk about something that sounds complicated but is actually not as bad as it might seem: deploying Azure Kubernetes Service (AKS) using Terraform, orchestrated through GitHub Actions. And the cherry on top? Let's make this entire process seamless and more secure by integrating OpenID Connect (OIDC) for authentication. This will give your developer experience a major upgrade!  
 
