@@ -16,7 +16,7 @@ tags:
 Let's talk about something that sounds complicated but is actually not as bad as it might seem: deploying Azure Kubernetes Service (AKS) using Terraform, orchestrated through GitHub Actions. And the cherry on top? Let's make this entire process seamless and more secure by integrating OpenID Connect (OIDC) for authentication. This will give your developer experience a major upgrade!  
 
 ## TL;DR
-If you wanna jump straight into it, check out my GitHub repository for this project [here](https://github.com/rimlaban7/azure-kubernetes-service-terraform).
+If you wanna jump straight into it, check out my GitHub repository for this project [here](https://github.com/rimlaban7/azure-kubernetes-service-terraform).  This includes a step-by-step guide, including prerequisites, configuration and deployment of AKS using OIDC, Terraform, GitHub Actions.
 
 ## Goodbye Passwords, Hello OIDC
 
