@@ -22,17 +22,17 @@ If you wanna jump straight into it, check out my GitHub repository for this proj
 
 Imagine deploying infrastructure without worrying about safeguarding a pile of secrets or passwords. From an engineer's or software developer's lense, this presents a host of challenges.  How do you store, manage and rotate those secrets and passwords? Thanks to OIDC, that daunting endeavor is a thing of the past! OIDC simplifies authenticating with Azure, meaning less time fretting over security and more time doing what you love: crafting great code. It’s a smarter, streamlined way to work, and honestly, who doesn’t want that?  For more information on how OIDC works with Entra, Azure, GitHub and Azure DevOps, see my blog post titled [Authenticating GitHub and Azure DevOps using OpenID Connect](https://www.theroadtocloud.com/blog/github-and-azure-devops-oidc-authentication/).
 
+## Keeping It Simple with Trunk-Based Development
+
+For this project, I kept is simple with a Trunk-Based Development strategy. Simply put, it honestly makes the most sense for a single person, or a very small highly skilled team, working on a project.  For a complete overview of all the different ways you can structure your repositories and workflow strategies, see my blog post on [Branching Strategies](https://www.theroadtocloud.com/blog/branching-strategies/)
+
 ## Flexibility and Portability Matter
 
 Why make a big deal about Kubernetes (or K8s as the cool kids call it)? Simply put, it gives you the flexibility to manage your applications with ease, regardless of where you choose to run them. The major Cloud Service Providers (CSPs) have all jumped on board - Microsoft with Azure Kubernetes Service (AKS), AWS with Elastick Kubernetes Service, and Google Cloud Platform (GCP) with Google Kubernetes Service (GKS). Think of K8s as your cloud Swiss Army knife, ready to adapt to whatever your project needs. K8s represents a cloud-agnostic service, pitting the major CSPs against each other to earn your business.
 
-## The Deployment Journey
 
-Here's how we demystify the whole process: start with a solid foundation (our GitHub repo, prepped and ready, following top-notch practices). Then, we walk you through the setup like a friend who’s been there before, covering everything from the nooks and crannies of OIDC configuration to the secrets of setting up GitHub like a treasure trove of your most prized assets. And yes, we even touch on initializing Terraform – think of it as laying down the tracks for your deployment train to glide smoothly.
-Keeping It Simple with Trunk-Based Development
 
-We keep our development process straightforward with a Trunk-Based Development strategy. It’s about having a single, main line of work that keeps everyone on the same page, reducing complexity and fostering faster, more agile releases. Add GitHub Actions into the mix, and you've got a recipe for deploying with confidence and speed.
-Wrapping Up: Deploying with Confidence
+## Wrapping Up
 
 As we wrap this up, think of the deployment process not as a daunting task but as your next step towards mastering the cloud. With the security of OIDC, the flexibility of Kubernetes, and the simplicity of our approach, you're well on your way to deploying AKS like a pro. It’s about making your life easier, your work more secure, and your deployments a reason to celebrate.
 Why This All Matters
