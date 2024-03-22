@@ -1,7 +1,7 @@
 ---
 title:  "Deploy Azure Kubernetes Service (AKS) using GitHub and Terraform"
 header:
-  #teaser: "/assets/images/github_terraform_azure_function.jpg"
+  teaser: "/assets/images/aks-terraform-oidc.svg"
 excerpt: "Let's deploy Azure Kubernetes Service (AKS) using GitHub and Terraform!"
 classes: wide
 toc: true
@@ -10,6 +10,10 @@ tags:
   - Programming
   - DevOps
 ---
+
+<figure class="align-left">
+	<a href="/assets/images/aks-terraform-oidc.svg"><img src="/assets/images/aks-terraform-oidc.svg"></a>
+</figure>
 
 # Flexibility, Portability and Security with Kubernetes, Terraform, GitHub, and OpenID Connect (OIDC)
 
