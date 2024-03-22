@@ -26,7 +26,7 @@ For this project, I kept is simple with a Trunk-Based Development strategy. Simp
 
 Imagine deploying infrastructure without worrying about safeguarding a pile of secrets or passwords. From an engineer's or software developer's lense, this presents a host of challenges.  How do you store, manage and rotate those secrets and passwords? Thanks to OIDC, that daunting endeavor is a thing of the past! OIDC simplifies authenticating with Azure, meaning less time fretting over security and more time doing what you love: crafting great code. It’s a smarter, streamlined way to work, and honestly, who doesn’t want that?  For more information on how OIDC works with Entra, Azure, GitHub and Azure DevOps, see my blog post titled [Authenticating GitHub and Azure DevOps using OpenID Connect](https://www.theroadtocloud.com/blog/github-and-azure-devops-oidc-authentication/).  This project uses OIDC. It just makes sense.
 
-## Flexibility and Portability Matter
+## Flexibility and Portability 
 
 Why make a big deal about Kubernetes, or K8s as the cool kids call it? Simply put, it gives you the flexibility to manage your applications with ease, regardless of where you choose to run them. The major Cloud Service Providers (CSPs) have all jumped on board - Microsoft with Azure Kubernetes Service (AKS), AWS with Elastick Kubernetes Service (EKS), and Google Cloud Platform (GCP) with Google Kubernetes Service (GKS). Think of K8s as your cloud Swiss Army knife, ready to adapt to whatever your project needs. K8s represents a cloud-agnostic service, pitting the major CSPs against each other to earn your business.  Competition is a good thing for the consumer (i.e. you and me!).
 
