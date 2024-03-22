@@ -3,7 +3,7 @@ title:  "Deploy Azure Kubernetes Service (AKS) using GitHub and Terraform"
 header:
   teaser: "/assets/images/aks-terraform-oidc.svg"
 excerpt: "Let's deploy Azure Kubernetes Service (AKS) using GitHub and Terraform!"
-#classes: wide
+classes: wide
 toc: true
 tags:
   - Cloud
