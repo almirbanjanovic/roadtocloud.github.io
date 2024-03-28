@@ -16,7 +16,11 @@ tags:
 </figure>
 
 # TL;DR
-If you wanna jump straight into it, check out my GitHub repository for this project [here](https://github.com/rimlaban7/azure-kubernetes-service-terraform).  This includes a step-by-step guide, including prerequisites, configuration and deployment of AKS using OIDC, Terraform, GitHub Actions.
+If you wanna jump straight into it, check out my GitHub repository for this project [here](https://github.com/rimlaban7/azure-kubernetes-service-terraform).  This includes a step-by-step guide, including prerequisites, configuration and deployment of AKS using OIDC, Terraform, GitHub Actions.  The goal of this project is to demonstrate the three (3) main points below:
+
+1. Use of OIDC for Microsoft Entra and GitHub Actions authentication,
+2. Use of Azure Storage Account as Terraform Backend for state storage, and
+3. Deployment of minimum viable product (MVP) Azure Kubernetes Service (AKS).
 
 # Flexibility, Portability and Security with Kubernetes, Terraform, GitHub, and OpenID Connect (OIDC)
 
@@ -32,8 +36,10 @@ Imagine deploying infrastructure without worrying about safeguarding a pile of s
 
 ## Flexibility and Portability 
 
+### Kubernetes
 Why make a big deal about Kubernetes, or K8s as the cool kids call it? Simply put, it gives you the flexibility to manage your applications with ease, regardless of where you choose to run them. The major Cloud Service Providers (CSPs) have all jumped on board - Microsoft with Azure Kubernetes Service (AKS), AWS with Elastic Kubernetes Service (EKS), and Google Cloud Platform (GCP) with Google Kubernetes Service (GKS). Think of K8s as your cloud Swiss Army knife, ready to adapt to whatever your project needs. K8s represents a cloud-agnostic service, pitting the major CSPs against each other to earn your business.  Competition is a good thing for the consumer (i.e. you and me!).
 
+### Terraform
 Finally, what's all the Terraform fuss about?  Some might say - can't I just use Azure Resource Manager (ARM) Templates?  Well, technically, yes.  But when you learn Terraform, a cross-CSP Infrastructure as Code (IaC) declarative deployment tool, it enables flexibility for IaC just like K8s does for application hosting.  A CSP decides to raise prices for infrastrucuture?  Don't fret, take your Terraform and Kubernetes knowledge to another vendor! Once again, competition is the name of the game.  Let' the CSPs compete for your business!
 
 # Why This All Matters
