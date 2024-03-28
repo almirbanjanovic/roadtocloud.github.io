@@ -21,7 +21,7 @@ If you wanna jump straight into it, check out my GitHub repository for this proj
 1. Use of OIDC for Microsoft Entra and GitHub Actions authentication,
 2. Use of Azure Storage Account as Terraform Backend for state storage, and
 3. Deployment of minimum viable product (MVP) Azure Kubernetes Service (AKS).
-<br></br>
+<br>
 
 # Flexibility, Portability and Security with Kubernetes, Terraform, GitHub, and OpenID Connect (OIDC)
 
