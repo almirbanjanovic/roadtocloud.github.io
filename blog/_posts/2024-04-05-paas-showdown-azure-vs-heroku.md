@@ -89,7 +89,7 @@ Finally, we'll also need to still utilize the same Site-to-Site VPN tunnel for e
 - Limited control due to managed infrastructure, but [Heroku Shield](https://www.heroku.com/shield) is offered for high compliance applications
 - Complicated network routing with additional hops and points of failure between Heroku and Azure
 - Degraded performance due to additional Site-to-Site VPN hops, which introduce additional latency
-- Increased security risk because traffic flows over open internet, even thoug hit is encrypted over a VPN tunnel
+- Increased security risk because traffic flows over open internet, even though it is encrypted over a VPN tunnel
 - Team has not worked with Heroku
 
 # Recommendation
