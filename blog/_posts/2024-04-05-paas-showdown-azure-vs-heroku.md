@@ -65,6 +65,10 @@ The combination of Heroku application hosting and Azure database hosting creates
 
 Additionally, we'll need to secure traffic in transit between our Ruby on Rails application hosted in Heroku and our database hosted in Azure.  For this, we'll use a Site-to-Site VPN.  Heroku offers this very capability with [Shield Space VPN Connections](https://devcenter.heroku.com/articles/private-space-vpn-connection).
 
+<figure>
+    <a href="/assets/images/paas-showdown-heroku.png"><img src="/assets/images/paas-showdown-heroku.png"></a>
+</figure>
+
 ## Pros
 - Managed infrastructure offers simplicity
 - Developers can focus on writing great code
