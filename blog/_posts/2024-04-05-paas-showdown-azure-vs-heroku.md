@@ -3,7 +3,7 @@ title:  "PaaS Showdown: Choosing a Hosting Platform for a Ruby on Rails Applicat
 header:
   teaser: "/assets/images/azure-vs-heroku.png"
 excerpt: "Which platform choice is better for hosting applications - Azure or Heroku?  Let's dive in and find out!"
-classes: wide
+#classes: wide
 toc: true
 tags:
   - Cloud
