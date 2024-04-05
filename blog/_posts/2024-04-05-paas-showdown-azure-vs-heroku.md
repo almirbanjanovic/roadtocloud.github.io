@@ -46,6 +46,7 @@ Additionally, to further keep traffic private, we'll utilize Private Endpoints t
 
 <figure>
     <a href="/assets/images/paas-showdown-azure.png"><img src="/assets/images/paas-showdown-azure.png"></a>
+	<figcaption>(Click to enlarge!)</figcaption>
 </figure>
 
 ## Pros
@@ -77,6 +78,7 @@ Finally, we'll also need to still utilize the same Site-to-Site VPN tunnel for e
 
 <figure>
     <a href="/assets/images/paas-showdown-heroku.png"><img src="/assets/images/paas-showdown-heroku.png"></a>
+	<figcaption>(Click to enlarge!)</figcaption>
 </figure>
 
 ## Pros
