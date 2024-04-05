@@ -36,7 +36,7 @@ Finally, I have also ommitted showing a CDN, which, for a critical application s
 
 ## Architecture
 
-First, we'll require a Hub-and-Spoke architecture.  Most LOB (line of business) applications should be separated into their own subscriptions and as a result their own virtual networks (VNets).  This creates an additional layer of security as it makes a blast radius of an attack smaller. Take a look at the [Azure's Cloud Adoption Framework Landing Zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) for a more detailed deep dive on this. For this architucture everything is hosted in Azure, including the Ruby application.  For this, we should utilize an isolated [Internal Load Balancer (ILB) Application Serivce Environment (ASE)](https://learn.microsoft.com/en-us/azure/app-service/environment/overview). App Services in an isolated environment can host a Ruby on Rails application either as a Linux web app or inside a Docker container. ASEs are great for workloads that require
+First, we'll require a Hub-and-Spoke architecture.  Most LOB (line of business) applications should be separated into their own subscriptions and as a result their own virtual networks (VNets).  This creates an additional layer of security as it makes a blast radius of an attack smaller. Take a look at the [Azure's Cloud Adoption Framework Landing Zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) for a more detailed deep dive on this. For this architucture everything is hosted in Azure, including the Ruby on Rails application.  For this, we should utilize an isolated [Internal Load Balancer (ILB) Application Serivce Environment (ASE)](https://learn.microsoft.com/en-us/azure/app-service/environment/overview). App Services, Azure's PaaS option, in an isolated environment can host a Ruby on Rails application either as a Linux web app or inside a Docker container. ASEs are great for workloads that require
 - High scale
 - Isolation and secure network access
 - High memory utilization
@@ -50,8 +50,8 @@ Additionally, to further keep traffic private, we'll utilize Private Endpoints t
 
 ## Pros
 - Team is familiar with and currently uses Azure
-- Network enclaving reduces risk
-- Fine-grained security control, fewer attack vectors for malicious actors
+- Network enclaving increases security and reduces risk
+- Fine-grained security control
 - Better performance, especially when both application and database are hosted on Azure
 - Integration with Microsoft Ecosystem
 
@@ -71,7 +71,7 @@ The combination of Heroku application hosting and Azure database hosting creates
 - Space level log drains
 - Strict TLS enforcement
 
-Additionally, we'll need to secure traffic in transit between our Ruby on Rails application hosted in Heroku and our database hosted in Azure.  For this, we'll use a Site-to-Site VPN.  Heroku offers this very capability with [Shield Space VPN Connections](https://devcenter.heroku.com/articles/private-space-vpn-connection). This VPN tunnel offers redundancy and IPSec encryption. (Another option would be to use HTTPS/TLS encrypted traffic, but this would not only introduce additional latency, it would also let our sensitive data flow accross the internet.  This is the least desirable option and I would not recommend this.)
+However, we still need to ensure network enclaving for Azure and individual VNets for LOB applications.  Additionally, we'll need to secure traffic in transit between our Ruby on Rails application hosted in Heroku and our database hosted in Azure.  For this, we'll use a Site-to-Site VPN at a minimum.  Heroku offers this very capability with [Shield Space VPN Connections](https://devcenter.heroku.com/articles/private-space-vpn-connection). This VPN tunnel offers redundancy and IPSec encryption. (Another option would be to use HTTPS/TLS encrypted traffic, but this would not only introduce additional latency, it would also let our sensitive data flow accross the internet.  This is the least desirable option and I would not recommend this.)
 
 Finally, we'll also need to still utilize the same Site-to-Site VPN tunnel for egress traffic from Heroku through our Azure VNet in order to only expose one public business IP address using SNAT.
 
@@ -81,13 +81,14 @@ Finally, we'll also need to still utilize the same Site-to-Site VPN tunnel for e
 
 ## Pros
 - Managed infrastructure offers simplicity
-- Developers can focus on writing code
+- Simple applications can be up and running fast
 
 ## Cons
 - Limited control due to managed infrastructure, but [Heroku Shield](https://www.heroku.com/shield) is offered for high compliance applications
-- Complicated network routing with additional hops and points of failure
-- Site-to-Site VPN creates additional attack vector for malicious actors
-- Degraded performance due to need to use Site-to-Site VPN introduces additional latency and will degrade performance
+- Complicated network routing with additional hops and points of failure between Heroku and Azure
+- Degraded performance due to additional Site-to-Site VPN hops, which introduce additional latency
+- Increased security risk because traffic flows over open internet, even thoug hit is encrypted over a VPN tunnel
 
 # Recommendation
 
+The choice between Azure and Heroku application hosting for Ruby on Rails depends on project size, complexity, and priorities. Azure offers ASEs as a PaaS option for performance and high scale through isolation.  This is ideal for larger, complex applications requiring flexibility and scalability.  On the other hand, Heroku is great for simplicity and fast deployment.  The additional complexity of requiring Azure to host data really handicaps Heroku as a choice, because a Site-to-Site VPN would degrade performance and increase security risk.  However, for smaller, less complex applications, Heroku could offer faster application deployments for tasks such as prototyping and proof of concepts.
