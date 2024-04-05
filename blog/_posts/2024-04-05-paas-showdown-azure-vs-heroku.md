@@ -1,6 +1,5 @@
 ---
 title:  "PaaS Showdown: Choosing a Hosting Platform for a Ruby on Rails Application"
-"
 header:
   teaser: "/assets/images/azure-vs-heroku.png"
 excerpt: "Which platform choice is better for hosting applications - Azure or Heroku?  Let's dive in and find out!"
@@ -9,6 +8,10 @@ toc: true
 tags:
   - Cloud
 ---
+
+<figure class="align-left">
+	<a href="/assets/images/azure-vs-heroku.png"><img src="/assets/images/azure-vs-heroku.png"></a>
+</figure>
 
 # Introduction
 Nowdays there are many ways to host your web app ranging from containerization for portability to full-fledged IaaS (Infrastructure as a Service) deployments.  However, these two options come with significant management overhead, which can be quite challenging.  Another solution is choosing a platform, which manages this for you; this is oftern referred to as Platform as a Service (PaaS).  Two popular choices represent Azure App Services and Heroku.  However, the choice between these two depends on individual application as well as business requirements.  Let's take a look at how this shakes out!
