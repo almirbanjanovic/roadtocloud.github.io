@@ -9,7 +9,7 @@ tags:
   - Cloud
 ---
 
-<figure style="width: 300px" class="align-center">
+<figure style="width: 250px" class="align-center">
 	<a href="/assets/images/azure-vs-heroku.png"><img src="/assets/images/azure-vs-heroku.png"></a>
 </figure>
 
@@ -36,6 +36,8 @@ Finally, I have also ommitted showing a CDN, which, for a critical application s
 # Option 1: Azure
 
 ## Architecture
+
+For this archtiecture everything is hosted in Azure, including the Ruby application.  For this, we should utilize an isolated Internal Load Balancer (ILB) Application Serivce Environment (ASE).  This will offer network isolation for security and HIPAA compliance purposes.  Additionally, to further keep traffic private, we'll utilize Private Endpoints to connect to Azure SQL.  This combination offers full control of traffic flow, and is completely isolated over private network connections within a single LOB VNet. This demonstrates network enclaving and offers protection and reduced the blast radius should an attack by a malicious actor occur.
 
 <figure>
     <a href="/assets/images/paas-showdown-azure.png"><img src="/assets/images/paas-showdown-azure.png"></a>
@@ -65,16 +67,19 @@ The combination of Heroku application hosting and Azure database hosting creates
 
 Additionally, we'll need to secure traffic in transit between our Ruby on Rails application hosted in Heroku and our database hosted in Azure.  For this, we'll use a Site-to-Site VPN.  Heroku offers this very capability with [Shield Space VPN Connections](https://devcenter.heroku.com/articles/private-space-vpn-connection).
 
+Finally, we'll need to still utilize the Site-to-Site VPN for egress traffic from Heroku through in order to only expose one public business IP address.
+
 <figure>
     <a href="/assets/images/paas-showdown-heroku.png"><img src="/assets/images/paas-showdown-heroku.png"></a>
 </figure>
 
 ## Pros
 - Managed infrastructure offers simplicity
-- Developers can focus on writing great code
+- Developers can focus on writing code
 
 ## Cons
 - Limited control over security due to shared and hidden infrastructure, but Heroku Shield is offered for high compliance applications.
+- Complicated network routing with additional hops and points of failure
 - Site-to-Site VPN creates additional attack vector for malicious actors
 - Site-to-Site VPN introduces additional latency and will degrade performance
 
