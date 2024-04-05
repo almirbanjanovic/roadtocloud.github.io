@@ -14,7 +14,7 @@ tags:
 </figure>
 
 # Introduction
-Nowdays there are many ways to host your web app ranging from containerization for portability to full-fledged IaaS (Infrastructure as a Service) deployments.  However, these two options come with significant management overhead, which can be quite challenging.  Another solution is choosing a platform, which manages this for you; this is oftern referred to as Platform as a Service (PaaS).  Two popular choices represent Azure App Services and Heroku.  However, the choice between these two depends on individual application as well as business requirements. Let's assume this scenario: a team is using Azure currently, but wants to consider Heroku.  Let's take a look at how this shakes out!
+Nowdays there are many ways to host your web app ranging from containerization for portability to full-fledged IaaS (Infrastructure as a Service) deployments.  However, these two options come with significant management overhead, which can be quite challenging.  Another solution is choosing a platform, which manages this for you; this is often referred to as Platform as a Service (PaaS).  Two popular choices represent Azure App Services and Heroku.  However, the choice between these two depends on individual application as well as business requirements. Let's assume this scenario: a team is using Azure currently, but wants to consider Heroku.  Let's take a look at how this shakes out!
 
 # Requirements
 ## In Scope
@@ -23,7 +23,7 @@ How would you begin by analyzing a showdown between Azure App Services and Herok
 ## Additional Assumptions
 Let's assume this Ruby on Rails application requires pretty significant up-time.  As a result, this business critical application requires High Availability (HA). 
 Additionally, usually it is best practice for companies to advertise one IP address to the world.  Multiple IP addresses can present challenges and unnecessary security risks.  This analysis also assumes that SNAT (Source Network Address Translation) is required, so that only one IP address is advertised. This will avoid exposing additional attack vectors.
-Finally, one last assumption: This is a standard 3-tier app with a web front-end, an API middle tier, and a back-end database tier.
+Finally, one last assumption: this is a standard 3-tier app with a web front-end, an API middle tier, and a back-end database tier.
 
 ## Out of Scope
 For this analysis I have ommitted focusing on DevOps and CI/CD and how that could affect the outcome.  Both platforms offer support for Git and should offer support for popular code repositories like GitHub.  However, this adds an aditional layer of complexity and takes away from the main concerns of analyzing the impact on performance and security. DevOps and CI/CD practices wouldn't necessarily change this analysis focused on security and performance.
@@ -88,7 +88,8 @@ Finally, we'll also need to still utilize the same Site-to-Site VPN tunnel for e
 - Complicated network routing with additional hops and points of failure between Heroku and Azure
 - Degraded performance due to additional Site-to-Site VPN hops, which introduce additional latency
 - Increased security risk because traffic flows over open internet, even thoug hit is encrypted over a VPN tunnel
+- Team has not worked with Heroku
 
 # Recommendation
 
-The choice between Azure and Heroku application hosting for Ruby on Rails depends on project size, complexity, and priorities. Azure offers ASEs as a PaaS option for performance and high scale through isolation.  This is ideal for larger, complex applications requiring flexibility and scalability.  On the other hand, Heroku is great for simplicity and fast deployment.  The additional complexity of requiring Azure to host data really handicaps Heroku as a choice, because a Site-to-Site VPN would degrade performance and increase security risk.  However, for smaller, less complex applications, Heroku could offer faster application deployments for tasks such as prototyping and proof of concepts.
+The choice between Azure and Heroku application hosting for Ruby on Rails depends on project size, complexity, and priorities. Azure offers ASEs as a PaaS option for performance and high scale through isolation.  This is ideal for larger, complex applications requiring flexibility and scalability.  On the other hand, Heroku is great for simplicity and fast deployment.  The additional complexity of requiring Azure to host data really handicaps Heroku as a choice, because a Site-to-Site VPN would degrade performance and increase security risk.  However, for smaller, less complex applications, Heroku could offer faster application deployments for tasks such as prototyping and proof of concepts. Finally, a team's familiarity and built-out processec currently existing with Azure should not be discounted, because migrating those to Heroku could introduce additional cost and risk.
