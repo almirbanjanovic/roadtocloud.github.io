@@ -37,14 +37,18 @@ Finally, I have also ommitted showing a CDN, which, for a critical application s
 
 ## Architecture
 
+<figure>
+    <a href="/assets/images/paas-showdown-azure.png"><img src="/assets/images/paas-showdown-azure.png"></a>
+</figure>
+
 ## Pros
-- Team is Familiar and Currently Uses Azure
-- Fine-grained security control for absolute control
-- Better Performance, especially when both application and database are hosted on Azure
+- Team is familiar and currently uses Azure
+- Fine-grained security control, fewer attack vectors for malicious actors
+- Better performance, especially when both application and database are hosted on Azure
 - Integration with Microsoft Ecosystem
 
 ## Cons
-- Infrastructure Complexity
+- Infrastructure complexity
 - Management 
 
 # Option 2: Heroku
