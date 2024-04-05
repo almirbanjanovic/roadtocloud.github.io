@@ -14,7 +14,7 @@ tags:
 </figure>
 
 # Introduction
-Nowdays there are many ways to host your web app ranging from containerization for portability to full-fledged IaaS (Infrastructure as a Service) deployments.  However, these two options come with significant management overhead, which can be quite challenging.  Another solution is choosing a platform, which manages this for you; this is oftern referred to as Platform as a Service (PaaS).  Two popular choices represent Azure App Services and Heroku.  However, the choice between these two depends on individual application as well as business requirements.  Let's take a look at how this shakes out!
+Nowdays there are many ways to host your web app ranging from containerization for portability to full-fledged IaaS (Infrastructure as a Service) deployments.  However, these two options come with significant management overhead, which can be quite challenging.  Another solution is choosing a platform, which manages this for you; this is oftern referred to as Platform as a Service (PaaS).  Two popular choices represent Azure App Services and Heroku.  However, the choice between these two depends on individual application as well as business requirements. Let's assume this scenario: a team is using Azure currently, but wants to consider Heroku.  Let's take a look at how this shakes out!
 
 # Requirements
 ## In Scope
@@ -55,7 +55,7 @@ Finally, I have also ommitted showing a CDN, which, for a critical application s
 
 ## Architecture
 
-The combination of Heroku application hosting and Azure database hosting creates additional complexity.  For security, right out of the gate we want to use Heroku Shield Spaces.  This will offer isolation and security on par with Azure Application Service Environments for isolated hosting.  Here are the major selling points for [Heroku Shield](https://www.heroku.com/pricing):
+The combination of Heroku application hosting and Azure database hosting creates additional complexity.  For security, right out of the gate we want to use Heroku Shield Spaces.  This will offer isolation and security on par with Azure Application Service Environments for isolated hosting.  Here are the major selling points for [Heroku Shield](https://www.heroku.com/shield):
 - Dedicated environment for high compliance apps
 - Ability to sign BAAs for HIPAA compliance
 - PCI compliance
