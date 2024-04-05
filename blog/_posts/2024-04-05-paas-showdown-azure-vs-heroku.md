@@ -38,25 +38,35 @@ Finally, I have also ommitted showing a CDN, which, for a critical application s
 ## Architecture
 
 ## Pros
+- Team is Familiar and Currently Uses Azure
 - Fine-grained security control for absolute control
 - Better Performance, especially when both application and database are hosted on Azure
 - Integration with Microsoft Ecosystem
 
 ## Cons
-- Complexity
+- Infrastructure Complexity
 - Management 
 
 # Option 2: Heroku
 
 ## Architecture
 
+The combination of Heroku application hosting and Azure database hosting creates additional complexity.  For security, right out of the gate we want to use Heroku Shield Spaces.  This will offer isolation and security on par with Azure Application Service Environments for isolated hosting.  Here are the major selling points for [Heroku Shield](https://www.heroku.com/pricing):
+- Dedicated environment for high compliance apps
+- Ability to sign BAAs for HIPAA compliance
+- PCI compliance
+- Keystroke logging
+- Space level log drains
+- Strict TLS enforcement
+
+Additionally, we'll need to secure traffic in transit between our Ruby on Rails application hosted in Heroku and our database hosted in Azure.  For this, we'll use a Site-to-Site VPN.  Heroku offers this very capability with [Private Space VPN Connections](https://devcenter.heroku.com/articles/private-space-vpn-connection).
+
 ## Pros
 - Managed infrastructure offers simplicity
 - Developers can focus on writing great code
 
 ## Cons
-- Cost at scale
-- Limited control over security due to shared and hidden infrastructure
+- Limited control over security due to shared and hidden infrastructure, but Heroku Shield is offered for high compliance applications.
 - Site-to-Site VPN creates additional attack vector for malicious actors
 - Site-to-Site VPN introduces additional latency and will degrade performance
 
