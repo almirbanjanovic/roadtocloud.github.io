@@ -9,7 +9,7 @@ tags:
   - Cloud
 ---
 
-<figure style="width: 250px" class="align-center">
+<figure style="width: 300px" class="align-left">
 	<a href="/assets/images/azure-vs-heroku.png"><img src="/assets/images/azure-vs-heroku.png"></a>
 </figure>
 
