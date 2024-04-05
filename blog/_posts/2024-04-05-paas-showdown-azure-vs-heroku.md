@@ -27,9 +27,9 @@ Additionally, usually it is best practice for companies to advertise one IP addr
 Finally, one last assumption: This is a standard 3-tier app with a web front-end, an API middle tier, and a back-end database tier.
 
 ## Out of Scope
-For this analysis I have ommitted focusing on DevOps and CI/CD and how that could affect the outcome.  Both platforms offer support for Git and should offer support for popular code repositories like GitHub.  However, this adds an aditional layer of complexity and takes away from the main concerns of analyzing the impact on performance and security.
+For this analysis I have ommitted focusing on DevOps and CI/CD and how that could affect the outcome.  Both platforms offer support for Git and should offer support for popular code repositories like GitHub.  However, this adds an aditional layer of complexity and takes away from the main concerns of analyzing the impact on performance and security. DevOps and CI/CD practices wouldn't necessarily change this analysis focused on security and performance.
 
-Similarly, I have ommitted disaster recovery (DR), as this, again, introduced an additional layer of complexity and introduce global load balancers (like Traffic Manager) and takes away from the main two requirements of analyzing security and performance.
+Similarly, I have ommitted disaster recovery (DR), as this, again, introduces an additional layer of complexity and would require global load balancers (like Traffic Manager). This takes away from the main two requirements of analyzing security and performance. This would not change the analysis on performance and security.
 
 Finally, I have also ommitted showing a CDN, which, for a critical application should probably be part of the architecture.
 
