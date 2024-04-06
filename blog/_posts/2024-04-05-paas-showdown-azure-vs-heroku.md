@@ -19,7 +19,7 @@ Nowdays there are many ways to host your web app ranging from containerization f
 
 # Requirements
 ## In Scope
-How would you begin by analyzing a showdown between Azure App Services and Heroku?  Obviously, we'll need to settle on some requirements.  For this, let's consider two important benchmarks: security and performance. This is a business critical application so performance is paramount.  As a result, we also require high availability. We'll also need to make sure to host our database in Azure. Sensitive data will be flowing, so we'll need to take that into account.
+How would you begin by analyzing a showdown between Azure App Services and Heroku?  Obviously, we'll need to settle on some requirements.  For this, let's consider two important benchmarks: security and performance. This is a business critical application so performance is paramount.  We'll also need to make sure to host our database in Azure. Sensitive data will be flowing, so we'll need to take that into account.
 
 ## Additional Assumptions
 Let's assume this Ruby on Rails application requires pretty significant up-time.  As a result, this business critical application requires High Availability (HA). 
@@ -37,13 +37,15 @@ Finally, I have also ommitted showing a CDN, which, for a critical application s
 
 ## Architecture
 
-First, we'll require a Hub-and-Spoke architecture.  Most LOB (line of business) applications should be separated into their own subscriptions and as a result their own virtual networks (VNets).  This creates an additional layer of security as it makes a blast radius of an attack smaller. Take a look at the [Azure's Cloud Adoption Framework Landing Zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) for a more detailed deep dive on this. For this architucture everything is hosted in Azure, including the Ruby on Rails application.  For this, we should utilize an isolated [Internal Load Balancer (ILB) Application Serivce Environment (ASE)](https://learn.microsoft.com/en-us/azure/app-service/environment/overview). App Services, Azure's PaaS option, in an isolated environment can host a Ruby on Rails application either as a Linux web app or inside a Docker container. ASEs are great for workloads that require
+First, we'll require a Hub-and-Spoke architecture.  Most LOB (line of business) applications should be separated into their own subscriptions and as a result their own virtual networks (VNets).  This creates an additional layer of security as it makes a blast radius of an attack smaller. Take a look at the [Azure's Cloud Adoption Framework Landing Zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) for a more detailed deep dive on this. The only public endpoint will be a public IP attached to an Application Gateway (Azure's Layer 7 load balancer), which will use the WAFv2 SKU to protect incoming web traffic.  For application hosting, we should utilize an isolated [Internal Load Balancer (ILB) Application Serivce Environment (ASE)](https://learn.microsoft.com/en-us/azure/app-service/environment/overview). This will ensure private traffic for security.  App Services, Azure's PaaS option, in an isolated environment can host a Ruby on Rails application either as a Linux web app or inside a Docker container. ASEs are great for workloads that require
 - High scale
 - Isolation and secure network access
 - High memory utilization
 - High requests per second (RPS). You can create multiple App Service Environments in a single Azure region or across multiple Azure regions. This flexibility makes an App Service Environment ideal for horizontally scaling stateless applications with a high RPS requirement.
 
-Additionally, to further keep traffic private, we'll utilize Private Endpoints to connect to Azure SQL.  This combination offers full control of traffic flow, and is completely isolated over private network connections within a single LOB VNet with private IPs. This demonstrates network enclaving and offers protection and reduces the blast radius should an attack by a malicious actor occur.
+Additionally, to further keep traffic private, we'll utilize Private Endpoints to connect to an Azure SQL database.  This combination offers full control of traffic flow, and is completely isolated over private network connections within a single LOB VNet with private IPs. This demonstrates network enclaving and offers protection and reduces the blast radius should an attack by a malicious actor occur.
+
+Finally, in order to satisfy our HA requirement for this business-critical application, we'll utilize zone-redundant deployments for all of our resources.
 
 <figure>
     <a href="/assets/images/paas-showdown-azure.png"><img src="/assets/images/paas-showdown-azure.png"></a>
