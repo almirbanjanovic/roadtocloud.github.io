@@ -86,7 +86,7 @@ Another similar option to ASEs represents Azure Container Apps (ACA).  Ever want
 
 ## Architecture
 
-The combination of Heroku application hosting and Azure database hosting creates additional complexity.  For security, right out of the gate we want to use Heroku Shield Spaces.  This will offer isolation and security similar to Azure Application Service Environments (ASEs) for isolated hosting.  Here are the major selling points for [Heroku Shield](https://www.heroku.com/shield):
+The combination of Heroku application hosting and Azure database hosting creates additional complexity.  For security, right out of the gate we want to use Heroku Shield Spaces.  This will offer isolation and security similar to Azure Application Service Environments (ASEs) or Azure Container App (ACA) Environments for isolated hosting.  Here are the major selling points for [Heroku Shield](https://www.heroku.com/shield):
 - Dedicated environment for high compliance apps
 - Ability to sign BAAs for HIPAA compliance
 - PCI compliance
