@@ -19,7 +19,7 @@ Nowdays there are many ways to host your web app ranging from containerization f
 
 # Requirements
 ## In Scope
-How would you begin by analyzing a showdown between Azure App Services and Heroku?  Obviously, we'll need to settle on some requirements.  For this, let's consider two important benchmarks: security and performance. This is a business critical application so performance is paramount.  We'll also need to make sure to host our database in Azure. Sensitive data will be flowing, so we'll need to take that into account.
+How would you begin by analyzing a showdown between and Heroku?  Obviously, we'll need to settle on some requirements.  For this, let's consider two important benchmarks: security and performance. This is a business critical application so performance is paramount.  We'll also need to make sure to host our database in Azure. Sensitive data will be flowing, so we'll need to take that into account.
 
 ## Additional Assumptions
 Let's assume this Ruby on Rails application requires pretty significant up-time.  As a result, this business critical application requires High Availability (HA). 
@@ -27,11 +27,11 @@ Additionally, usually it is best practice for companies to advertise one IP addr
 Finally, one last assumption: this is a standard 3-tier app with a web front-end, an API middle tier, and a back-end database tier.
 
 ## Out of Scope
-For this analysis I have ommitted focusing on DevOps and CI/CD and how that could affect the outcome.  Both platforms offer support for Git and should offer support for popular code repositories like GitHub.  However, this adds an aditional layer of complexity and takes away from the main concerns of analyzing the impact on performance and security. DevOps and CI/CD practices wouldn't necessarily change this analysis focused on security and performance.
+For this analysis I have ommitted focusing on DevOps and CI/CD and how that could affect the outcome.  Both platforms offer support for Git and should offer support for popular code repositories like GitHub. However, this adds an aditional layer of complexity and takes away from the main concerns of analyzing the impact on performance and security. DevOps and CI/CD practices wouldn't necessarily change this analysis focused on security and performance.
 
 Similarly, I have ommitted disaster recovery (DR), as this, again, introduces an additional layer of complexity and would require global load balancers (like Traffic Manager). This takes away from the main two requirements of analyzing security and performance. This would not change the analysis on performance and security.
 
-Finally, I have also ommitted showing a CDN, which, for a critical application should probably be part of the architecture.
+Finally, I have also ommitted showing a Content Delivery Network (CDN) for cashing, which, for a critical application should probably be part of the architecture.
 
 # Option 1: Azure
 
