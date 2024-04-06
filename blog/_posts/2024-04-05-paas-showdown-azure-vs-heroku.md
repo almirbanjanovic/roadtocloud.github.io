@@ -35,7 +35,7 @@ Finally, I have also ommitted showing a CDN, which, for a critical application s
 
 # Option 1: Azure
 
-## Architecture
+## Architecture Option 1
 
 First, we'll require a Hub-and-Spoke architecture.  Most LOB (line of business) applications should be separated into their own subscriptions and as a result their own virtual networks (VNets).  This creates an additional layer of security as it makes a blast radius of an attack smaller. Take a look at the [Azure's Cloud Adoption Framework Landing Zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) for a more detailed deep dive on this. The only public endpoint will be a public IP attached to an Application Gateway (Azure's Layer 7 load balancer), which will use the WAFv2 SKU to protect incoming web traffic.  For application hosting, we should utilize an isolated [Internal Load Balancer (ILB) Application Serivce Environment (ASE)](https://learn.microsoft.com/en-us/azure/app-service/environment/overview). This will ensure private traffic for security.  App Services, Azure's PaaS option, in an isolated environment can host a Ruby on Rails application either as a Linux web app or inside a Docker container. ASEs are great for workloads that require
 - High scale
@@ -52,16 +52,35 @@ Finally, in order to satisfy our HA requirement for this business-critical appli
 	<figcaption>(Click to enlarge!)</figcaption>
 </figure>
 
-## Pros
+### Pros
 - Team is familiar with and currently uses Azure
 - Network enclaving increases security and reduces risk
 - Fine-grained security control
 - Better performance, especially when both application and database are hosted on Azure
 - Integration with Microsoft Ecosystem
 
-## Cons
+### Cons
 - Infrastructure complexity
-- Management 
+- Management
+- Potential for vendor-lock in
+
+## Architecture Option 2
+Another similar option to ASEs represents Azure Container Apps (ACA).  Ever wanted to deploy your containers to Kubernetes but found all the plumbing too complicated?  This is where ACA comes in as a managed Kubernetes platform.  Whereas Azure Kubernetes Service (AKS) only abstracts away the Kubernetes control plane, ACA takes it a step further and also abstracts away everything else.  ACA represents a fully managed Kubernetes PaaS.  Most of the architecture will be similar to our ASE architecture above, but now instead of App Services, we are using ACA containers.  The architecture appears simpler, cleaner. We maintain security through enclaving and deploying the ACA into an existing VNet with existing security controls.  For more information on this see [Azure Container Apps Environment Security](https://learn.microsoft.com/en-us/azure/container-apps/networking?tabs=workload-profiles-env%2Cazure-cli#environment-security).
+
+<figure>
+    <a href="/assets/images/paas-showdown-azure-aca.png"><img src="/assets/images/paas-showdown-azure-aca.png"></a>
+	<figcaption>(Click to enlarge!)</figcaption>
+</figure>
+
+### Pros
+- Team is familiar with and currently uses Azure
+- Network enclaving increases security and reduces risk
+- Fine-grained security control
+- Better performance, especially when both application and database are hosted on Azure
+- Integration with Microsoft Ecosystem
+
+### Cons
+- Kubernetes-specific knowledge still required to reap most benefits
 
 # Option 2: Heroku
 
@@ -84,17 +103,18 @@ Finally, we'll also need to still utilize the same Site-to-Site VPN tunnel for e
 	<figcaption>(Click to enlarge!)</figcaption>
 </figure>
 
-## Pros
+### Pros
 - Managed infrastructure offers simplicity
 - Simple applications can be up and running fast
 
-## Cons
+### Cons
 - Limited control due to managed infrastructure, but [Heroku Shield](https://www.heroku.com/shield) is offered for high compliance applications
 - Complicated network routing with additional hops and points of failure between Heroku and Azure
 - Degraded performance due to additional Site-to-Site VPN hops, which introduce additional latency
 - Increased security risk because traffic flows over open internet, even though it is encrypted over a VPN tunnel
 - Team has not worked with Heroku
+- Potential for vendor lock-in
 
 # Recommendation
 
-The choice between Azure and Heroku application hosting for Ruby on Rails depends on project size, complexity, and priorities. Azure offers ASEs as a PaaS option for performance and high scale through isolation.  This is ideal for larger, complex applications requiring flexibility and scalability.  On the other hand, Heroku is great for simplicity and fast deployment.  The additional complexity of requiring Azure to host data really handicaps Heroku as a choice, because a Site-to-Site VPN would degrade performance and increase security risk.  However, for smaller, less complex applications, Heroku could offer faster application deployments for tasks such as prototyping and proof of concepts. Finally, a team's familiarity and built-out processes currently existing with Azure should not be discounted, because migrating those to Heroku could introduce additional cost and risk.
+The choice between Azure and Heroku application hosting for Ruby on Rails depends on project size, complexity, and priorities. Azure offers ASEs as a PaaS option for performance and high scale through isolation.  This is ideal for larger, complex applications requiring flexibility and scalability.  On the other hand, Heroku is great for simplicity and fast deployment.  The additional complexity of requiring Azure to host data really handicaps Heroku as a choice, because a Site-to-Site VPN would degrade performance and increase security risk.  However, for smaller, less complex applications, Heroku could offer faster application deployments for tasks such as prototyping and proof of concepts. Finally, a team's familiarity and built-out processes currently existing with Azure should not be discounted, because migrating those to Heroku could introduce additional cost and risk.  In the end, if a team currently uses containers to deploy a Ruby on Rails application, I would stick to either Azure PaaS offering - Azure Application Service Environments or Azure Container Appps.  The choice depends on preference, future direction and a more detailed price comparison.
