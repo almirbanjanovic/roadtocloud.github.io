@@ -9,7 +9,7 @@ tags:
   - Cloud
 ---
 
-<figure style="width: 300px" class="align-left">
+<figure style="width: 350px" class="align-left">
 	<a href="/assets/images/azure-vs-heroku.png"><img src="/assets/images/azure-vs-heroku.png"></a>
 	<figcaption>Created with DALL-E 3</figcaption>
 </figure>
