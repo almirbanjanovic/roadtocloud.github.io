@@ -60,7 +60,7 @@ Finally, in order to satisfy our HA requirement for this business-critical appli
 - Integration with Microsoft Ecosystem
 
 ### Cons
-- App Service Support for Ruby has ended, requiring containerization
+- App Service support for Ruby has ended, requiring containerization
 - Infrastructure complexity
 - Management
 
