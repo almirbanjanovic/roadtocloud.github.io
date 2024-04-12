@@ -104,6 +104,7 @@ Finally, we'll also need to still utilize the same Site-to-Site VPN tunnel for e
 </figure>
 
 ### Pros
+- Ruby applications can run natively and do not require containerization
 - Managed infrastructure offers simplicity
 - Simple applications can be up and running fast
 
