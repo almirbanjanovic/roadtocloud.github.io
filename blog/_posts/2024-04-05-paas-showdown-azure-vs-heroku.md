@@ -62,7 +62,7 @@ Finally, in order to satisfy our HA requirement for this business-critical appli
 ### Cons
 - App Service support for Ruby has ended, requiring containerization
 - Infrastructure complexity
-- Management
+- Management overhead
 
 ## Architecture Option 2
 Another similar option to ASEs represents Azure Container Apps (ACA).  Ever wanted to deploy your containers to Kubernetes but found all the plumbing too complicated?  This is where ACA comes in as a managed Kubernetes platform.  Whereas Azure Kubernetes Service (AKS) only abstracts away the Kubernetes control plane, ACA takes it a step further and also abstracts away everything else.  ACA represents a fully managed Kubernetes PaaS.  Most of the architecture will be similar to our ASE architecture above, but now instead of App Services, we are using ACA containers.  The architecture appears simpler, cleaner. We maintain security through enclaving and deploying the ACA into an existing VNet with existing security controls.  For more information on this see [Azure Container Apps Environment Security](https://learn.microsoft.com/en-us/azure/container-apps/networking?tabs=workload-profiles-env%2Cazure-cli#environment-security).
@@ -78,9 +78,12 @@ Another similar option to ASEs represents Azure Container Apps (ACA).  Ever want
 - Fine-grained security control
 - Better performance, especially when both application and database are hosted on Azure
 - Integration with Microsoft Ecosystem
+- Includes functionality for auto-scaling and versioning
 
 ### Cons
 - Kubernetes-specific knowledge still required to reap most benefits
+- Infrastructure complexity
+- Management overhead
 
 # Option 2: Heroku
 
