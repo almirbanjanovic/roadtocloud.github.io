@@ -87,7 +87,7 @@ Another similar option to ASEs represents Azure Container Apps (ACA).  Ever want
 
 # Option 2: Heroku
 
-## Architecture
+## Architecture Option 1
 
 The combination of Heroku application hosting and Azure database hosting creates additional complexity.  For security, right out of the gate we want to use Heroku Shield Spaces.  This will offer isolation and security similar to Azure Application Service Environments (ASEs) or Azure Container App (ACA) Environments for isolated hosting.  Here are the major selling points for [Heroku Shield](https://www.heroku.com/shield):
 - Dedicated environment for high compliance apps
@@ -107,18 +107,44 @@ Finally, we'll also need to still utilize the same Site-to-Site VPN tunnel for e
 </figure>
 
 ### Pros
+- [Heroku Shield](https://www.heroku.com/shield) is offered for high compliance applications
 - Ruby applications can run natively and do not require containerization
 - Managed infrastructure offers simplicity
-- Simple applications can be up and running fast
+- Applications can be up and running fast
 
 ### Cons
-- Limited control due to managed infrastructure, but [Heroku Shield](https://www.heroku.com/shield) is offered for high compliance applications
+- Limited control due to managed infrastructure
 - Complicated network routing with additional hops and points of failure between Heroku and Azure
 - Degraded performance due to additional Site-to-Site VPN hops, which introduce additional latency
 - Increased security risk because traffic flows over open internet, even though it is encrypted over a VPN tunnel
 - Team has not worked with Heroku
 - Potential for vendor lock-in
 
+## Architecture Option 2
+
+But what would our Heroku architecture look like if both our web app *and* database were hosted in Heroku? As can be seen in the diagram below, this represents a massive simplification of the architecture.  Not only do we drop the need to containerize our Ruby on Rails application as is the case with Azure PaaS services, but now we can also utilize [Heroku Postrges for Shield Spaces](https://devcenter.heroku.com/articles/heroku-postgres-and-private-spaces).  Our entire architecture can now be hosted in Heroku, inside an isolated, secure environment built specifically for high compliance applications.
+
+<figure>
+    <a href="/assets/images/paas-showdown-heroku.png"><img src="/assets/images/paas-showdown-heroku-db.png"></a>
+	<figcaption>(Click to enlarge!)</figcaption>
+</figure>
+
+### Pros
+- [Heroku Shield](https://www.heroku.com/shield) is offered for high compliance applications
+- Ruby applications can run natively and do not require containerization
+- Managed infrastructure offers simplicity
+- Applications can be up and running fast
+- Heroku Postgres for Shield Spaces addition massively simplifies architecture
+
+### Cons
+- Limited control due to managed infrastructure
+- Team has not worked with Heroku
+- Potential for vendor lock-in
+
 # Recommendation
 
-The choice between Azure and Heroku application hosting for Ruby on Rails depends on project size, complexity, and priorities. Azure offers ASEs and ACAs as PaaS options for performance and high scale through isolation.  This is ideal for larger, complex applications requiring flexibility and scalability.  On the other hand, Heroku is great for simplicity and fast deployment.  The additional complexity of requiring Azure to host data really handicaps Heroku as a choice, because a Site-to-Site VPN would degrade performance and increase security risk.  However, for smaller, less complex applications, Heroku could offer faster application deployments for tasks such as prototyping and proof of concepts. Finally, a team's familiarity and built-out processes currently existing with Azure should not be discounted, because migrating those to Heroku could introduce additional cost and risk.  In the end, if a team currently uses containers to deploy a Ruby on Rails application, I would stick to either Azure PaaS offering - Azure Application Service Environments or Azure Container Appps.  The choice depends on preference, future direction and a more detailed price comparison.
+The choice between Azure and Heroku application hosting for Ruby on Rails depends on project size, complexity, priorities, level of needed control and business direction. Azure offers ASEs and ACAs as PaaS options for performance and high scale through isolation.  This is ideal for larger, complex applications requiring flexibility, scalability and fine-grained control.   Similarly, a team's familiarity and built-out processes currently existing with Azure should not be discounted, because migrating those to Heroku could introduce additional cost and risk.
+
+However, Heroku could offer faster application deployments for tasks such as prototyping and proof of concepts. Heroku is great for simplicity and fast deployment, because it does not require containerization for Ruby on Rails applications. In addition, if we drop the requirement to keep data on Azure, Heroku offers a clear choice - it massively simplifies the cloud architecture and maintainability. However, if there is a hard requirement to keep data within Azure, this creates additional complexity and really handicaps Heroku as a choice, because a Site-to-Site VPN would degrade performance and decrease security.
+
+In the end, if a team currently uses containers to deploy a Ruby on Rails application, and absolutely *must* maintain data within Azure, I would stick to either Azure PaaS offering for web app hosting - Azure Application Service Environments or Azure Container Appps. The added overhead of setting up and maintaining a Site-to-Site VPN between Heroku and Azure really opens up security risks and decreases performance. However, without the data in Azure requirement, Heroku would present a clear winner and a much better choice for developer experience, decreases management overhead and deployment simplicity.  The choice depends on data hosting preference, future business direction and a more detailed price comparison.
