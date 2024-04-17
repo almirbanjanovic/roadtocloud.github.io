@@ -125,7 +125,7 @@ Finally, we'll also need to still utilize the same Site-to-Site VPN tunnel for e
 But what would our Heroku architecture look like if both our web app *and* database were hosted in Heroku? As can be seen in the diagram below, this represents a massive simplification of the architecture.  Not only do we drop the need to containerize our Ruby on Rails application as is the case with Azure PaaS services, but now we can also utilize [Heroku Postgres for Shield Spaces](https://devcenter.heroku.com/articles/heroku-postgres-and-private-spaces).  Our entire architecture can now be hosted in Heroku, inside an isolated, secure environment built specifically for high compliance applications.
 
 <figure>
-    <a href="/assets/images/paas-showdown-heroku.png"><img src="/assets/images/paas-showdown-heroku-db.png"></a>
+    <a href="/assets/images/paas-showdown-heroku-db.png"><img src="/assets/images/paas-showdown-heroku-db.png"></a>
 	<figcaption>(Click to enlarge!)</figcaption>
 </figure>
 
