@@ -29,7 +29,7 @@ feature_row:
   - image_path: /assets/images/about-me-unsplash.jpg
     alt: "About"
     title: "About"
-    excerpt: "Who created the Road to Cloud blog and podcast? Click here to find out more about who Almir is."
+    excerpt: "Who created the Road to Cloud blog and podcast? Click here to find out more about Almir."
     url: "/about/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
