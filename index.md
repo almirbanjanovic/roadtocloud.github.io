@@ -8,9 +8,9 @@ header:
  #   - label: "Learn More"
  #     url: "/blog/"
   caption: "Photo credit: Created with DALLE-3."
-excerpt: "Welcome to Road to Cloud -- Almir's guide to grand strategy, imaginative solutions and creative implementations!"
+excerpt: "Welcome to Road to Cloud -- your guide to grand strategy, imaginative solutions and creative implementations!"
 intro:
-  - excerpt: "Road to Cloud chronicles Almir Banjanovic's efforts in crafting secure, high-performance, cost-effective, and resilient solutions for your enterprise journey."
+  - excerpt: "Road to Cloud chronicles efforts in crafting secure, high-performance, cost-effective, and resilient solutions for your enterprise journey."
 feature_row:
   - image_path: /assets/images/blog-unsplash.jpg
     alt: "Blog"
