@@ -27,8 +27,8 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Listen more"
   - image_path: /assets/images/about-me-unsplash.jpg
-    alt: "About Me"
-    title: "About Me"
+    alt: "About"
+    title: "About"
     excerpt: "Who created the Road to Cloud blog and podcast? Click here to find out more about who Almir is."
     url: "/about/"
     btn_class: "btn--primary"
