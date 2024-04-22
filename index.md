@@ -23,7 +23,7 @@ feature_row:
     alt: "Podcast"
     title: "Podcast"
     excerpt: "Road to Cloud podcast explores everything from cloud and architecture to how technology intersects with our daily lives."
-    url: "/docs/layouts/"
+    url: "/podcast/"
     btn_class: "btn--primary"
     btn_label: "Listen more"
 ---
