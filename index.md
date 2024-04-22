@@ -15,14 +15,14 @@ feature_row:
   - image_path: /assets/images/blog-unsplash.jpg
     alt: "Blog"
     title: "Blog"
-    excerpt: "Road to Cloud blog contains how-to guies as well as personal reflections. Building tomorrow's cloud, today."
+    excerpt: "Road to Cloud blog contains how-to guides as well as personal reflections. Building tomorrow's cloud, today."
     url: "/blog/"
     btn_class: "btn--primary"
     btn_label: "Read more"
   - image_path: /assets/images/podcast-unsplash.jpg
     alt: "Podcast"
     title: "Podcast"
-    excerpt: "Listen to Road to Cloud podcast, which explores everything from cloud and architecture to how technology intersects with our daily lives."
+    excerpt: "Road to Cloud podcast explores everything from cloud and architecture to how technology intersects with our daily lives."
     url: "/docs/layouts/"
     btn_class: "btn--primary"
     btn_label: "Listen more"
