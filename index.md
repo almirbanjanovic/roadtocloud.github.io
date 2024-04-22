@@ -18,14 +18,14 @@ feature_row:
     excerpt: "Road to Cloud blog contains how-to guides as well as personal reflections. Building tomorrow's cloud, today."
     url: "/blog/"
     btn_class: "btn--primary"
-    btn_label: "Read more"
+    btn_label: "Learn more"
   - image_path: /assets/images/podcast-unsplash.jpg
     alt: "Podcast"
     title: "Podcast"
     excerpt: "Road to Cloud podcast explores everything from cloud and architecture to how technology intersects with our daily lives."
     url: "/podcast/"
     btn_class: "btn--primary"
-    btn_label: "Listen more"
+    btn_label: "Learn more"
   - image_path: /assets/images/about-me-unsplash.jpg
     alt: "About"
     title: "About"
