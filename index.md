@@ -26,6 +26,13 @@ feature_row:
     url: "/podcast/"
     btn_class: "btn--primary"
     btn_label: "Listen more"
+  - image_path: /assets/images/about-me-unsplash.jpg
+    alt: "About Me"
+    title: "About Me"
+    excerpt: "Who created Road to Cloud? Click here to find out more about who Almir is.                                               "
+    url: "/about/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
 ---
 
 {% include feature_row id="intro" type="center" %}
