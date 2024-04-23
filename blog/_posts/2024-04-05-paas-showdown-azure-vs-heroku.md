@@ -19,7 +19,7 @@ Nowdays there are many ways to host your web app ranging from containerization f
 
 # Requirements
 ## In Scope
-How would you begin by analyzing a showdown between and Heroku?  Obviously, we'll need to settle on some requirements.  For this, let's consider two important benchmarks: security and performance. This is a business critical application so performance is paramount.  We'll also need to make sure to host our database in Azure. Sensitive data will be flowing, so we'll need to take that into account.
+How would you begin analyzing a showdown between Azure and Heroku?  Obviously, we'll need to settle on some requirements.  For this, let's consider two important benchmarks: security and performance. This is a business critical application so performance is paramount.  We'll also need to make sure to host our database in Azure. Sensitive data will be flowing, so we'll need to take that into account.
 
 ## Additional Assumptions
 Let's assume this Ruby on Rails application requires pretty significant up-time.  As a result, this business critical application requires High Availability (HA). 
