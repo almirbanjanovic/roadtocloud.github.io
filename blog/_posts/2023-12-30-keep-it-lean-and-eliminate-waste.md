@@ -1,5 +1,5 @@
 ---
-title:  "Keept it Lean and Eliminate Waste"
+title:  "Keep it Lean and Eliminate Waste"
 header:
   teaser: "/assets/images/keep-it-lean-and-eliminate-waste.png"
 excerpt: "Keep it lean and eliminate waste represent words to live by in software development, cloud computing, Lean, Agile and DevOps."
