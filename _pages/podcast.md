@@ -4,7 +4,6 @@ layout: single
 permalink: /podcast/
 ---
 
------
 ### Passing Google Cloud Certifications with Dario Cabianca
 I'm thrilled to have Dario Cabianca on Road to Cloud podcast. Dario is not only a Principal Architect but also a passionate educator and author in the realm of cloud computing. He’s here to share his expert knowledge on Google Cloud Platform and discuss his recent publications aimed at helping you ace your Google Cloud certifications - the Google Cloud Platform Professional Cloud Network Engineer Certification Companion and the Google Cloud Platform Professional Security Engineer Certification Companion. Whether you’re a seasoned pro or just starting out, this episode is packed with insights you won’t want to miss! 
 
