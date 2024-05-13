@@ -132,6 +132,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "Spotify"
+      icon: "fa-brands fa-spotify"
+      url: "https://open.spotify.com/show/1C1hXTLBF5NEXvV3PzWgVP?si=85e3f7d0241d4892"
 
 # Site Footer
 footer:
@@ -157,6 +160,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "Spotify"
+      icon: "fa-brands fa-spotify"
+      url: "https://open.spotify.com/show/1C1hXTLBF5NEXvV3PzWgVP?si=85e3f7d0241d4892"
 
 
 # Reading Files
