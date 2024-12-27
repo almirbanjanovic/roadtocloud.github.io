@@ -57,6 +57,8 @@ To limit network traffic for pods within a namespace so that they can only commu
 {% endraw %}
 {% endhighlight %}
 
+There you have it!  Pretty simple and straightforward.  We can use `NetworkPolicy` to balance security and optimize cost using a single Kubernetes cluster.
+
 ## Separate Resource Groups
 
 While namespaces handle separation within the cluster for transaction based processing through pods, other Azure resources that store data (such as Storage Accounts, Databases, Key Vaults, etc.) should reside in tenant-specific resource groups. Data needs to be strictly separated to maintain compliance and security.
