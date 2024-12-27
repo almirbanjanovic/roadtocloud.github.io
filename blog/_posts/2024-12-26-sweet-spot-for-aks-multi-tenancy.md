@@ -57,7 +57,7 @@ To limit network traffic for pods within a namespace so that they can only commu
 {% endraw %}
 {% endhighlight %}
 
-There you have it!  Pretty simple and straightforward.  We can use `NetworkPolicy` to balance security and optimize cost using a single Kubernetes cluster.
+There you have it!  Pretty simple and straightforward.  We can use `NetworkPolicy` to balance security and optimize cost using a single Kubernetes cluster. For more information and more complex scenarios, take a look at the official Kubernetes [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) documentation.
 
 ## Separate Resource Groups
 
