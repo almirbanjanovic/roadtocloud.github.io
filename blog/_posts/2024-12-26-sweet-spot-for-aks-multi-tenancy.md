@@ -41,8 +41,8 @@ To limit network traffic for pods within a namespace so that they can only commu
    apiVersion: networking.k8s.io/v1
    kind: NetworkPolicy
    metadata:
-     name: restrict-to-namespace
-     namespace: your-namespace-name
+     name: <restrict-to-namespace>
+     namespace: <your-namespace-name>
    spec:
      podSelector: {}
      policyTypes:
