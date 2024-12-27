@@ -36,7 +36,8 @@ Kubernetes’ built-in network policies can enforce strict traffic isolation. Fo
 
 To limit network traffic for pods within a namespace so that they can only communicate with other pods in the same namespace, you can define a Kubernetes `NetworkPolicy` as follows:
 
-   ```yaml
+{% highlight yaml %}
+{% raw %}
    apiVersion: networking.k8s.io/v1
    kind: NetworkPolicy
    metadata:
@@ -53,6 +54,8 @@ To limit network traffic for pods within a namespace so that they can only commu
      egress:
      - to:
        - podSelector: {}
+{% endraw %}
+{% endhighlight %}
 
 ## Separate Resource Groups
 
