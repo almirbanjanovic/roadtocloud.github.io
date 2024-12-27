@@ -3,7 +3,7 @@ title:  "The Sweet Spot for Azure Kubernetes Service Multi-Tenancy"
 header:
   teaser: "/assets/images/kubernetes-namespace-multi-tenancy.png"
 excerpt: "Explore the sweet spot for Azure Kubernetes Service multi-tenancy: balancing cost, reliability, and security using namespaces and robust policies."
-#classes: wide
+classes: wide
 toc: true
 tags:
   - Cloud
