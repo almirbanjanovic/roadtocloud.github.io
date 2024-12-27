@@ -22,7 +22,7 @@ Having worked at large Fortune 50 organization, where funding was not always the
 
 The answer lies in identifying the "sweet spot" for multi-tenancy. While the [Azure Architecture Framework](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/service/aks) outlines several approaches—ranging from fully isolated clusters per tenant to namespace-based separation—there is a middle ground that offers an effective compromise for startups and smaller organizations. This post explores that sweet spot: using namespaces as tenant separators to separate transactional workloads, combined with strict security measures to maintain isolation and control.
 
-## Why Namespace-Based Multi-Tenancy?
+# Why Namespace-Based Multi-Tenancy?
 Namespaces in Kubernetes provide logical separation within a cluster, making them an ideal candidate for multi-tenancy in cost-conscious environments. Here are a few reasons why namespace-based separation is appealing:
 
 1. **Cost Efficiency:** Running separate clusters for each tenant can be prohibitively expensive. By sharing a single AKS cluster, you reduce the operational and financial overhead associated with maintaining multiple clusters.
@@ -31,7 +31,7 @@ Namespaces in Kubernetes provide logical separation within a cluster, making the
 
 3. **Scalability:** A namespace-based approach is well-suited to scaling tenant workloads within a single cluster, allowing smaller companies to start lean and expand gradually.
 
-## Achieving Secure Namespace Separation
+# Achieving Secure Namespace Separation
 Security is a common concern when sharing a cluster across multiple tenants. To address this, it is critical to implement robust measures that prevent cross-tenant interference. Here’s how you can do it:
 
 Kubernetes’ built-in network policies can enforce strict traffic isolation. For example, you can configure network policies to:
@@ -64,9 +64,9 @@ To limit network traffic for pods within a namespace so that they can only commu
 
 There you have it!  Pretty simple and straightforward.  We can use `NetworkPolicy` to balance security and optimize cost using a single Kubernetes cluster. For more information and more complex scenarios, take a look at the official Kubernetes [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) documentation.
 
-## Separate Resource Groups
+# Separate Resource Groups
 
 While namespaces handle separation within the cluster for transaction based processing through pods, other Azure resources that store data (such as Storage Accounts, Databases, Key Vaults, etc.) should reside in tenant-specific resource groups. Data needs to be strictly separated to maintain compliance and security.
 
-## Final Thoughts
+# Final Thoughts
 For startups and smaller companies, namespace-based multi-tenancy offers a pragmatic balance between cost and control. By leveraging namespaces for separation and implementing strict security measures, you can create a multi-tenant architecture that scales with your business. 
