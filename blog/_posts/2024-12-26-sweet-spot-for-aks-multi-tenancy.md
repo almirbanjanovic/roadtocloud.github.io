@@ -66,7 +66,7 @@ There you have it!  Pretty simple and straightforward.  We can use `NetworkPolic
 
 # Separate Resource Groups
 
-While namespaces handle separation within the cluster for transaction based processing through pods, other Azure resources that store data (such as Storage Accounts, Databases, Key Vaults, etc.) should reside in tenant-specific resource groups. Data needs to be strictly separated to maintain compliance and security.
+However, here I must caution you against using namespaces for anything but purely transactional workloads that do not store data.  While technically possible, I find it more challenging.  While namespaces handle separation within a cluster for transaction based processing through pods, other Azure resources that store data (such as Storage Accounts, Databases, Key Vaults, etc.) should reside in tenant-specific Resource Groups (RGs). Data needs to be strictly separated to maintain compliance and security. Azure Platform as a Service (PaaS) offerings separated in tenant-specific RGs offload operational burden for organizations with limited staff and funding.
 
 # Final Thoughts
 For startups and smaller companies, namespace-based multi-tenancy offers a pragmatic balance between cost and control. By leveraging namespaces for separation and implementing strict security measures, you can create a multi-tenant architecture that scales with your business. 
