@@ -11,6 +11,11 @@ tags:
 
 # The Sweet Spot for Azure Kubernetes Service Multi-Tenancy
 
+<figure style="width: 350px" class="align-left">
+	<a href="/assets/images/kubernetes-namespace-multi-tenancy.png"><img src="/assets/images/kubernetes-namespace-multi-tenancy.png"></a>
+	<figcaption>Created with DALL-E 3</figcaption>
+</figure>
+
 Azure Kubernetes Service (AKS) is a powerful tool for managing containerized applications at scale. However, as organizations adopt AKS, the question of multi-tenancy often arises: how do you design an architecture that balances efficiency, cost, and security when serving multiple tenants? For smaller companies with limited funding, this question is particularly crucial. 
 
 Having worked at a larger organization like Humana, where funding was not always the critical decider, I witnessed firsthand how cloud costs, initially seen as manageable, ballooned over time and became a significant issue. Now, working for a small company such as SafeTower, I’ve come to appreciate the "magic triangle" of funding (cloud cost), reliability, and security. These three elements must work hand in hand to build a sustainable and scalable infrastructure.
