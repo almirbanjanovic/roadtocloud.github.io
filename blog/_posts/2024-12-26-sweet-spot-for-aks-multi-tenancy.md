@@ -9,7 +9,7 @@ tags:
   - Cloud
 ---
 
-# The Sweet Spot for Azure Kubernetes Service Multi-Tenancy
+# Introduction
 
 <figure style="width: 350px" class="align-left">
 	<a href="/assets/images/kubernetes-namespace-multi-tenancy.png"><img src="/assets/images/kubernetes-namespace-multi-tenancy.png"></a>
