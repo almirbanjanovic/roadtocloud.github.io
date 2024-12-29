@@ -32,7 +32,7 @@ Namespaces in Kubernetes provide logical separation within a cluster, making the
 3. **Scalability:** A namespace-based approach is well-suited to scaling tenant workloads within a single cluster, allowing smaller companies to start lean and expand gradually.
 
 ## Achieving Secure Namespace Separation
-Security is a common concern when sharing a cluster across multiple tenants. To address this, it is critical to implement robust measures that prevent cross-tenant interference. Here’s how you can do it:
+Security is a common concern when sharing a cluster across multiple tenants. To address this, it is critical to implement robust measures that prevent cross-tenant interference.
 
 Kubernetes’ built-in network policies can enforce strict traffic isolation. For example, you can configure network policies to:
    - Block communication between namespaces.
