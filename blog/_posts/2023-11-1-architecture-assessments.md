@@ -1,5 +1,5 @@
 ---
-title:  "Modernizing Architectures - A Recipe"
+title:  "Modernizing Architectures and Gaining Alignment"
 header:
   teaser: "/assets/images/arch-assess-1.jpg"
 excerpt: "How does one perform an architecture asessment in the context of modernization? Oftentimes this involves assessing current state vs future state, identifying challenges, providing recommendations and gaining alignment."
