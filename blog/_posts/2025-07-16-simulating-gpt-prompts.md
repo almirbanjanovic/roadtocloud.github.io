@@ -11,7 +11,7 @@ tags:
 
 # Simulating GPT Prompts in C# — A Console App with Real-World Intent
 
-Every cloud-native solution starts with a foundation. In this case, it’s a C# console application — intentionally simple, but architecturally aligned with the broader goal: building a full-stack, AI-enabled assistant powered by GPT-4 Turbo and deployed to Azure Kubernetes Service (AKS).
+Every cloud-native solution starts with a foundation. In this case, it’s a C# console application — intentionally simple, but architecturally aligned with the broader goal: building a full-stack, AI-enabled assistant powered by Azure OpenAI and deployed to Azure Kubernetes Service (AKS).
 
 This console app simulates GPT-style prompts and responses. But more importantly, it sets the tone for the rest of the system — clean architecture, async-first design, and modular components that scale from local dev to production-grade cloud.
 
