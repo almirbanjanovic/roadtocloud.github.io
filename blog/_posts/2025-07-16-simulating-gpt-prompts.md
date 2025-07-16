@@ -69,7 +69,7 @@ Each repo is modular, version-controlled, and aligned with cloud-native best pra
 
 ---
 
-## What’s Next
+# What’s Next
 
 With the simulator complete, the next step is designing the database schema and scaffolding EF Core models. From there, I’ll move into the API layer, frontend, containerization, and infrastructure deployment.
 
@@ -78,7 +78,7 @@ This is a journey — and this console app is the first real checkpoint.
 ---
 
 📁 Repo: [copilot-console-simulator](https://github.com/almirbanjanovic/copilot-console-simulator/actions)  
-🧠 Built with: GitHub Copilot Chat + Claude Sonnet 4  
+🧠 Built with: GitHub Copilot Chat + Agent Mode 
 🛠️ Editor: Visual Studio Code  
 🧱 Runtime: .NET 9
 
