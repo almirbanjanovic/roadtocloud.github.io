@@ -48,7 +48,7 @@ This project was developed entirely in **Visual Studio Code**, using:
 - `async/await` for non-blocking I/O
 - Clean architecture patterns (interfaces, DI, separation of concerns)
 
-To accelerate development and stay in flow, I used **GitHub Copilot Chat** and **Agent Mode**, powered by **Claude Sonnet 4**. This combination allowed me to:
+To accelerate development and stay in flow, I used **GitHub Copilot Chat** and **Agent Mode**. This combination allowed me to:
 
 - Scaffold services and interfaces quickly
 - Ask contextual questions directly in the IDE
