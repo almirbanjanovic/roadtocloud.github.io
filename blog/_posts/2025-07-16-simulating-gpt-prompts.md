@@ -15,7 +15,7 @@ Every cloud-native solution starts with a foundation. In this case, it’s a C# 
 
 This console app simulates GPT-style prompts and responses. But more importantly, it sets the tone for the rest of the system — clean architecture, async-first design, and modular components that scale from local dev to production-grade cloud.
 
-🔗 [View the code on GitHub](https://github.com/almirbanjanovic/copilot-console-simulator/actions)
+🔗 [View the code on GitHub](https://github.com/almirbanjanovic/copilot-console-simulator)
 
 ---
 
@@ -77,7 +77,7 @@ This is a journey — and this console app is the first real checkpoint.
 
 ---
 
-📁 Repo: [copilot-console-simulator](https://github.com/almirbanjanovic/copilot-console-simulator/actions)  
+📁 Repo: [copilot-console-simulator](https://github.com/almirbanjanovic/copilot-console-simulator)  
 🧠 Built with: GitHub Copilot Chat + Agent Mode 
 🛠️ Editor: Visual Studio Code  
 🧱 Runtime: .NET 9
