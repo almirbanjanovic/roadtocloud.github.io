@@ -9,7 +9,7 @@ tags:
   - Cloud
 ---
 
-# Introduction
+# Simulating GPT Prompts
 
 Every cloud-native solution starts with a foundation. In this case, it’s a C# console application — intentionally simple, but architecturally aligned with the broader goal: building a full-stack, AI-enabled assistant powered by Azure OpenAI and deployed to Azure Kubernetes Service (AKS).
 
@@ -19,7 +19,7 @@ This console app simulates GPT-style prompts and responses. But more importantly
 
 ---
 
-# Why Start with a Console App?
+## Why Start with a Console App?
 
 Before deploying to AKS or wiring up Azure OpenAI, I wanted to isolate the core logic: prompt handling, response simulation, and structured logging. This CLI tool provides a focused environment to build and test that logic — without distractions.
 
@@ -27,7 +27,7 @@ It’s not a prototype. It’s a foundational component.
 
 ---
 
-# What It Does
+## What It Does
 
 The `copilot-console-simulator`:
 
@@ -39,7 +39,7 @@ The `copilot-console-simulator`:
 
 ---
 
-# Built with the Right Tools
+## Built with the Right Tools
 
 This project was developed entirely in **Visual Studio Code**, using:
 
@@ -56,7 +56,7 @@ To accelerate development and stay in flow, I used **GitHub Copilot Chat** and *
 
 ---
 
-# Strategic Fit
+## Strategic Fit
 
 This app is the first of several purpose-built repositories that make up the full solution:
 
@@ -69,7 +69,7 @@ Each repo is modular, version-controlled, and aligned with cloud-native best pra
 
 ---
 
-# Example Interaction
+## Example Interaction
 
 ```
 Welcome to the Copilot Console Simulator!
@@ -107,9 +107,14 @@ This is a journey — and this console app is the first real checkpoint.
 
 ---
 
+# TL;DR
+
 📁 Repo: [copilot-console-simulator](https://github.com/almirbanjanovic/copilot-console-simulator)  
+
 🧠 Built with: GitHub Copilot Chat + Agent Mode
+
 🛠️ Editor: Visual Studio Code  
+
 🧱 Runtime: .NET 9
 
 Let’s keep building.
