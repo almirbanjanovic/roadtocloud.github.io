@@ -109,7 +109,6 @@ This is a journey — and this console app is the first real checkpoint.
 
 📁 Repo: [copilot-console-simulator](https://github.com/almirbanjanovic/copilot-console-simulator)  
 🧠 Built with: GitHub Copilot Chat + Agent Mode
-
 🛠️ Editor: Visual Studio Code  
 🧱 Runtime: .NET 9
 
