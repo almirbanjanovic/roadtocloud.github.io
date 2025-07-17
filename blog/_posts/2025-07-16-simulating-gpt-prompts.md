@@ -19,7 +19,7 @@ This console app simulates GPT-style prompts and responses. But more importantly
 
 ---
 
-## Why Start with a Console App?
+# Why Start with a Console App?
 
 Before deploying to AKS or wiring up Azure OpenAI, I wanted to isolate the core logic: prompt handling, response simulation, and structured logging. This CLI tool provides a focused environment to build and test that logic — without distractions.
 
@@ -27,7 +27,7 @@ It’s not a prototype. It’s a foundational component.
 
 ---
 
-## What It Does
+# What It Does
 
 The `copilot-console-simulator`:
 
@@ -39,7 +39,7 @@ The `copilot-console-simulator`:
 
 ---
 
-## Built with the Right Tools
+# Built with the Right Tools
 
 This project was developed entirely in **Visual Studio Code**, using:
 
@@ -56,7 +56,7 @@ To accelerate development and stay in flow, I used **GitHub Copilot Chat** and *
 
 ---
 
-## Strategic Fit
+# Strategic Fit
 
 This app is the first of several purpose-built repositories that make up the full solution:
 
@@ -68,6 +68,34 @@ This app is the first of several purpose-built repositories that make up the ful
 Each repo is modular, version-controlled, and aligned with cloud-native best practices.
 
 ---
+
+# Example Interaction
+
+```
+Welcome to the Copilot Console Simulator!
+Session ID: abc123de
+Type your questions or commands. Type 'exit' to quit.
+Special commands: 'history' to view conversation history, 'clear' to clear history
+----------------------------------------------------------------------
+
+You: Hello, how are you?
+Copilot: Great question! I think the key thing to consider is: When it comes to coding, I always recommend following best practices and writing clean, maintainable code.
+
+You: Can you help me with a programming problem?
+Copilot: I'm here to help! That's an interesting question! Let me think about that for a moment. Feel free to ask me anything you'd like assistance with.
+
+You: history
+--- Conversation History (Session: abc123de) ---
+[14:30:15] You: Hello, how are you?
+[14:30:16] Copilot: Great question! I think the key thing to consider is: When it comes to coding, I always recommend following best practices and writing clean, maintainable code.
+
+[14:30:45] You: Can you help me with a programming problem?
+[14:30:46] Copilot: I'm here to help! That's an interesting question! Let me think about that for a moment. Feel free to ask me anything you'd like assistance with.
+--- End of History ---
+
+You: exit
+Thank you for using the Copilot Console Simulator!
+```
 
 # What’s Next
 
