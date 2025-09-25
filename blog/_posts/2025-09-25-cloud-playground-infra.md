@@ -31,13 +31,12 @@ But instead of manually clicking around in the Azure portal, I wanted a repeatab
 
 ## What’s Inside
 
+The repo is structured to be modular and language-agnostic.  Pick your favorite IaC language (Bicep or Terraform) and follow directions in the README within the [**cloud-playground-infra**](https://github.com/almirbanjanovic/cloud-playground-infra) repo.
+ 
 <figure style="width: 350px" class="align-left">
 	<a href="/assets/images/cloud-playground-infra.png"><img src="/assets/images/cloud-playground-infra.png"></a>
 	<figcaption>Pick your favorite: Terraform or Bicep!</figcaption>
 </figure>
-
-The repo is structured to be modular and language-agnostic.  Pick your favorite IaC language (Bicep or Terraform) and follow directions in the README within the [**cloud-playground-infra**](https://github.com/almirbanjanovic/cloud-playground-infra) repo.
- 
 - GitHub Actions workflows for both → This is where it gets powerful. The repo already includes two CI/CD pipelines:  
   - `terraform-deploy.yml` for Terraform deployments  
   - `bicep-deploy.yml` for Bicep deployments  
