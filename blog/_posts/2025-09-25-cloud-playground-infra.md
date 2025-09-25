@@ -15,7 +15,7 @@ tags:
 
 # Cloud Playground with Infra-as-Code
 
-One of the things I always tell people who are learning cloud is this: you need a safe space to experiment. Practice, practice, practice. Somewhere you can break stuff, try new patterns, rebuild quickly, and not worry about production blowing up.
+One of the things I always tell people who are learning cloud is this: you need a safe space to experiment. Practice, practice, practice. Somewhere you can break stuff, try new patterns, rebuild quickly.
 
 That’s why I built this: [**cloud-playground-infra**](https://github.com/almirbanjanovic/cloud-playground-infra).
 
