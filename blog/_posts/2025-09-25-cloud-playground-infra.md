@@ -1,5 +1,5 @@
 ---
-title: "Modular Cloud Playground with Infra-as-Code (Terraform + Bicep)"
+title: "Cloud Playgrounds: Practice Makes Perfect"
 header:
   teaser: "/assets/images/cloud-playground-infra.png"
 excerpt: "A modular Azure playground repo with ready-to-run GitHub Actions for both Terraform and Bicep."
@@ -15,7 +15,7 @@ tags:
 
 # Cloud Playground with Infra-as-Code
 
-One of the things I always tell people who are learning cloud is this: you need a safe space to experiment. Somewhere you can break stuff, try new patterns, rebuild quickly, and not worry about production blowing up.
+One of the things I always tell people who are learning cloud is this: you need a safe space to experiment. Practice, practice, practice. Somewhere you can break stuff, try new patterns, rebuild quickly, and not worry about production blowing up.
 
 That’s why I built this: [**cloud-playground-infra**](https://github.com/almirbanjanovic/cloud-playground-infra).
 
