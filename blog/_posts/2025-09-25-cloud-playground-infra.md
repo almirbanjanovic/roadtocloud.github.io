@@ -37,10 +37,10 @@ The repo is structured to be modular and language-agnostic.  Pick your favorite 
 	<a href="/assets/images/cloud-playground-infra.png"><img src="/assets/images/cloud-playground-infra.png"></a>
 	<figcaption>Pick your favorite: Terraform or Bicep!</figcaption>
 </figure>
-- GitHub Actions workflows for both → This is where it gets powerful. The repo already includes two CI/CD pipelines:  
+This is where it gets powerful. The repo already includes two CI/CD pipelines:
   - `terraform-deploy.yml` for Terraform deployments  
   - `bicep-deploy.yml` for Bicep deployments  
 
-  You don’t need to wire up your own automation — just call the workflow for the language you prefer, and the pipeline handles the provisioning end to end.  To emphacise again, this assumes you've followed instructions in the README within the [**cloud-playground-infra**](https://github.com/almirbanjanovic/cloud-playground-infra) repo.
+  You don’t need to wire up your own automation — just call the workflow for the language you prefer, and the pipeline handles the provisioning end to end.  To emphasize again, this assumes you've followed instructions in the README within the [**cloud-playground-infra**](https://github.com/almirbanjanovic/cloud-playground-infra) repo.
 
-The idea is simple: cloud playgrounds. You can work in Terraform or Bicep, keep the repo modular, and plug into the corresponding pipeline. The workflows abstract the heavy lifting — you just choose your IaC language and run the pipeline.
+The idea is simple: cloud playgrounds. You can work in Terraform or Bicep and run the corresponding pipeline. The GitHub Actions Workflows abstract the heavy lifting — you just choose your IaC language and run the pipeline.
