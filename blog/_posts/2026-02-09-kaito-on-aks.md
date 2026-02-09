@@ -23,18 +23,15 @@ By the way, you should also check out [my other blog post on what cloud-playgrou
 
 ---
 
-## What KAITO Brings
+## What is KAITO?
 
-KAITO is an open-source operator that automates deploying and running large models directly inside Kubernetes. It works well with popular open-source LLMs and handles a lot of the plumbing you’d normally manage by hand.
+[KAITO (Kubernetes AI Toolchain Operator)](https://github.com/kaito-project/kaito) is an operator that automates AI/ML model inference and tuning workloads in Kubernetes. It simplifies running AI/ML inference by:
 
-Some things KAITO simplifies:
-
-- Automatic GPU provisioning based on the model you choose  
-- Built-in presets optimized for different GPU SKUs  
-- Container-based model packaging with an OpenAI‑style inference server  
-- Support for multiple inference runtimes and/or endpoints
-
-For a learning environment or a sandbox, this level of visibility is perfect. You see exactly how Kubernetes schedules, provisions, scales, and serves LLM workloads.
+- **Automatic node provisioning** - Spins up GPU/CPU nodes based on model requirements
+- **Model lifecycle management** - Downloads weights, manages inference server lifecycle
+- **Preset models** - Built-in support for popular models (Llama, Mistral, Falcon, Phi, etc.)
+- **Custom models** - Deploy your own models from HuggingFace, Azure Blob Storage, Azure Files, or Azure ML Model Registry
+- **OpenAI-compatible API** - Provides a standard interface for inference calls
 
 ---
 
