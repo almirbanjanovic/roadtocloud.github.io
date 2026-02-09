@@ -151,10 +151,28 @@ kaito@aks:~$ az aks get-credentials --resource-group <resource-group> --name <cl
 Merged "*****" as current context in ~\.kube\config
 ```
 
-Verify connection:
+Verify that AKS cluster was configured correctly:
 
 ```bash
-kubectl get-contexts
+kaito@aks:~$ kubectl config get-contexts
+CURRENT   NAME                      CLUSTER                   AUTHINFO                                                            NAMESPACE
+*         aks-********              aks-********              clusterUser_*********_aks-********
+
+kaito@aks:~$ kubectl get namespaces
+NAME                         STATUS   AGE
+default                      Active   13m
+kaito-custom-cpu-inference   Active   11m
+kube-node-lease              Active   13m
+kube-public                  Active   13m
+kube-system                  Active   13m
+
+kaito@aks:~$ kubectl get workspaces -n kaito-custom-cpu-inference
+NAME                    INSTANCE           RESOURCEREADY   INFERENCEREADY   JOBSTARTED   WORKSPACESUCCEEDED   AGE
+bloomz-560m-workspace   Standard_D16s_v5   True            True                          True                 12m
+
+kaito@aks:~$ kubectl get pods -n kaito-custom-cpu-inference
+NAME                                     READY   STATUS    RESTARTS   AGE
+bloomz-560m-workspace-78f597c8b8-q5m86   1/1     Running   0          11m
 ```
 
 ## Testing the Model
