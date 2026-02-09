@@ -15,7 +15,7 @@ tags:
   - GitHub Actions
 ---
 
-# Kaito on AKS
+# KAITO on AKS
 
 I recently added a new environment to [cloud-playground-infra](https://github.com/almirbanjanovic/cloud-playground-infra): a fully automated KAITO-on-AKS setup. It gives me a Kubernetes-native space to experiment with open‑source LLMs, wired directly into the same Terraform and GitHub Actions workflows that power the rest of the repo.  Check out the [official Project KAITO on GitHub](https://github.com/kaito-project/kaito).
 
@@ -23,11 +23,11 @@ By the way, you should also check out [my other blog post on what cloud-playgrou
 
 ---
 
-## What Kaito Brings
+## What KAITO Brings
 
 Kaito is an open-source operator that automates deploying and running large models directly inside Kubernetes. It works well with popular open-source LLMs and handles a lot of the plumbing you’d normally manage by hand.
 
-Some things Kaito simplifies:
+Some things KAITO simplifies:
 
 - Automatic GPU provisioning based on the model you choose  
 - Built-in presets optimized for different GPU SKUs  
