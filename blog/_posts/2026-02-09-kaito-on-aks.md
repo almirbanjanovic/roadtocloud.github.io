@@ -17,7 +17,7 @@ tags:
 
 # KAITO on AKS
 
-I recently added a new environment to [cloud-playground-infra](https://github.com/almirbanjanovic/cloud-playground-infra): a fully automated KAITO-on-AKS (Azure Kubernetes Service) setup. Check out the [official Project KAITO on GitHub](https://github.com/kaito-project/kaito).
+I recently added a new playground to [cloud-playground-infra](https://github.com/almirbanjanovic/cloud-playground-infra): a fully automated [KAITO-on-AKS](https://learn.microsoft.com/en-us/azure/aks/ai-toolchain-operator) setup. 
 
 By the way, you should also check out [my other blog post on what cloud-playground-infra](https://www.theroadtocloud.com/blog/cloud-playground-infra/) helps us do.
 
@@ -25,7 +25,7 @@ By the way, you should also check out [my other blog post on what cloud-playgrou
 
 ## What is KAITO?
 
-[KAITO (Kubernetes AI Toolchain Operator)](https://github.com/kaito-project/kaito) is an operator that automates AI/ML model inference and tuning workloads in Kubernetes. Microsoft has added this capability to AKS. KAITO simplifies running AI/ML inference by:
+[KAITO (Kubernetes AI Toolchain Operator)](https://github.com/kaito-project/kaito) is an operator that automates AI/ML model inference and tuning workloads in Kubernetes. Microsoft has enabled [KAITO on AKS](https://learn.microsoft.com/en-us/azure/aks/ai-toolchain-operator). KAITO simplifies running AI/ML inference by:
 
 - **Automatic node provisioning** - Spins up GPU/CPU nodes based on model requirements
 - **Model lifecycle management** - Downloads weights, manages inference server lifecycle
