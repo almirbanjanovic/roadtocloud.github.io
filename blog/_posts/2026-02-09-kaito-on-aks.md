@@ -71,7 +71,7 @@ Source: [Project KAITO](https://github.com/kaito-project/kaito)
 
 ---
 
-## AKS and KAITO Preset Models
+## Preset Models
 
 AKS has enabled support for several open-source models that can be deployed with minimal configuration using KAITO. Instead of defining a custom inference template, you simply specify the preset name in your workspace manifest.
 
