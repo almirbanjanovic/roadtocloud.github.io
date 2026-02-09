@@ -17,7 +17,7 @@ tags:
 
 # KAITO on AKS
 
-I recently added a new environment to [cloud-playground-infra](https://github.com/almirbanjanovic/cloud-playground-infra): a fully automated KAITO-on-AKS setup. It gives me a Kubernetes-native space to experiment with open‑source LLMs, wired directly into the same Terraform and GitHub Actions workflows that power the rest of the repo.  Check out the [official Project KAITO on GitHub](https://github.com/kaito-project/kaito).
+I recently added a new environment to [cloud-playground-infra](https://github.com/almirbanjanovic/cloud-playground-infra): a fully automated KAITO-on-AKS (Azure Kubernetes Service) setup. Check out the [official Project KAITO on GitHub](https://github.com/kaito-project/kaito).
 
 By the way, you should also check out [my other blog post on what cloud-playground-infra](https://www.theroadtocloud.com/blog/cloud-playground-infra/) helps us do.
 
@@ -234,9 +234,10 @@ curl --max-time 60 -X POST http://$KAITO_IP/chat \
 
 ## Final Thoughts
 
-This environment isn’t meant to replace Microsoft Foundry—and it shouldn’t.   Foundry is the right tool when you want a managed, enterprise-grade path to LLMs with almost no infrastructure overhead.
+So now you're asking - which should I use: KAITO on AKS or Microsoft Foundry?  The answer - it depends.
 
-Kaito, on the other hand, is ideal for learning, experimenting, customizing, and understanding what’s actually happening under the hood.
+KAITO on AKS isn’t meant to replace Microsoft Foundry, and it shouldn’t. Foundry is the right tool when you want a fully managed platform, access to premium proprietary models like GPT‑5 or Claude, simple pay‑as‑you‑go pricing, and zero responsibility for GPUs, cluster operations or infrastructure overhead.
 
-Different tools, different jobs.  
-For this playground, Kaito was exactly what I needed.
+KAITO on AKS, on the other hand, is ideal for when your data must stay inside your own environment, when you prefer predictable compute-only costs, when compliance is non‑negotiable, or when you need full control over how your models are configured and executed.
+ 
+
