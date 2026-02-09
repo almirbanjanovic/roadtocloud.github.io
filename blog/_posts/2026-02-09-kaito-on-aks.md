@@ -25,7 +25,7 @@ By the way, you should also check out [my other blog post on what cloud-playgrou
 
 ## What KAITO Brings
 
-Kaito is an open-source operator that automates deploying and running large models directly inside Kubernetes. It works well with popular open-source LLMs and handles a lot of the plumbing you’d normally manage by hand.
+KAITO is an open-source operator that automates deploying and running large models directly inside Kubernetes. It works well with popular open-source LLMs and handles a lot of the plumbing you’d normally manage by hand.
 
 Some things KAITO simplifies:
 
