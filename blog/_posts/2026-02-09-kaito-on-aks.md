@@ -25,7 +25,7 @@ By the way, you should also check out [my other blog post on what cloud-playgrou
 
 ## What is KAITO?
 
-[KAITO (Kubernetes AI Toolchain Operator)](https://github.com/kaito-project/kaito) is an operator that automates AI/ML model inference and tuning workloads in Kubernetes. It simplifies running AI/ML inference by:
+[KAITO (Kubernetes AI Toolchain Operator)](https://github.com/kaito-project/kaito) is an operator that automates AI/ML model inference and tuning workloads in Kubernetes. Microsoft has added this capability to AKS. KAITO simplifies running AI/ML inference by:
 
 - **Automatic node provisioning** - Spins up GPU/CPU nodes based on model requirements
 - **Model lifecycle management** - Downloads weights, manages inference server lifecycle
