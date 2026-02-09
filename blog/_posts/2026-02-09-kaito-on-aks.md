@@ -37,11 +37,11 @@ By the way, you should also check out [my other blog post on what cloud-playgrou
 
 ## KAITO vs. Microsoft Foundry
 
-You might wonder: why use KAITO on AKS, when [Microsoft Foundry](https://ai.azure.com) offers thousands of models for inference? Well both approaches solve different problems. Some teams benefit from having both available, while others should choose carefully depending on which industry they serve. Microsoft Foundry is an excellent PaaS product. It gives customers a fully managed, secure, and production-ready platform for running LLMs without touching GPU infrastructure. So, how do we go about understanding *when* a Kubernetes-native approach like KAITO on AKS makes sense?
+You might wonder: why use [KAITO on AKS](https://learn.microsoft.com/en-us/azure/aks/ai-toolchain-operator), when [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-foundry?view=foundry-classic) offers thousands of models for inference? Well both approaches solve different problems. Some teams benefit from having both available, while others should choose carefully depending on which industry they serve. Microsoft Foundry is an excellent PaaS product. It gives customers a fully managed, secure, and production-ready platform for running LLMs without touching GPU infrastructure. So, how do we go about understanding *when* a Kubernetes-native approach like KAITO on AKS makes sense?
 
 ### Side-by-Side Overview
 
-| Consideration | KAITO | Microsoft Foundry |
+| Consideration | KAITO on AKS | Microsoft Foundry |
 |---------------|-------|------------------|
 | **Service model** | PaaS - you manage cluster and model deployments | PaaS - you consume models via APIs |
 | **Model selection** | Full control - any model from HuggingFace, Azure Blob/Files, Azure ML Registry, or private registries | Curated catalog with regional availability limitations (not all models available in all regions) |
