@@ -40,7 +40,7 @@ For a learning environment or a sandbox, this level of visibility is perfect. Yo
 
 ## KAITO vs. Microsoft Foundry
 
-You might wonder: why use KAITO when [Microsoft Foundry](https://ai.azure.com) offers thousands of models for inference? Well both approaches solve different problems. Some teams benefit from having both available, while others should choose carefully depending on which industry they serve. Microsoft Foundry is an excellent PaaS product. It gives customers a fully managed, secure, and production-ready platform for running LLMs without touching GPU infrastructure. This isn’t a “versus” post. It’s about understanding *when* a Kubernetes-native approach like KAITO makes sense.
+You might wonder: why use KAITO when [Microsoft Foundry](https://ai.azure.com) offers thousands of models for inference? Well both approaches solve different problems. Some teams benefit from having both available, while others should choose carefully depending on which industry they serve. Microsoft Foundry is an excellent PaaS product. It gives customers a fully managed, secure, and production-ready platform for running LLMs without touching GPU infrastructure. So, how do we go about understanding *when* a Kubernetes-native approach like KAITO makes sense?
 
 ### Side-by-Side Overview
 
