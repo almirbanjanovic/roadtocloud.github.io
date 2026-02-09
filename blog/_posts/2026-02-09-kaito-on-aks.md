@@ -148,7 +148,7 @@ After deployment, configure kubectl to connect to your AKS cluster:
 
 ```bash
 kaito@aks:~$ az aks get-credentials --resource-group <resource-group> --name <cluster-name>
-Merged "*****" as current context in ~\.kube\config
+Merged "aks-********" as current context in ****\.kube\config
 ```
 
 Verify that AKS cluster was configured correctly:
