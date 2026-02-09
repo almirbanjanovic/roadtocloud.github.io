@@ -188,14 +188,15 @@ When the `kaito.sh/enablelb: "True"` annotation is enabled, you can test the inf
 # Get the external IP (service name matches workspace name)
 kaito@aks:~$ KAITO_IP=$(kubectl get svc bloomz-560m-workspace -n kaito-custom-cpu-inference -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
 
-
 kaito@aks:~$ echo "KAITO endpoint: http://$KAITO_IP"
+KAITO endpoint: http://**.***.***.***
 ```
 
 **2. Check health:**
 
 ```bash
-curl http://$KAITO_IP/health
+kaito@aks:~$ curl http://$KAITO_IP/health
+{"status":"Healthy"}
 ```
 
 **3. Check the API schema:**
