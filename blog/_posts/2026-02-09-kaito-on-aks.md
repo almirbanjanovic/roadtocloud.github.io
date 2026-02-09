@@ -32,7 +32,7 @@ Some things KAITO simplifies:
 - Automatic GPU provisioning based on the model you choose  
 - Built-in presets optimized for different GPU SKUs  
 - Container-based model packaging with an OpenAI‑style inference server  
-- Support for multiple inference runtimes like vLLM and transformers  
+- Support for multiple inference runtimes and/or endpoints
 
 For a learning environment or a sandbox, this level of visibility is perfect. You see exactly how Kubernetes schedules, provisions, scales, and serves LLM workloads.
 
