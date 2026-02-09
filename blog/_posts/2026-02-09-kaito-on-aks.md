@@ -4,6 +4,7 @@ header:
   teaser: "https://raw.githubusercontent.com/kaito-project/kaito/main/website/static/img/arch.png"
 excerpt: "Standing up a Kubernetes-native LLM playground using KAITO on AKS—where it fits and when it makes sense alongside Microsoft Foundry."
 toc: true
+classes: wide
 tags:
   - Cloud
   - Azure
