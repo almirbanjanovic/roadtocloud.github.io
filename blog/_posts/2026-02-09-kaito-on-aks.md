@@ -112,7 +112,7 @@ inference:
     name: ${presetName}
 ```
 
-## Custom Model Manifests
+## Custom Models
 
 For more advanced deployments, see the example manifests in [assets/kubernetes/](https://github.com/almirbanjanovic/cloud-playground-infra/tree/main/environments/kaito-on-aks/assets/kubernetes):
 
