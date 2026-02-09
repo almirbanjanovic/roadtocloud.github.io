@@ -37,7 +37,7 @@ By the way, you should also check out [my other blog post on what cloud-playgrou
 
 ## KAITO vs. Microsoft Foundry
 
-You might wonder: why use KAITO when [Microsoft Foundry](https://ai.azure.com) offers thousands of models for inference? Well both approaches solve different problems. Some teams benefit from having both available, while others should choose carefully depending on which industry they serve. Microsoft Foundry is an excellent PaaS product. It gives customers a fully managed, secure, and production-ready platform for running LLMs without touching GPU infrastructure. So, how do we go about understanding *when* a Kubernetes-native approach like KAITO makes sense?
+You might wonder: why use KAITO on AKS, when [Microsoft Foundry](https://ai.azure.com) offers thousands of models for inference? Well both approaches solve different problems. Some teams benefit from having both available, while others should choose carefully depending on which industry they serve. Microsoft Foundry is an excellent PaaS product. It gives customers a fully managed, secure, and production-ready platform for running LLMs without touching GPU infrastructure. So, how do we go about understanding *when* a Kubernetes-native approach like KAITO on AKS makes sense?
 
 ### Side-by-Side Overview
 
@@ -51,8 +51,8 @@ You might wonder: why use KAITO when [Microsoft Foundry](https://ai.azure.com) o
 | **Customization** | Full control over inference parameters, batching, quantization | Limited to provider-exposed options |
 | **Latency** | In-cluster inference, minimal network hops | Network round-trip to external endpoint |
 
-### When KAITO Makes Sense  
-Use KAITO when you need data to remain in your environment, want consistent compute-based costs, have strict compliance requirements, or need deep customization of how models run.
+### When KAITO on AKS Makes Sense  
+Use KAITO on AKS when you need data to remain in your environment, want consistent compute-based costs, have strict compliance requirements, or need deep customization of how models run.
 
 ### When Microsoft Foundry Makes Sense  
 Use Foundry when you want a fully managed experience, access to proprietary models like GPT‑4 or Claude, consumption-based pricing, and no GPU or cluster management.
@@ -71,9 +71,9 @@ Source: [Project KAITO](https://github.com/kaito-project/kaito)
 
 ---
 
-## KAITO Preset Models
+## AKS and KAITO Preset Models
 
-KAITO includes built-in support for popular open-source models that can be deployed with minimal configuration. Instead of defining a custom inference template, you simply specify the preset name in your workspace manifest.
+AKS has enabled support for several open-source models that can be deployed with minimal configuration using KAITO. Instead of defining a custom inference template, you simply specify the preset name in your workspace manifest.
 
 **Note:** Preset models require GPU-enabled node pools. The current minimum requirement is `Standard_NC24ads_A100_v4`. Ensure your Azure subscription has sufficient GPU quota. This POC uses a custom model on CPU instead, as GPU quota was not available.
 
