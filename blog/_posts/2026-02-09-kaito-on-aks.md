@@ -95,6 +95,26 @@ See the full list: [KAITO Supported Models](https://github.com/kaito-project/kai
 
 An example preset manifest is available at [assets/kubernetes/kaito_preset_model.yaml](https://github.com/almirbanjanovic/cloud-playground-infra/blob/main/environments/kaito-on-aks/assets/kubernetes/kaito_preset_model.yaml).
 
+```yaml
+apiVersion: kaito.sh/v1beta1
+kind: Workspace
+metadata:
+  name: ${name}
+  namespace: ${namespace}
+  # annotations:
+  #   kaito.sh/enablelb: "True"  # Creates LoadBalancer service automatically (testing only, not for production)
+
+resource:
+  instanceType: ${instanceType} # Must be GPU-enabled instance type.  Ensure your subscription has quota.
+  labelSelector:
+    matchLabels:
+      apps: ${appLabel}
+
+inference:
+  preset:
+    name: ${presetName}
+```
+
 ## Custom Model Manifests
 
 For more advanced deployments, see the example manifests in [assets/kubernetes/](https://github.com/almirbanjanovic/cloud-playground-infra/tree/main/environments/kaito-on-aks/assets/kubernetes):
@@ -106,6 +126,8 @@ For more advanced deployments, see the example manifests in [assets/kubernetes/]
 | `kaito_option2_azure_volume.yaml` | Models pre-loaded on Azure Blob/Files storage |
 | `kaito_option3_init_container_blob.yaml` | Download from Azure Blob at startup |
 | `kaito_option4_azureml.yaml` | Download from Azure ML Model Registry |
+
+The custom manifests are much more complex and involved than the preset ones.  I encourage you to take a look inside my repo in [assets/kubernetes/](https://github.com/almirbanjanovic/cloud-playground-infra/tree/main/environments/kaito-on-aks/assets/kubernetes).
 
 ## Infrastructure Overview
 
@@ -170,46 +192,10 @@ curl http://$KAITO_IP/health
 curl -s http://$KAITO_IP/openapi.json | head
 ```
 
-**4. Sample prompts:**
+**4. Sample prompt example:**
 
 ```bash
 # Question answering
-curl --max-time 60 -X POST http://$KAITO_IP/chat \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "What sport should I play in rainy weather?",
-    "return_full_text": false,
-    "generate_kwargs": {
-      "max_new_tokens": 256,
-      "do_sample": false
-    }
-  }'
-
-# Factual question
-curl --max-time 60 -X POST http://$KAITO_IP/chat \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "Is a tomato a fruit or a vegetable?",
-    "return_full_text": false,
-    "generate_kwargs": {
-      "max_new_tokens": 256,
-      "do_sample": false
-    }
-  }'
-
-# Brief definition
-curl --max-time 60 -X POST http://$KAITO_IP/chat \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "Answer briefly: What is cloud computing?",
-    "return_full_text": false,
-    "generate_kwargs": {
-      "max_new_tokens": 256,
-      "do_sample": false
-    }
-  }'
-
-# Controversial questions
 curl --max-time 60 -X POST http://$KAITO_IP/chat \
   -H "Content-Type: application/json" \
   -d '{
