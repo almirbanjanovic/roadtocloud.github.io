@@ -215,7 +215,9 @@ kaito@aks:~$ curl --max-time 60 -X POST http://$KAITO_IP/chat \
       "do_sample": false
     }
   }'
-{"Result":" no"}
+{
+  "Result":" no"
+}
 
 kaito@aks:~$ curl --max-time 60 -X POST http://$KAITO_IP/chat \
   -H "Content-Type: application/json" \
