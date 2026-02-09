@@ -138,14 +138,7 @@ The Terraform configuration ([terraform/main.tf](https://github.com/almirbanjano
 
 ### POC Model Details
 
-This POC uses [**bigscience/bloomz-560m**](https://huggingface.co/bigscience/bloomz-560m), a small multilingual instruction-tuned model (~2.2GB) from [Hugging Face](https://huggingface.co). It runs on CPU for simplicity (no GPU quota required).  By the way, Hugging Face is basically the open-source registry for modern AI models. Think of it as the GitHub for models that developers can download, fine‑tune, and run anywhere — including on AKS. 
-
-| Setting | Value |
-|---------|-------|
-| Model | bigscience/bloomz-560m |
-| VM Size | Standard_D16s_v5 (16 vCPU, 64GB RAM) |
-| Precision | float32 (CPU) |
-| Port | 5000 |
+This POC uses [**bigscience/bloomz-560m**](https://huggingface.co/bigscience/bloomz-560m), a small multilingual instruction-tuned model (~2.2GB) from [Hugging Face](https://huggingface.co). It runs on CPU for simplicity (no GPU quota required).  By the way, Hugging Face is basically the open-source registry for modern AI models. Think of it as the GitHub for models that developers can download, fine‑tune, and run anywhere — including on AKS. |
 
 ---
 
@@ -204,16 +197,6 @@ curl --max-time 60 -X POST http://$KAITO_IP/chat \
     }
   }'
 ```
-
-**Request Parameters:**
-
-| Parameter | Description |
-|-----------|-------------|
-| `prompt` | The input text/question for the model |
-| `return_full_text` | If `false`, returns only the generated text (not the prompt) |
-| `generate_kwargs.max_new_tokens` | Maximum number of new tokens to generate |
-| `generate_kwargs.do_sample` | If `false`, uses greedy decoding (deterministic). If `true`, uses sampling (more creative). |
-
 
 ## Final Thoughts
 
