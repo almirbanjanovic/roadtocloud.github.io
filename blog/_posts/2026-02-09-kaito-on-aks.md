@@ -199,17 +199,11 @@ kaito@aks:~$ curl http://$KAITO_IP/health
 {"status":"Healthy"}
 ```
 
-**3. Check the API schema:**
-
-```bash
-curl -s http://$KAITO_IP/openapi.json | head
-```
-
-**4. Sample prompt example:**
+**3. Sample prompts:**
 
 ```bash
 # Question answering
-curl --max-time 60 -X POST http://$KAITO_IP/chat \
+kaito@aks:~$ curl --max-time 60 -X POST http://$KAITO_IP/chat \
   -H "Content-Type: application/json" \
   -d '{
     "prompt": "Is pineapple on a pizza acceptable?",
@@ -219,6 +213,31 @@ curl --max-time 60 -X POST http://$KAITO_IP/chat \
       "do_sample": false
     }
   }'
+{"Result":" no"}
+
+kaito@aks:~$ curl --max-time 60 -X POST http://$KAITO_IP/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "Is a tomato a fruit or a vegetable?",
+    "return_full_text": false,
+    "generate_kwargs": {
+      "max_new_tokens": 256,
+      "do_sample": false
+    }
+  }'
+{"Result":" vegetable"}
+
+kaito@aks:~$ curl --max-time 60 -X POST http://$KAITO_IP/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "Answer briefly: What is cloud computing?",
+    "return_full_text": false,
+    "generate_kwargs": {
+      "max_new_tokens": 256,
+      "do_sample": false
+    }
+  }'
+{"Result":" Cloud computing is a service that allows users to access data and services from a central location."}
 ```
 
 ## Final Thoughts
