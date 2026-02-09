@@ -1,5 +1,5 @@
 ---
-title: "Kaito on AKS: Why Would You Use It Instead of Microsoft Foundry?"
+title: "KAITO on AKS: Why Would You Use It Instead of Microsoft Foundry?"
 header:
   teaser: "https://raw.githubusercontent.com/kaito-project/kaito/main/website/static/img/arch.png"
 excerpt: "Standing up a Kubernetes-native LLM playground using KAITO on AKS—where it fits and when it makes sense alongside Microsoft Foundry."
