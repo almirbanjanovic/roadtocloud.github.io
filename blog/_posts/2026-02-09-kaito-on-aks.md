@@ -196,7 +196,9 @@ KAITO endpoint: http://**.***.***.***
 
 ```bash
 kaito@aks:~$ curl http://$KAITO_IP/health
-{"status":"Healthy"}
+{
+  "status":"Healthy"
+}
 ```
 
 **3. Sample prompts:**
@@ -225,7 +227,9 @@ kaito@aks:~$ curl --max-time 60 -X POST http://$KAITO_IP/chat \
       "do_sample": false
     }
   }'
-{"Result":" vegetable"}
+{
+  "Result":" vegetable"
+}
 
 kaito@aks:~$ curl --max-time 60 -X POST http://$KAITO_IP/chat \
   -H "Content-Type: application/json" \
@@ -237,7 +241,9 @@ kaito@aks:~$ curl --max-time 60 -X POST http://$KAITO_IP/chat \
       "do_sample": false
     }
   }'
-{"Result":" Cloud computing is a service that allows users to access data and services from a central location."}
+{
+  "Result":" Cloud computing is a service that allows users to access data and services from a central location."
+}
 ```
 
 ## Final Thoughts
