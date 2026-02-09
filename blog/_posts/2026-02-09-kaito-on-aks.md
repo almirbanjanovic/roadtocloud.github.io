@@ -72,9 +72,7 @@ KAITO follows the classic Kubernetes CRD/controller pattern. Its major component
 - **Workspace controller** - Reconciles the Workspace custom resource, triggers node provisioning via NodeClaim CRDs, and creates inference/tuning workloads based on model preset configurations
 - **Node provisioner controller (gpu-provisioner)** - Uses Karpenter-core NodeClaim CRD to integrate with Azure Resource Manager APIs, automatically adding GPU nodes to AKS clusters
 
-*Source: [KAITO GitHub](https://github.com/kaito-project/kaito)*
-
-KAITO is enabled on this cluster via `ai_toolchain_operator_enabled = true` in Terraform.
+Source: [KAITO GitHub](https://github.com/kaito-project/kaito)
 ---
 
 ## KAITO Preset Models
