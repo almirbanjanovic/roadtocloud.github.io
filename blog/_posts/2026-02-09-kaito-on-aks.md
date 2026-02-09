@@ -147,13 +147,14 @@ This POC uses [**bigscience/bloomz-560m**](https://huggingface.co/bigscience/blo
 After deployment, configure kubectl to connect to your AKS cluster:
 
 ```bash
-az aks get-credentials --resource-group <resource-group> --name <cluster-name>
+kaito@aks:~$ az aks get-credentials --resource-group <resource-group> --name <cluster-name>
+Merged "*****" as current context in ~\.kube\config
 ```
 
 Verify connection:
 
 ```bash
-kubectl get nodes
+kubectl get-contexts
 ```
 
 ## Testing the Model
