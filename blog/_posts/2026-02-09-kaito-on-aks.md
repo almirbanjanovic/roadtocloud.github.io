@@ -156,7 +156,7 @@ Verify that AKS cluster was configured correctly:
 
 ```bash
 kaito@aks:~$ kubectl config get-contexts
-CURRENT   NAME                      CLUSTER                   AUTHINFO                                                            NAMESPACE
+CURRENT   NAME                      CLUSTER                   AUTHINFO                                 NAMESPACE
 *         aks-********              aks-********              clusterUser_*********_aks-********
 
 kaito@aks:~$ kubectl get namespaces
@@ -186,8 +186,10 @@ When the `kaito.sh/enablelb: "True"` annotation is enabled, you can test the inf
 
 ```bash
 # Get the external IP (service name matches workspace name)
-KAITO_IP=$(kubectl get svc bloomz-560m-workspace -n kaito-custom-cpu-inference -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
-echo "KAITO endpoint: http://$KAITO_IP"
+kaito@aks:~$ KAITO_IP=$(kubectl get svc bloomz-560m-workspace -n kaito-custom-cpu-inference -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+
+
+kaito@aks:~$ echo "KAITO endpoint: http://$KAITO_IP"
 ```
 
 **2. Check health:**
