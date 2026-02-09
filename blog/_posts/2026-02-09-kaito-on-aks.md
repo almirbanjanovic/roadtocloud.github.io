@@ -21,8 +21,6 @@ I recently added a new environment to [cloud-playground-infra](https://github.co
 
 By the way, you should also check out [my other blog post on what cloud-playground-infra](https://www.theroadtocloud.com/blog/cloud-playground-infra/) helps us do.
 
-Finally, before going deeper, it’s worth saying clearly: Microsoft Foundry is excellent. It gives customers a fully managed, secure, and production-ready platform for running LLMs without touching GPU infrastructure. This isn’t a “versus” post. It’s about understanding *when* a Kubernetes-native approach like Kaito makes sense in addition to Foundry.
-
 ---
 
 ## What Kaito Brings
@@ -42,7 +40,7 @@ For a learning environment or a sandbox, this level of visibility is perfect. Yo
 
 ## KAITO vs. Microsoft Foundry
 
-You might wonder: why use KAITO when [Microsoft Foundry](https://ai.azure.com) offers thousands of models for inference? I'll say this though - both approaches solve different problems. Most teams benefit from having both available.
+You might wonder: why use KAITO when [Microsoft Foundry](https://ai.azure.com) offers thousands of models for inference? I'll say this though - both approaches solve different problems. Most teams benefit from having both available. Microsoft Foundry is an excellent PaaS product. It gives customers a fully managed, secure, and production-ready platform for running LLMs without touching GPU infrastructure. This isn’t a “versus” post. It’s about understanding *when* a Kubernetes-native approach like KAITO makes sense.
 
 ### Side-by-Side Overview
 
@@ -57,7 +55,7 @@ You might wonder: why use KAITO when [Microsoft Foundry](https://ai.azure.com) o
 | **Latency** | In-cluster inference, minimal network hops | Network round-trip to external endpoint |
 
 ### When KAITO Makes Sense  
-Use Kaito when you need data to remain in your environment, want consistent compute-based costs, have strict compliance requirements, or need deep customization of how models run.
+Use KAITO when you need data to remain in your environment, want consistent compute-based costs, have strict compliance requirements, or need deep customization of how models run.
 
 ### When Microsoft Foundry Makes Sense  
 Use Foundry when you want a fully managed experience, access to proprietary models like GPT‑4 or Claude, consumption-based pricing, and no GPU or cluster management.
