@@ -138,7 +138,7 @@ The Terraform configuration ([terraform/main.tf](https://github.com/almirbanjano
 
 ### POC Model Details
 
-This POC uses [**bigscience/bloomz-560m**](https://huggingface.co/bigscience/bloomz-560m), a small multilingual instruction-tuned model (~2.2GB). It runs on CPU for simplicity (no GPU quota required).
+This POC uses [**bigscience/bloomz-560m**](https://huggingface.co/bigscience/bloomz-560m), a small multilingual instruction-tuned model (~2.2GB) from [Hugging Face](https://huggingface.co). It runs on CPU for simplicity (no GPU quota required).  By the way, Hugging Face is basically the open-source registry for modern AI models. Think of it as the GitHub for models that developers can download, fine‑tune, and run anywhere — including on AKS. 
 
 | Setting | Value |
 |---------|-------|
