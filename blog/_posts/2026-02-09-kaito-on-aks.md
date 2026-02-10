@@ -119,7 +119,7 @@ For more advanced deployments, see the example manifests in [assets/kubernetes/]
 
 | Manifest | Use Case |
 |----------|----------|
-| `kaito_custom_cpu_model.yaml` | Base template for public HuggingFace models |
+| `kaito_custom_cpu_model.yaml` | Base template for public HuggingFace models for CPU VMs |
 | `kaito_option1_hf_private.yaml` | Private/gated HuggingFace models with HF_TOKEN |
 | `kaito_option2_azure_volume.yaml` | Models pre-loaded on Azure Blob/Files storage |
 | `kaito_option3_init_container_blob.yaml` | Download from Azure Blob at startup |
