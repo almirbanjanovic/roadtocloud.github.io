@@ -137,13 +137,15 @@ The Terraform configuration ([terraform/main.tf](https://github.com/almirbanjano
 
 > **Note:** The `kaito.sh/enablelb` annotation automatically creates a LoadBalancer service with a public IP. This is for **testing only** and is NOT recommended for production. For production, use an Ingress Controller to safely expose the service.
 
-### POC Model Details
-
-This POC uses [**bigscience/bloomz-560m**](https://huggingface.co/bigscience/bloomz-560m), a small multilingual instruction-tuned model (~2.2GB) from [Hugging Face](https://huggingface.co). It runs on CPU for simplicity (no GPU quota required).  By the way, Hugging Face is basically the open-source registry for modern AI models. Think of it as the GitHub for models that developers can download, fine‑tune, and run anywhere — including on AKS. |
-
 ---
 
-## Configure kubectl
+## Testing the Model
+
+### POC Model Details
+
+This POC uses [**bigscience/bloomz-560m**](https://huggingface.co/bigscience/bloomz-560m), a small multilingual instruction-tuned model (~2.2GB) from [Hugging Face](https://huggingface.co). It runs on CPU for simplicity (no GPU quota required).  By the way, Hugging Face is basically the open-source registry for modern AI models. Think of it as the GitHub for models that developers can download, fine‑tune, and run anywhere — including on AKS.
+
+### Configure kubectl
 
 After deployment, configure kubectl to connect to your AKS cluster:
 
@@ -175,8 +177,6 @@ kaito@aks:~$ kubectl get pods -n kaito-custom-cpu-inference
 NAME                                     READY   STATUS    RESTARTS   AGE
 bloomz-560m-workspace-78f597c8b8-q5m86   1/1     Running   0          11m
 ```
-
-## Testing the Model
 
 ### Testing with LoadBalancer
 
