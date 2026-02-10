@@ -127,7 +127,11 @@ For more advanced deployments, see the example manifests in [assets/kubernetes/]
 
 The custom manifests are much more complex and involved than the preset ones.  I encourage you to take a look inside my repo in [assets/kubernetes/](https://github.com/almirbanjanovic/cloud-playground-infra/tree/main/environments/kaito-on-aks/assets/kubernetes).
 
-## Infrastructure Overview
+---
+
+## Testing the Model
+
+### Infrastructure Overview
 
 The Terraform configuration ([terraform/main.tf](https://github.com/almirbanjanovic/cloud-playground-infra/blob/main/environments/kaito-on-aks/terraform/main.tf)) provisions:
 
@@ -136,10 +140,6 @@ The Terraform configuration ([terraform/main.tf](https://github.com/almirbanjano
 - **KAITO Workspace** - Custom model deployment (bigscience/bloomz-560m) with `kaito.sh/enablelb: "True"` annotation for automatic LoadBalancer creation
 
 > **Note:** The `kaito.sh/enablelb` annotation automatically creates a LoadBalancer service with a public IP. This is for **testing only** and is NOT recommended for production. For production, use an Ingress Controller to safely expose the service.
-
----
-
-## Testing the Model
 
 ### POC Model Details
 
