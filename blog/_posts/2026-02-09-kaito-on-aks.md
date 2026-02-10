@@ -76,8 +76,6 @@ Source: [Project KAITO](https://github.com/kaito-project/kaito)
 
 AKS has enabled support for several open-source models that can be deployed with minimal configuration using KAITO. Instead of defining a custom inference template, you simply specify the preset name in your workspace manifest.
 
-> **Note:** Preset models require GPU-enabled node pools. The current minimum requirement is `Standard_NC24ads_A100_v4`. Ensure your Azure subscription has sufficient GPU quota. This POC uses a custom model on CPU instead, as GPU quota was not available.
-
 | Model Family | Examples |
 |--------------|----------|
 | DeepSeek | deepseek-r1 |
@@ -90,6 +88,8 @@ AKS has enabled support for several open-source models that can be deployed with
 | Qwen | qwen-2.5-7b, qwen-2.5-72b, qwen-2.5-coder-32b |
 
 See the full list: [KAITO Supported Models](https://github.com/kaito-project/kaito/tree/main/presets/workspace/models)
+
+> **Note:** Preset models require GPU-enabled node pools. The current minimum requirement is `Standard_NC24ads_A100_v4`. Ensure your Azure subscription has sufficient GPU quota. This POC uses a custom model on CPU instead, as GPU quota was not available.
 
 An example preset manifest is available at [assets/kubernetes/kaito_preset_model.yaml](https://github.com/almirbanjanovic/cloud-playground-infra/blob/main/environments/kaito-on-aks/assets/kubernetes/kaito_preset_model.yaml).
 
