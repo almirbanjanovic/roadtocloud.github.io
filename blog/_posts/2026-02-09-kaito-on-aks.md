@@ -18,7 +18,7 @@ tags:
 
 # KAITO on AKS
 
-I recently added a new playground to [cloud-playground-infra](https://github.com/almirbanjanovic/cloud-playground-infra): a fully automated [KAITO-on-AKS](https://github.com/almirbanjanovic/cloud-playground-infra/tree/main/environments/kaito-on-aks) setup. 
+I recently added a new playground to [cloud-playground-infra](https://github.com/almirbanjanovic/cloud-playground-infra): a fully automated [KAITO-on-AKS](https://github.com/almirbanjanovic/cloud-playground-infra/tree/main/environments/kaito-on-aks) environment.
 
 By the way, you should also check out [my other blog post on what cloud-playground-infra](https://www.theroadtocloud.com/blog/cloud-playground-infra/) helps us do.
 
