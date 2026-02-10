@@ -76,7 +76,7 @@ Source: [Project KAITO](https://github.com/kaito-project/kaito)
 
 AKS has enabled support for several open-source models that can be deployed with minimal configuration using KAITO. Instead of defining a custom inference template, you simply specify the preset name in your workspace manifest.
 
-**Note:** Preset models require GPU-enabled node pools. The current minimum requirement is `Standard_NC24ads_A100_v4`. Ensure your Azure subscription has sufficient GPU quota. This POC uses a custom model on CPU instead, as GPU quota was not available.
+> **Note:** Preset models require GPU-enabled node pools. The current minimum requirement is `Standard_NC24ads_A100_v4`. Ensure your Azure subscription has sufficient GPU quota. This POC uses a custom model on CPU instead, as GPU quota was not available.
 
 | Model Family | Examples |
 |--------------|----------|
