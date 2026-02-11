@@ -33,7 +33,7 @@ A picture is worth a thousand words.  I've laid out the authentication flow in t
 </figure>
 
 ## Microsoft's John Savill Explains
-Microsoft's Chief Architect John Savill explains OIDC authentication with Workload Identity Federation in his awesome YouTube videos that I have linked below.  
+Microsoft's John Savill explains OIDC authentication with Workload Identity Federation in his awesome YouTube videos that I have linked below.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/saTUeR_U3lA?si=r3OMGYwt5DVX3Iii" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br/><br/>
@@ -47,7 +47,7 @@ How does this flow look for GitHub and GitHub Actions Workflows?  Well pretty si
 </figure>
 
 ## Microsoft's John Savill Explains
-Once again, also check out Microsoft's Chief Architect John Savill explain this OIDC flow for GitHub.
+Once again, also check out how John Savill explains this OIDC flow for GitHub.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XkhkkLBkAT4?si=faDeaiViVhgPyBxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br/><br/>
