@@ -11,13 +11,13 @@ tags:
   - 12-factor
 ---
 
-I spent last week watching *Microsoft Build* sessions, mostly the *Microsoft Foundry* and agent-related ones — *Foundry Agent Service*, *Prompt Agents*, *Hosted Agents*, and the *Microsoft Agent Framework (MAF)*. The runtimes are new, the SDKs are new, the demos are impressive, and the whole time I kept thinking about a document written in 2011 for the Heroku era: the [Twelve-Factor App](https://12factor.net/).
+I spent last few days watching [*Microsoft Build*](https://build.microsoft.com/en-US/home) sessions, mostly the *Microsoft Foundry* and agent-related ones — *Foundry Agent Service*, *Prompt Agents*, *Hosted Agents*, and the *Microsoft Agent Framework (MAF)*. The runtimes are new, the SDKs are new, the demos are impressive, and the whole time I kept thinking about a document written in 2011 for the Heroku and subsequent cloud-native era: the [Twelve-Factor App](https://12factor.net/).
 
 We are about to make all the same mistakes again, just with agents instead of monoliths. The good news is the playbook to avoid those mistakes already exists, and *Twelve-Factor* is most of it.
 
-Before going any further — Dex Horthy has already written [12-Factor Agents](https://github.com/humanlayer/12-factor-agents), which is an agent-native rewrite of the original twelve. It is a great read and I would not try to replace it. What I want to do here is different. I want to take the *original* twelve, exactly as they were written for cloud-native web apps, and walk through what each one means now that the "app" is an agent — and what Microsoft Foundry and the broader Azure ecosystem give you to actually follow them.
+What I would like to do here is take the *original* twelve, exactly as they were written for cloud-native web apps, and walk through what each one means now that the "app" is an agent — and what Microsoft, Microsoft Foundry and the broader Azure ecosystem give you to actually follow them.
 
-A quick disclaimer before the long table. *Twelve-Factor* is necessary but it is not sufficient for agents. Some factors map cleanly, some need a bit of stretching, a couple are honestly weak fits, and several of the things that will get you paged at 3 a.m. on an agent in production are not in the original twelve at all. I will get to those at the end.
+Now before we get to the good stuff, *Twelve-Factor* is necessary but it is not really entirely sufficient for agents. Some factors map cleanly, some need a bit of stretching, a couple are kind of weak fits, and several of the things that will get you paged at 3 a.m. on an agent in production are not in the original twelve at all. We'll talk about those at the end.
 
 ## The Big Picture
 
@@ -36,37 +36,38 @@ A quick disclaimer before the long table. *Twelve-Factor* is necessary but it is
 | XI | Logs | Needs expansion | *OpenTelemetry*, *Application Insights*, Foundry tracing, continuous evaluation |
 | XII | Admin processes | Moderate | *Functions* and *Container Apps Jobs*, batch eval, dataset curation, fine-tuning |
 
-The rest of this post zooms in on the factors that I think need the most discussion. The ones I do not call out below are either obvious or covered well by the table above.
+In the rest of this post I'll focus on the factors that I think need the most discussion. The ones I do not call out below are either obvious or covered well by the table above.
 
-## Codebase — Yes, One Repo Per Agent
+## Codebase
 
-The most common architecture question I get right now is some variation of *"do we put all our agents in one repo?"* My answer is no. One agent, one repo. Same conversation we have been having about microservices for a decade, just with new building blocks. The agent's instructions, its tool schemas, its model bindings, its eval datasets, and its infrastructure-as-code all sit together and version together. Dev, test, and prod are deploys of the same codebase.
+One of the most common architecture question I get right now is some variation of "do we put all our agents in one repo?" Well, my answer is usually "no". One agent, one repo — at least when the agent is its own deployable and lifecycle-managed unit. Same conversation we have been having about microservices for over a decade, just with new building blocks. The agent's instructions, its tool schemas (the model-facing invocation contracts), its model bindings, its eval datasets sit together and version together. Dev, test, and prod are deploys of the same codebase.  
 
-Reusable tools and shared skills are a different question, and one I get asked about almost as often. Those belong in *their own* repos — an *MCP* server, an *Azure Functions* tool app, a shared prompt library — published, versioned, and referenced by the agent repo that depends on them. Same logic that has guided shared library design for fifteen years. Nothing exotic about it.
+Reusable tools and shared skills are a different question. Those belong in their own repos — an MCP server, an Azure Functions tool app, a shared prompt library — published, versioned, and referenced by the agent repo that depends on them. Same logic that has guided shared library design for around fifteen years. There is nothing new or exotic about this.  
 
-A note on Foundry specifically. The Foundry portal is excellent for authoring and debugging, but it should not be your system of record. Define your agents declaratively through the Foundry SDK or REST API, store those definitions in GitHub, deploy them with *GitHub Actions*, and provision the surrounding infrastructure with *Bicep* or *Terraform*. Treat the portal as a viewer.
+And here is where I go into a tangential mandatory rant about ClickOps. The Foundry portal is excellent for authoring and debugging, but it should not be your default unless you're building simple prompt agents for demos or PoCs. Define your agents declaratively through the Foundry SDK or REST API, store those definitions in Azure DevOps or GitHub, deploy them with a pipeline, and provision the surrounding infrastructure with Bicep or Terraform. Treat the portal as a viewer.  Let's make sure we use DevOps best practices that have been guiding us for years.  Stay away from ClickOps.
 
-## Backing Services — Where Foundry Really Pays Off
 
-The *Backing services* factor is the cleanest 1:1 mapping in the whole list, and it is also the factor that Foundry was clearly designed around. Every meaningful piece of an agent is an attached resource.
+## Backing Services
 
-Retrieval is *Azure AI Search* or *Foundry IQ*. Conversation and thread state is Foundry-managed or, when data residency matters, your own *Cosmos DB*. Files and artifacts go in *Blob Storage*. Tools are *Azure Functions* apps, *Logic Apps* workflows, or custom *MCP* servers. Secrets live in *Azure Key Vault*. Identity is *Microsoft Entra*. Every one of these is swappable by changing configuration, not by changing code.
+The Backing services factor could very well be the cleanest 1:1 mapping in the whole list, and it is also the factor that Foundry was clearly designed around. Every meaningful capability and piece of state the agent depends on is an attached resource. 
 
-The discipline is the same one we have always had to enforce — do not hard-code an index name into a system prompt, and do not bake a tool endpoint into a container. The Foundry tools abstraction makes this easier because file search, web search, code interpreter, *MCP*, and your own custom functions all show up through a uniform interface. The platform pushes you toward the right shape if you let it.
+For example, semantic retrieval comes from [*Azure AI Search*](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search?tabs=indexing%2Cquickstarts) or [*Foundry IQ*](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-foundry-iq?tabs=portal). Conversation and thread state is Foundry-managed or, when data residency matters, your own [*Cosmos DB*](https://learn.microsoft.com/en-us/azure/cosmos-db/overview). Files and artifacts go in [*Blob Storage*](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview). Tools can be managed through the new [Foundry Toolbox](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/toolbox?pivots=dotnet) or can exist as [*Azure Functions* apps](https://learn.microsoft.com/en-us/azure/azure-functions/scenario-custom-remote-mcp-server?pivots=programming-language-csharp), [*Logic Apps* workflows](https://learn.microsoft.com/en-us/azure/logic-apps/create-model-context-protocol-server-standard), or custom *MCP* servers. Secrets live in [*Azure Key Vault*](https://learn.microsoft.com/en-us/azure/key-vault/general/overview). Identity is [*Microsoft Entra*](https://learn.microsoft.com/en-us/entra/fundamentals/what-is-entra). Every one of these is swappable by changing configuration, not by changing code.
 
-## Processes — The Goal Is Not "No State", It Is No *Hidden* State
+The discipline is the same one we have always had to enforce — do not hard-code an index name into a system prompt, and do not bake a tool endpoint into a container. The Foundry tools abstraction makes this easier because file search, web search, code interpreter, *MCP*, and your own custom functions all show up through a uniform interface. The platform pushes you toward the right shape if you let it.  Check out this official blog post [Introducing Toolboxes in Foundry](https://devblogs.microsoft.com/foundry/introducing-toolboxes-in-foundry/) that clearly aims to implement DRY (don't repeat yourself) principles and reusability.
 
-A strict reading of *Processes* says applications should be stateless and share-nothing. Agents are not stateless. They have conversations, retrieved context, memory, tool outputs, and approval queues. Pretending otherwise will get you in trouble fast.
+## Processes
 
-The principle that survives, and actually gets more important with agents, is this: the *compute* should be stateless, and every piece of state should live in an attached, observable, replaceable backing service. *Hosted Agents* in Foundry are a clean example. The container is ephemeral. Session state, threads, files, and vectors are persisted in Foundry-managed storage or in your own *Cosmos DB*, *Blob Storage*, and *AI Search*. The rule, restated for the agent era: no hidden, ungoverned state anywhere in the system.
+A strict reading of *Processes* says applications should be stateless and share-nothing. Agents are not really stateless. They have conversations, retrieved context, memory, tool outputs, and approval queues. Pretending otherwise will get you in trouble fast.
 
-## Port Binding and Concurrency — Where Foundry Inverts the Original
+The principle that survives, and actually gets more important with agents, is this: the *compute* that hosts the agent should be stateless, and every piece of state should live in an attached, observable, replaceable backing service. And yes, that does mean don't store context in memory, but use that also as an attached resource. [*Hosted Agents*](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents) in Foundry are a clean example. The container is ephemeral and can go away at any time. Session state, threads, files, and vectors are persisted in Foundry-managed storage or in your own *Cosmos DB*, *Blob Storage*, and *AI Search*. The rule, restated for the agent era: no hidden, ungoverned state anywhere in the system.
 
-*Port binding* is the factor that fits agents worst, because Foundry inverts the original assumption. In *Twelve-Factor*, the app exports its own service by binding to a port. With Foundry, the platform owns the surface. Your agent is reached through the *Responses API*, and the entry point is the same whether the agent is a portal-authored *Prompt Agent*, a custom container in *Hosted Agents*, or your own process calling the *Responses API* from somewhere else entirely. The honest way to read this factor in 2026 is that the agent should have a clean invocation contract — through the *Responses API* or via *MCP* if it is a tool — and let the platform handle the ports.
+## Port Binding and Concurrency
+
+*Port binding* is the factor that fits agents worst, because Foundry inverts the original assumption. In *Twelve-Factor*, the app exports its own service by binding to a port. With Foundry, the platform owns the surface. Your agent is reached through the *Responses API*, and the entry point is the same whether the agent is a portal-authored *Prompt Agent*, a custom container in *Hosted Agents*, or your own process calling the *Responses API* from somewhere else entirely. The best way to read this factor in 2026 is that the agent should have a clean invocation contract — through the *Responses API* or via *MCP* if it is a tool — and let the platform handle the ports.
 
 *Concurrency* needs a similar reread. The original factor is about scaling out via the Unix-style process model. With Foundry, you are not provisioning replicas the way you would for a stateless web app. Concurrency for an agent is bounded by model quota and tokens-per-minute, by tool latency, by downstream system limits, and by how well your async paths are wired up. The Azure-side answer is a combination of *TPM* management on your model deployments, *Azure Functions* on Flex Consumption for scale-to-zero tools, and *Service Bus* or *Event Grid* when you need to fan out work asynchronously. The mental model shifts from "more processes" to "more headroom across the whole pipeline."
 
-## Logs — One Factor That Has Outgrown Itself
+## Logs
 
 Treat logs as event streams. That advice is still correct, and it is still not enough for an agent. For a traditional web app, stdout plus a log aggregator gets you most of the way home. For an agent, you also need traces of every prompt and completion, traces of every tool call (with inputs, outputs, retries, and partial failures), retrieval diagnostics including the documents grounding each answer, token and cost telemetry, model and prompt versions on every span, safety and content-filter events, and the eval results that gate each release.
 
@@ -84,10 +85,10 @@ This is the part that matters most. *Twelve-Factor* was written for stateless we
 
 These are not extensions to *Twelve-Factor*. They are the gaps it leaves, and they are the gaps that will determine whether your agent is something you can confidently put in front of a customer.
 
-## Where That Leaves Us
+## Where Does this Leave Us?
 
-The point of this post is not that *Twelve-Factor* is a perfect lens for agents. It is not. The point is that the discipline behind it — declarative codebases, pinned dependencies, externalized config, attached backing services, immutable builds, observable state, real observability — is exactly the discipline we need right now, when the temptation to glue together prompt-and-tool prototypes and call them production systems is at an all-time high.
+The point of this post is not that *Twelve-Factor* is a perfect lens for agents. It may or may not be. The point is that the discipline behind it — declarative codebases, pinned dependencies, externalized config, attached backing services, immutable builds, observable state, real observability — is the discipline we followed with cloud-native apps for years and it is exactly the discipline we need right now, when the temptation to glue together prompt-and-tool prototypes and call them production systems is at an all-time high.
 
 Microsoft Foundry gives you the runtime and most of the building blocks. Azure gives you the rest. The original twelve give you the operating model. The new failure modes give you the gaps to fill on top.
 
-Build the boring parts well. The agent will thank you for it.
+Build the boring parts well. Your agent will thank you for it.
