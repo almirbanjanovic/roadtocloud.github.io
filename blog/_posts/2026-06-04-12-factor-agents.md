@@ -61,12 +61,6 @@ A strict reading of *Processes* says applications should be stateless and share-
 
 The principle that survives, and actually gets more important with agents, is this: the *compute* that hosts the agent stays stateless, and every piece of state lives in a backing service you can see, swap, and back up. Don't keep conversation history memory, don't cache embeddings on the container's local disk, and don't treat the model's context window as durable memory — push all of it to an attached resource. [*Hosted Agents*](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents) in Foundry are a clean example of this separation in practice. The container is ephemeral and can go away at any time. Session state, threads, files, and vectors are persisted in Foundry-managed storage or in your own *Cosmos DB*, *Blob Storage*, and *AI Search*. 
 
-## Port Binding and Concurrency
-
-*Port binding* is the factor that fits agents worst, because Foundry inverts the original assumption. In *Twelve-Factor*, the app exports its own service by binding to a port. With Foundry, the platform owns the surface. Your agent is reached through the *Responses API*, and the entry point is the same whether the agent is a portal-authored *Prompt Agent*, a custom container in *Hosted Agents*, or your own process calling the *Responses API* from somewhere else entirely. The best way to read this factor in 2026 is that the agent should have a clean invocation contract — through the *Responses API* or via *MCP* if it is a tool — and let the platform handle the ports.
-
-*Concurrency* needs a similar reread. The original factor is about scaling out via the Unix-style process model. With Foundry, you are not provisioning replicas the way you would for a stateless web app. Concurrency for an agent is bounded by model quota and tokens-per-minute, by tool latency, by downstream system limits, and by how well your async paths are wired up. The Azure-side answer is a combination of *TPM* management on your model deployments, *Azure Functions* on Flex Consumption for scale-to-zero tools, and *Service Bus* or *Event Grid* when you need to fan out work asynchronously. The mental model shifts from "more processes" to "more headroom across the whole pipeline."
-
 ## Logs
 
 Treat logs as event streams. That advice is still correct, and it is still not enough for an agent. For a traditional web app, stdout plus a log aggregator gets you most of the way home. For an agent, you also need traces of every prompt and completion, traces of every tool call (with inputs, outputs, retries, and partial failures), retrieval diagnostics including the documents grounding each answer, token and cost telemetry, model and prompt versions on every span, safety and content-filter events, and the eval results that gate each release.
@@ -75,7 +69,7 @@ On Azure this is *OpenTelemetry* into *Azure Application Insights* and *Azure Mo
 
 ## What Is *Not* in the Original Twelve
 
-This is the part that matters most. *Twelve-Factor* was written for stateless web apps without LLMs, and it does not address the failure modes that will most likely take down an agent. A short list of what the original twelve do not cover, with the Microsoft-side answer next to each:
+*Twelve-Factor* was written for stateless web apps without LLMs, and it does not address failure modes that will most likely take down an agent. A short list of what the original twelve do not cover, with the Microsoft-side answer next to each:
 
 1. **Prompt injection and tool-call authorization** — assume every retrieved document and every user message is hostile. *Microsoft Entra* gives each agent its own identity; tool calls authorize the agent, not the user behind it. *Azure AI Content Safety* and Foundry's policy controls do the input/output filtering.
 2. **Evaluation as a release gate** — agents need an eval suite the same way services need unit tests. Foundry's evaluation tooling and continuous evaluation pipelines plug directly into *GitHub Actions* so that an agent version cannot be promoted if it regresses on a known dataset.
@@ -83,12 +77,10 @@ This is the part that matters most. *Twelve-Factor* was written for stateless we
 4. **Human-in-the-loop** — for any action with real-world side effects, design the approval step into the agent from day one. *Logic Apps*, *Teams* adaptive cards, and *Power Automate* approvals are all production-ready integrations for this.
 5. **Multi-agent coordination and handoff state** — once you have more than one agent, the state that lives *between* them becomes its own first-class concern. *MAF* gives you primitives for orchestration, but the discipline of treating handoff state as an explicit, observable, replayable artifact is on you.
 
-These are not extensions to *Twelve-Factor*. They are the gaps it leaves, and they are the gaps that will determine whether your agent is something you can confidently put in front of a customer.
-
 ## Where Does this Leave Us?
 
-The point of this post is not that *Twelve-Factor* is a perfect lens for agents. It may or may not be. The point is that the discipline behind it — declarative codebases, pinned dependencies, externalized config, attached backing services, immutable builds, observable state, real observability — is the discipline we followed with cloud-native apps for years and it is exactly the discipline we need right now, when the temptation to glue together prompt-and-tool prototypes and call them production systems is at an all-time high.
+We're in the AI era now and things move fast. However, I've been noticing we are repeating the same mistakes we fought hard to avoid with cloud-native apps.  The point of this post is not that *Twelve-Factor* is a perfect lens for agents. It may or may not be. The point is that the discipline behind it — declarative codebases, pinned dependencies, externalized config, attached backing services, immutable builds, observable state, real observability — is the discipline we followed with cloud-native apps for years and it is exactly the discipline we need right now, when the temptation to glue together prompt-and-tool prototypes and call them production systems is at an all-time high.
 
 Microsoft Foundry gives you the runtime and most of the building blocks. Azure gives you the rest. The original twelve give you the operating model. The new failure modes give you the gaps to fill on top.
 
-Build the boring parts well. Your agent will thank you for it.
+Build the boring parts well. Sleep well at night. Your agent will thank you for it.
