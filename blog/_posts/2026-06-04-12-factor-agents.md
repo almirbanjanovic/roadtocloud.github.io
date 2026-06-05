@@ -2,8 +2,8 @@
 title: "12-Factor Apps, Revisited for AI Agents"
 date: 2026-06-04
 header:
-  teaser: "https://raw.githubusercontent.com/kaito-project/kaito/main/website/static/img/arch.png"
-excerpt: "The 2011 Twelve-Factor App playbook still holds up for AI agents on Microsoft Foundry.  App now stands for agent."
+  teaser: "https://raw.githubusercontent.com/almirbanjanovic/roadtocloud.github.io/refs/heads/main/assets/images/12-factor-agents.png"
+excerpt: "The Twelve-Factor App playbook still holds up for AI agents on Microsoft Foundry.  App now stands for agent."
 toc: true
 categories:
   - blog
