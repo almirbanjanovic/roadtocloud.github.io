@@ -19,7 +19,7 @@ tags:
     <a href="/assets/images/12-factor-agents.png"><img src="/assets/images/12-factor-agents.png"></a>
 </figure>
 
-I spent last few days watching [*Microsoft Build*](https://build.microsoft.com/en-US/home) sessions, mostly the *Microsoft Foundry* and agent-related ones — *Foundry Agent Service*, *Prompt Agents*, *Hosted Agents*, and the *Microsoft Agent Framework (MAF)*. The runtimes are new, the SDKs are new, the demos are impressive, and the whole time I kept thinking about a document written in 2011 for the Heroku and subsequent cloud-native era: the [Twelve-Factor App](https://12factor.net/).
+I spent last few days watching [*Microsoft Build*](https://build.microsoft.com/en-US/home) sessions, mostly the *Microsoft Foundry* and agent-related ones — *Foundry Agent Service*, *Hosted Agents*, and the *Microsoft Agent Framework (MAF)*. Many new features were announced, the demos were impressive, and the whole time I kept thinking about a document written in the early 2010s for the cloud-native era: the [Twelve-Factor App](https://12factor.net/).
 
 I worry we are about to make all the same mistakes again, just with agents instead of monoliths. The good news is the playbook to avoid those mistakes already exists, and *Twelve-Factor* is most of it.
 
