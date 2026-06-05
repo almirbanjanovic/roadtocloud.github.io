@@ -21,7 +21,7 @@ tags:
 
 I spent last few days watching [*Microsoft Build*](https://build.microsoft.com/en-US/home) sessions, mostly the *Microsoft Foundry* and agent-related ones — *Foundry Agent Service*, *Hosted Agents*, and the *Microsoft Agent Framework (MAF)*. Many new features were announced, the demos were impressive, and the whole time I kept thinking about a document written in the early 2010s for the cloud-native era: the [Twelve-Factor App](https://12factor.net/).
 
-I worry we are about to make all the same mistakes again, just with agents instead of monoliths. The good news is the playbook to avoid those mistakes already exists, and *Twelve-Factor* is most of it.
+I worry we are about to make all the same mistakes again, just with agents instead of apps. But there is good news, since the playbook to avoid those mistakes already exists, and [*Twelve-Factor App*](https://12factor.net/) gives us most of it.
 
 What I would like to do here is take the *original* twelve, exactly as they were written for cloud-native web apps, and walk through what each one means now that the "app" is an agent — and what Microsoft, Microsoft Foundry and the broader Azure ecosystem give you to actually follow them.
 
