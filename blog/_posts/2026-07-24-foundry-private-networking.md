@@ -66,16 +66,6 @@ This lines up with what I wrote in [12-Factor Apps, Revisited for AI Agents](htt
 
 It is important to remember that there is no one size fits all approach. For a quick demo, a simpler setup may be fine. For a regulated workload, customer-facing workload, or anything that needs to align with a real landing zone, I would rather start with the right boundaries than retrofit them later.
 
-## The Teardown Lesson
-
-One thing I intentionally documented in the repo is teardown. Happy-path deployment guides are everywhere. Teardown issues are where you learn how the platform really behaves.
-
-While testing this, I hit an issue where deleting the Foundry account left a `legionservicelink` service association link on the delegated subnet. The account was gone, but the subnet was still pinned because the underlying platform-managed environment had not released the service association link yet.
-
-The recovery is documented here: [Deleting an AI Foundry subnet blocked by `legionservicelink`](https://github.com/almirbanjanovic/cloud-playground-infra/tree/main/environments/ai-foundry#deleting-an-ai-foundry-subnet-blocked-by-legionservicelink). Short version: delete the account, wait for the service association link to clear, then clean up the subnet. If it never clears, open a support ticket with the right resource IDs. Not exciting, but very useful to know before this happens in a customer environment.
-
-This is why I like building playgrounds. You learn the weird stuff before it matters.
-
 ## Final Thoughts
 
 Microsoft Foundry makes it easier to build agents, but it does not remove the need for architecture. If anything, it makes the architecture more important because agents sit between users, tools, data and downstream systems.
