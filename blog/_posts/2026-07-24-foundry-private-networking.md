@@ -68,8 +68,6 @@ It is important to remember that there is no one size fits all approach. For a q
 
 ## Final Thoughts
 
-Microsoft Foundry makes it easier to build agents, but it does not remove the need for architecture. If anything, it makes the architecture more important because agents sit between users, tools, data and downstream systems.
+Microsoft Foundry makes it easier to build agents, but it does not remove the need for architecture. If anything, it makes the architecture more important because agents sit between users, tools, data and downstream systems. Private networking is one of those areas where the details matter. 
 
-Private networking is one of those areas where the details matter. Subnets, private DNS, private endpoints, managed identity, RBAC propagation, temporary deployer access and teardown behavior are not the flashy parts of an AI demo, but they are the parts that determine whether the solution can survive in a real enterprise environment.
-
-The repo is not meant to be the only way to deploy Foundry Agent Service or Hosted Agents with private networking. It is just a working pattern in both Bicep and Terraform. Use it as a starting point, mutate it for your landing zone, and test the boring parts before they become production problems.
+The repo is not meant to be the only way to deploy Foundry Agent Service or Hosted Agents with private networking. It is just a working pattern in both Bicep and Terraform. Use it as a starting point, make it your own, play with it, get your hands dirty, and test the boring parts before they become production problems.
