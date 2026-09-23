@@ -28,5 +28,19 @@ In this episode, I had the privilege of hosting Mark Servais, a seasoned technol
 ### Welcome to Roud to Cloud Podcast
 Welcome to the Road to Cloud podcast with host Almir, a seasoned expert in software and cloud architecture. This podcast will explore the latest in technology and innovation, blending industry insights with Almir's personal interests in coffee, beer, music, and cars. Get ready for a journey that combines professional expertise with life beyond the office.
 
-<div style="height: 228px; width: 100%;"><iframe src="https://audio.com/embed/audio/1789839263963074?theme=image"
-    style="display:block; border-radius: 6px; border: none; height: 204px; width: 100%;"></iframe><a href='https://audio.com/road-to-cloud' style="text-align: center; display: block; color: #A4ABB6; font-size: 12px; font-family: sans-serif; line-height: 16px; margin-top: 8px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">@road-to-cloud</a></div>
+<div style="height: 176px; width: 100%;">
+  <iframe
+    src="https://open.spotify.com/embed/episode/5yoBtNMuBcyXPEpj5WrO5G?utm_source=generator"
+    style="display:block; border-radius: 12px; border: none; height: 152px; width: 100%;"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+  <a href="https://open.spotify.com/episode/5yoBtNMuBcyXPEpj5WrO5G"
+     style="text-align: center; display: block; color: #A4ABB6; font-size: 12px; font-family: sans-serif; line-height: 16px; margin-top: 8px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+    Listen on Spotify
+  </a>
+</div>
+
+
+<!-- <div style="height: 228px; width: 100%;"><iframe src="https://audio.com/embed/audio/1789839263963074?theme=image"
+    style="display:block; border-radius: 6px; border: none; height: 204px; width: 100%;"></iframe><a href='https://audio.com/road-to-cloud' style="text-align: center; display: block; color: #A4ABB6; font-size: 12px; font-family: sans-serif; line-height: 16px; margin-top: 8px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">@road-to-cloud</a></div> -->
